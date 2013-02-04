@@ -1,0 +1,12 @@
+@font-face { font-family: 'Futuris'; src: url("../fonts/Futuris-Cyrillic.woff"); }
+
+@font-face { font-family: 'Futuris Bold'; src: url("../fonts/Futuris-Bold.woff"); }
+
+/*styles for layouts*/
+.cols { margin: 10px 25px; background: url(../img/bg.jpg); overflow: hidden; }
+
+.col-1 { float: left; width: 190px; margin-right: 15px; }
+
+.col-2 { float: left; width: 580px; padding: 0 10px; }
+
+.col-3 { float: right; width: 190px; }

@@ -1,0 +1,23 @@
+@import "lib/base";
+@import "lib/animations";
+@import "lib/keyframes";
+//variables
+$blue: #04aeef;
+// gradients for ie
+$experimental-support-for-svg: true;
+// global sprites
+$index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
+//extend
+%block {
+	
+}
+//font
+@font-face {
+ 	font-family: 'Futuris';
+ 	src: url('../fonts/Futuris-Cyrillic.woff');
+}
+@font-face {
+	font-family: 'Futuris Bold';
+	src: url('../fonts/Futuris-Bold.woff');
+}
+				

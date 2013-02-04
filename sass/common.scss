@@ -1,0 +1,228 @@
+@import "base";
+//reset 
+* { margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+//
+body {
+	background: #fff;
+	font-family: 'Futuris';
+}
+a {
+	text-decoration: none;
+}
+input, textarea, button {
+	border: none;
+	outline: none;
+}
+button {
+	background: none;
+	cursor: pointer;
+}
+// common styles
+.h2 {
+	font-family: Georgia, Tahoma, sans-serif;
+	font-size: 16px;
+	color: #000;
+}
+.h3 {
+	font-size: 14px;
+}
+
+.container {	
+	width: 1280px;
+	margin: 0 auto;
+}
+
+//header
+.header {
+	background: #00a5e4;
+	@include background-image(linear-gradient(#09bbff, #00a5e4));
+	@include box-shadow(rgba(0,0,0,0.48) 0 2px 5px);
+	.container {
+		height: 43px;
+	}
+}
+.phone, .mail, .player {
+	float: left;
+	height: 23px;
+	line-height: 23px;
+	margin-top: 11px;
+	font-size: 14px;
+	color: #fff;
+}
+.phone {
+	padding-right: 15px;
+	margin-right: 15px;
+	border-right: 1px solid #63c9f0;	
+}
+.mail {
+	margin-right: 124px;
+}
+.player {
+	position: relative;
+	padding-left: 18px;
+}
+.user, .search {
+	float: right;
+	margin-top: 9px;
+}
+.user {
+	height: 26px;
+	padding-left: 8px;
+	margin-left: 8px;
+	line-height: 26px;
+	//border-left: 1px solid #63c9f0;
+	a {
+		color: #fff;
+	}	
+}
+.user__pic {
+	float: left;
+	margin-right: 6px;
+}
+.search {
+	width: 253px;
+	height: 26px;
+	background: #fff;
+	@include border-radius(3px);
+	input, button {
+		height: 26px;
+		background: none;
+	}
+	input {
+		float: left;
+		width: 214px;
+		padding: 0 5px;		
+	}
+	button {
+		float: right;
+		padding: 0 7px;		
+	}
+	i {
+		display: block;
+		@include sized-sprite($index_img, search);
+	}
+}
+//top
+.top {
+	height: 43px;
+	border-bottom: 1px solid #edf0f2;
+	@include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
+}
+.nav {
+	float: left;
+	li {
+		float: left;
+		&:first-child {
+			a {
+				padding: 0 10px 0 0;
+			}			
+		}
+	}
+	a {
+		display: block;
+		height: 43px;
+		line-height: 43px;
+		padding: 0 10px;
+		font-family: 'Futuris Bold';
+		color: $blue;
+	}
+}
+.online-title {
+	float: right;
+	width: 352px;
+} 
+.online__title {
+	width: 352px;
+	height: 43px;
+	padding-left: 24px;
+	text-align: left;
+	font-size: 19px;
+	font-family: 'Futuris Bold';
+	color: $blue;
+}
+//main
+.main {
+	height: 700px;
+	background: url(../img/index_img/main.jpg) no-repeat 50% 0;
+	.container {
+		position: relative;
+	}
+}
+.logo {
+	position: absolute;
+	top: 29px;
+	left: 0;	
+	a {
+		display: block;
+		@include sized-sprite($index_img, logo);
+		@extend %hide-text;
+	}
+}
+.online {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 310px;
+	padding: 18px 21px 21px 21px;
+	background: url(../img/index_img/online_bg.jpg);
+}
+.online__nav {
+	overflow: hidden;
+	li {
+		float: left;
+	}
+	button {
+		height: 30px;
+		background: #78e800;
+		@include background-image(linear-gradient(#78e800, #3b9c00));
+		@include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
+		@include border-radius(3px);
+		font-size: 16px;
+		font-family: 'Futuris Bold';
+		color: #fff;
+		text-shadow: 0 1px 1px rgba(97,62,0,0.54);
+	}
+}
