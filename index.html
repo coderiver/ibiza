@@ -18,12 +18,13 @@
 	<div class="container">
 		<span class="phone">+7 495 726-59-21</span>
 		<a class="mail" href="mailto:noexali@ibiza.ru">noexali@ibiza.ru</a>
-		<span class="player">Superhuman Happiness “Ile Aiye feat. Cults (Juan </span>
+		<div class="player">Superhuman Happiness “Ile Aiye feat. Cults (Juan </div>
 		<div class="user">
 			<div class="user__pic">
 				<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
 			</div>
 			<a href="#">Константин Контантинопольский</a>
+			<button class="user__out"></button>
 		</div>		
 		<form action="" class="search">
 			<input type="text">
@@ -58,13 +59,45 @@
 		</div>
 		<form class="online" action="">
 			<ul class="online__nav">
-				<li><button>Тур</button></li>
-				<li><button>Отель</button></li>
-				<li><button>Авиабилет</button></li>				                            
+				<li><button><span>Тур</span></button></li>
+				<li><button><span>Отель</span></button></li>
+				<li><button class="active"><span>Авиабилет</span></button></li>
 			</ul>
 			<div class="online__avia">
-				
+				<div class="txt-field">
+					<label for="on1">Лечу из</label>
+					<input id="on1" type="text" placeholder="Домодедово (DME), Москва">
+				</div>
+				<div class="txt-field">
+					<label for="on2">Пункт назначения</label>
+					<input id="on2" type="text" placeholder="Ибица (IBZ), Испания">
+				</div>
+				<div class="online__date">
+					<div class="txt-field">
+						<label for="on3">Вылетаю</label>
+						<input id="on3" type="text" placeholder="4 февраля">
+					</div>
+					<div class="txt-field">
+						<label for="on4">Возвращаюсь</label>
+						<input id="on4" type="text" placeholder="12 января">
+					</div>
+				</div>
+				<div class="online__people">
+					<div class="select">
+						<div class="select__title">Взрослые</div>
+						<div class="select__value">4</div>
+					</div>
+					<div class="select">
+						<div class="select__title">Дети</div>
+						<div class="select__value">6</div>
+					</div>
+					<div class="select">
+						<div class="select__title">Номера</div>
+						<div class="select__value">1</div>
+					</div>
+				</div>
 			</div>
+			<input class="btn-orange" type="submit">
 		</form>
 	</div>
 </div>

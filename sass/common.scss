@@ -69,12 +69,10 @@ button {
 .h3 {
 	font-size: 14px;
 }
-
 .container {	
 	width: 1280px;
 	margin: 0 auto;
 }
-
 //header
 .header {
 	background: #00a5e4;
@@ -103,20 +101,43 @@ button {
 .player {
 	position: relative;
 	padding-left: 18px;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: 0;
+		@include sized-sprite($index_img, play);
+	}
 }
 .user, .search {
 	float: right;
 	margin-top: 9px;
 }
 .user {
+	position: relative;
 	height: 26px;
-	padding-left: 8px;
+	padding: 0 24px 0 9px;
 	margin-left: 8px;
 	line-height: 26px;
-	//border-left: 1px solid #63c9f0;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 1px;
+		height: 23px;
+		background: #63c9f0;
+	}
 	a {
+		position: relative;
 		color: #fff;
 	}	
+}
+.user__out {
+	position: absolute;
+	top: 7px;
+	right: 4px;
+	@include sized-sprite($index_img, close);
 }
 .user__pic {
 	float: left;
@@ -208,21 +229,133 @@ button {
 	width: 310px;
 	padding: 18px 21px 21px 21px;
 	background: url(../img/index_img/online_bg.jpg);
+	@include border-radius(0 0 3px 3px);
+	.btn-orange {
+		width: 310px;
+	}
 }
 .online__nav {
+	padding-bottom: 16px;
 	overflow: hidden;
+	text-align: center;
 	li {
-		float: left;
+		display: inline-block;
+		&:first-child {
+			float: left;
+		}
+		&:last-child {
+			float: right;
+		}
 	}
 	button {
 		height: 30px;
-		background: #78e800;
-		@include background-image(linear-gradient(#78e800, #3b9c00));
-		@include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
-		@include border-radius(3px);
+		padding: 0 20px;		
 		font-size: 16px;
 		font-family: 'Futuris Bold';
-		color: #fff;
+		color: #fff;	
 		text-shadow: 0 1px 1px rgba(97,62,0,0.54);
+		span {
+			border-bottom: 1px dotted #fff;
+		}	
+		&.active {
+			background: #78e800;
+			@include background-image(linear-gradient(#78e800, #3b9c00));
+			@include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
+			@include border-radius(3px);
+			span {
+				border-bottom: none;
+			}			
+		}
 	}
+}
+.online__date {
+	height: 51px;
+	margin-bottom: 20px;
+	.txt-field {
+		position: relative;
+		float: right;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 25px;
+			right: 5px;
+			@include sized-sprite($index_img, date);
+		}
+		input {
+			position: relative;
+			width: 142px;			
+		}		
+		&:first-child {
+			float: left;
+		}
+	}
+}
+.online__people {
+	height: 51px;
+	margin-bottom: 20px;
+	.select {
+		float: left;
+		margin-left: 8px;
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+}
+//general
+.btn-orange {
+	height: 41px;
+	background: #ffcc00;
+	@include background-image(linear-gradient(#ffcc00, #e99400));
+	@include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
+	@include border-radius(3px);
+	text-align: center;
+	font-family: 'Futuris Bold';
+	font-size: 16px;	
+	color: #fff;	
+	text-shadow: 0 1px 1px rgba(97,62,0,0.54);	
+	cursor: pointer;
+}
+.txt-field {
+	margin-bottom: 20px;
+	label {
+		display: block;
+		margin-bottom: 2px;
+		color: #fff;
+	}
+	input {
+		width: 300px;
+		height: 33px;
+		padding: 0 5px;
+		@include border-radius(3px);
+		font-family: 'Futuris';
+		font-size: 16px;
+		color: #9a9a9a;
+	}
+}
+.select {
+	
+}
+.select__title {
+	display: block;
+	margin-bottom: 2px;
+	color: #fff;
+}
+.select__value {
+	position: relative;
+	width: 93px;
+	height: 33px;
+	line-height: 33px;
+	padding-left: 5px;
+	background: #fff;
+	@include border-radius(3px);
+	cursor: pointer;
+	color: #9a9a9a;
+	font-size: 16px;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 14px;
+		right: 5px;
+		@include sized-sprite($index_img, arr);
+	} 
 }
