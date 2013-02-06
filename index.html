@@ -8,62 +8,86 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.tools.min.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 <body>
 <!-- BEGIN .header -->
-<div class="header">
+<header class="header">
 	<div class="container">
-		<span class="phone">+7 495 726-59-21</span>
+		<span class="phone">8 (495) 726 59 21</span>
 		<a class="mail" href="mailto:noexali@ibiza.ru">noexali@ibiza.ru</a>
-		<div class="player">Superhuman Happiness “Ile Aiye feat. Cults (Juan </div>
+		<div class="player">Superhuman Happiness “Ile Aiye feat. Cults</div>
 		<div class="user">
 			<div class="user__pic">
 				<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
 			</div>
-			<a href="#">Константин Контантинопольский</a>
-			<button class="user__out"></button>
+			<a class="user__name" href="#">Константин Контантинопольский</a>
+			<a class="user__out" href="#">Выйти</a>
 		</div>		
 		<form action="" class="search">
 			<input type="text">
 			<button><i></i></button>
 		</form>
 	</div>
-</div>
+</header>
 <!-- END .header -->
 <!-- BEGIN .top -->
-<div class="top">
+<section class="top">
 	<div class="container">
-		<div class="nav">
+		<nav class="nav">
 			<ul>
-				<li><a href="#">Онлайн бронирование</a></li>
 				<li><a href="#">Коммьюнити</a></li>
 				<li><a href="#">Места</a></li>
 				<li><a href="#">Гид</a></li>
 				<li><a href="#">Карта</a></li>
 				<li><a href="#">События</a></li>
-				<li><a href="#">Контактная информация</a></li>
+				<li><a href="#">Отели</a></li>
+				<li><a href="#">Пляжи</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">SOS!</a></li>
+				<li><a href="#">Попутчики</a></li>
+				<li><a href="#">Контактная информация</a></li>			
 			</ul>
+		</nav>
+		<div class="online-title">
+			<span>Онлайн бронирование<button class="online-close"></button></span>			
 		</div>
-		<button class="online-title">Онлайн бронирование</button>
 	</div>
-</div>
+</section>
 <!-- END .top -->
 <!-- BEGIN .main -->
-<div class="main">
-	<div class="container">
-		<div class="logo">
+<section class="main">
+	<div class="container">		
+		<h1 class="logo">
 			<a href="#">IBIZA.ru</a>
+		</h1>
+		<!-- BEGIN .hot-deals -->
+		<div class="hot-deals">
+			<button class="hot-deals__prev"></button>		
+			<button class="hot-deals__next"></button>	
+			<div class="hot-deals__label">Горячее предложение</div>
+			<div class="hot-deals__desc">
+				<div class="hot-deals__pic">
+					<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
+				</div>
+				<div class="hot-deals__title">
+					<a href="#">Ultra Music Festival в Майами</a> 
+					<span>17-26 марта, $ 2 100</span>
+				</div>
+			</div>
 		</div>
+		<!-- END .hot-deals -->		
+		<!-- BEGIN .online -->
 		<form class="online" action="">
 			<ul class="online__nav">
-				<li><button><span>Тур</span></button></li>
-				<li><button><span>Отель</span></button></li>
-				<li><button class="active"><span>Авиабилет</span></button></li>
+				<li><a href="#" class="online__tour">Тур</a></li>
+				<li><a href="#" class="online__hotel">Отель</a></li>
+				<li><a href="#" class="online__avia active">Авиабилет</a></li>
 			</ul>
-			<div class="online__avia">
+			<div class="online__reserv">
 				<div class="txt-field">
 					<label for="on1">Лечу из</label>
 					<input id="on1" type="text" placeholder="Домодедово (DME), Москва">
@@ -99,8 +123,1047 @@
 			</div>
 			<input class="btn-orange" type="submit">
 		</form>
-	</div>
+		<!-- END .online -->
+		<!-- BEGIN .menu -->
+		<ul class="menu">
+			<li><a href="#">Коммьюнити</a></li>
+			<li><a href="#">Гид по Ибице</a></li>
+			<li><a href="#">Места и события</a></li>
+		</ul>
+		<!-- END .menu -->
+	</section>
 </div>
 <!-- END .main -->
+<!-- BEGIN .container -->
+<div class="container">
+	<!-- BEGIN .tours -->
+	<div class="tours">
+		<h2 class="h2">каталог готовых туров</h2>
+		<ul>
+			<li class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic1.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Fiesta Hotel Don Toni</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Playa D’en Bossa</span></a>
+					<p>Лучший тур для  тусовщиков! Здесь самый длинный пляж. Клуб Space и знаменитая Bora Bora, аквапарк, отличные и недорогие рестораны</p>
+				</div>
+				<div class="item__price">1000$</div>
+			</li>
+			<li class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic1.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Don Toni</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Paseo Maritimo s/n, Apdo de Correos 1/167</span></a>
+					<p>Лучший тур для  тусовщиков! Здесь самый длинный пляж. Клуб Space и знаменитая Bora</p>
+				</div>
+				<div class="item__price">976$</div>
+			</li>
+			<li class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic1.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Fiesta Hotel Don Toni</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Playa D’en Bossa</span></a>
+					<p>Лучший тур для  тусовщиков! Здесь самый длинный пляж. Клуб Space и знаменитая Bora Bora, аквапарк, отличные и недорогие рестораны</p>
+				</div>
+				<div class="item__price">1000$</div>
+			</li>
+			<li class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic1.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Don Toni</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Paseo Maritimo s/n, Apdo de Correos 1/167</span></a>
+					<p>Лучший тур для  тусовщиков! Здесь самый длинный пляж. Клуб Space и знаменитая Bora</p>
+				</div>
+				<div class="item__price">976$</div>
+			</li>
+			<li class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic1.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Fiesta Hotel Don Toni</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Playa D’en Bossa</span></a>
+					<p>Лучший тур для  тусовщиков! Здесь самый длинный пляж. Клуб Space и знаменитая Bora Bora, аквапарк, отличные и недорогие рестораны</p>
+				</div>
+				<div class="item__price">1000$</div>
+			</li>
+			<li class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic1.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Don Toni</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Paseo Maritimo s/n, Apdo de Correos 1/167</span></a>
+					<p>Лучший тур для  тусовщиков! Здесь самый длинный пляж. Клуб Space и знаменитая Bora</p>
+				</div>
+				<div class="item__price">976$</div>
+			</li>
+		</ul>
+	</div>
+	<!-- END .tours -->
+	<!-- BEGIN .cols -->
+	<div class="cols">
+		<!-- BEGIN .col-1 -->		
+		<div class="col-1">
+			<h2 class="h2">рестораны</h2>
+			<!-- BEGIN .item -->			
+			<div class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic2.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__cat">
+					<a href="#">вегетарианский</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Madagaskar</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Ctra Cala Llonga, Jesus</span></a>
+					<p>Одно из лучших мест для завтрака на Ибице, круассаны из слоеноготеста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйцаи ветчина</p>
+				</div>
+				<div class="item__price">976$</div>
+				<div class="navi">
+					<button class="navi__prev"></button>
+					<span>1/5</span>
+					<button class="navi__next"></button>					
+				</div>
+			</div>	
+			<!-- END .item -->	
+			<h2 class="h2">Бары и Клубы</h2>
+			<!-- BEGIN .item -->			
+			<div class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic2.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__cat">
+					<a href="#">классика</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Croissanteria Jesus</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Ctra Cala Llonga, Jesus</span></a>
+					<p>Одно из лучших мест для завтрака на Ибице, круассаны из слоеноготеста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйцаи ветчина</p>
+				</div>
+				<div class="item__price">976$</div>
+			</div>	
+			<!-- END .item -->
+			<h2 class="h2">Попутчики</h2>
+			<!-- BEGIN .circle -->
+			<div class="circle">
+				<div class="circle__pic">
+					<a href="#">
+						<img src="img/index_img/pic4.jpg" alt="">
+					</a>					
+				</div>
+				<div class="circle__date">С 23.05.2013 по 29.05.2013</div>
+			</div>
+			<!-- END .circle -->
+			<!-- BEGIN .tape -->
+			<div class="tape tape_mod-1">
+				<div class="tape__title">
+					<a href="#">Россияне тратят в Испании больше всех</a>
+				</div>
+				<div class="tape__user">
+					<a href="#">
+						<img src="img/index_img/user.jpg" alt="">
+						<span>Anarchist17</span>
+					</a>
+				</div>
+				<div class="tape__detail">
+					<span class="tape__comm">33</span>
+				</div>
+			</div>
+			<!-- END .tape -->
+			<div class="navi">
+				<button class="navi__prev"></button>
+				<span>1/5</span>
+				<button class="navi__next"></button>
+			</div>
+		</div>
+		<!-- END .col-1 -->
+		<!-- BEGIN .col-2 -->		
+		<div class="col-2">
+			<h2 class="h2 h2_red">Лента блогов</h2>
+			<!-- BEGIN .col-4 -->
+			<div class="col-4">
+				<div class="date">
+					<span>5 февраля</span>
+				</div>
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<div class="date">
+					<span>5 февраля</span>
+				</div>
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->							
+			</div>
+			<!-- END .col-4 -->
+			<!-- BEGIN .col-5 -->
+			<div class="col-5">
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->	
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<div class="date">
+					<span>5 февраля</span>
+				</div>
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->	
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__title">
+						<a href="#">Россияне тратят в Испании больше всех</a>
+					</div>
+					<div class="tape__user">
+						<a href="#">
+							<img src="img/index_img/user.jpg" alt="">
+							<span>Anarchist17</span>
+						</a>
+					</div>
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+				</div>
+				<!-- END .tape -->
+			</div>
+			<!-- END .col-5 -->		
+			<div class="navi">
+				<button class="navi__prev"></button>
+				<span>1/5</span>
+				<button class="navi__next"></button>					
+			</div>	
+		</div>
+		<!-- END .col-2 -->
+		<!-- BEGIN .col-3 -->		
+		<div class="col-3">
+			<h2 class="h2">виллы</h2>
+			<!-- BEGIN .item -->			
+			<div class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic2.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Croissanteria Jesus</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Ctra Cala Llonga, Jesus</span></a>
+					<p>Одно из лучших мест для завтрака на Ибице, круассаны из слоеноготеста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйцаи ветчина</p>
+				</div>
+				<div class="item__number"><span>кол-во мест: 2</span></div>
+				<div class="item__price">976$</div>
+			</div>	
+			<!-- END .item -->
+			<!-- BEGIN .item -->			
+			<div class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic2.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Croissanteria Jesus</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Ctra Cala Llonga, Jesus</span></a>
+					<p>Одно из лучших мест для завтрака на Ибице, круассаны из слоеноготеста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйцаи ветчина</p>
+				</div>
+				<div class="item__number"><span>кол-во мест: 2</span></div>
+				<div class="item__price">976$</div>
+			</div>	
+			<!-- END .item -->
+			<h2 class="h2">отели</h2>
+			<!-- BEGIN .item -->			
+			<div class="item">
+				<div class="item__pic">
+					<a href="#">
+						<img src="img/index_img/pic2.jpg" alt="">
+					</a>
+				</div>
+				<div class="item__title">
+					<a href="#"><span>Croissanteria Jesus</span></a>
+				</div>
+				<div class="item__rate">
+					<img src="img/index_img/rate.png" alt="">
+				</div>
+				<div class="item__comm">
+					<span>24<img src="img/index_img/rate-s.png" alt=""></span>
+				</div>
+				<div class="item__desc">
+					<a href="#"><span>Ctra Cala Llonga, Jesus</span></a>
+					<p>Одно из лучших мест для завтрака на Ибице, круассаны из слоеноготеста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйцаи ветчина</p>
+				</div>
+				<div class="item__number"><span>кол-во мест: 2</span></div>
+				<div class="item__price">976$</div>
+				<div class="navi">
+					<button class="navi__prev"></button>
+					<span>1/5</span>
+					<button class="navi__next"></button>
+				</div>
+			</div>	
+			<!-- END .item -->
+		</div>
+		<!-- END .col-3 -->
+	</div>
+	<!-- END .cols -->
+	<!-- BEGIN .cols -->
+	<div class="cols-1">		
+		<!-- BEGIN .col-6 -->
+		<div class="col-6">
+			<h2 class="h2 h2_today">18 января, пятница, сегодня</h2>
+			<!-- BEGIN .col-8 -->
+			<div class="col-8">
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я уже неиду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+			</div>
+			<!-- END .col-8 -->	
+			<!-- BEGIN .col-8 -->
+			<div class="col-8">
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic5.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic5.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+			</div>
+			<!-- END .col-8 -->	
+			<!-- BEGIN .col-8 -->
+			<div class="col-8 col-8_mod">
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape tape_mod">
+					<div class="tape__pic">
+						<a href="#">
+							<img src="img/index_img/pic3.jpg" alt="">
+						</a>
+					</div>
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я уже неиду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+				<!-- BEGIN .tape -->				
+				<div class="tape">
+					<div class="tape__cat">
+						<a href="#">Конкурсы</a>
+					</div>
+					<div class="tape__title">
+						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+					</div>				
+					<div class="tape__detail">
+						<span class="tape__comm">33</span>
+						<span class="tape__like">1</span>
+					</div>
+					<div class="tape__people">
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
+					</div>
+					<div class="tape__go">
+						<a href="#">Я пойду</a>
+					</div>
+				</div>
+				<!-- END .tape -->
+			</div>
+			<!-- END .col-8 -->	
+		</div>
+		<!-- END .col-6 -->
+		<!-- BEGIN .col-7 -->
+		<div class="col-7">
+			<!-- BEGIN .afisha -->
+			<div class="afisha">
+				<h2 class="h2">анонс</h2>
+				<ul>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+					<li>
+						<div class="afisha__title">
+							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+						</div>
+						<div class="afisha__detail">
+							<span class="afisha__comm">33</span>
+							<span class="afisha__like">1</span>
+						</div>
+					</li>
+				</ul>
+				<div class="navi">
+					<button class="navi__prev"></button>
+					<span>1/5</span>
+					<button class="navi__next"></button>					
+				</div>
+			</div>
+			<!-- END .afisha -->
+		</div>
+		<!-- END .col-7 -->		
+	</div>
+	<!-- END .cols -->
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<nav class="nav-list">
+			<ul>
+				<li><a class="nav-list__bold" href="#">Гид</a></li>
+				<li><a href="#">Отели и жилье</a></li>
+				<li><a href="#">Диджеи и музыка</a></li>
+				<li><a href="#">Российский центр</a></li>
+				<li><a href="#">Прокат автомобилей</a></li>
+				<li><a href="#">Транспорт</a></li>
+				<li><a href="#">Пляжи</a></li>
+				<li><a href="#">Шоппинг</a></li>
+				<li><a class="nav-list__bold" href="#">Места</a></li>
+				<li><a href="#">Рестораны и бары</a></li>
+				<li><a href="#">Клубы</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Gay Ibiza</a></li>
+				<li><a href="#">Спорт, здоровье, йога</a></li>
+				<li><a href="#">Hippy</a></li>
+				<li><a href="#">Семейный отдых</a></li>
+				<li><a href="#">Праздники и фестивали</a></li>
+				<li><a href="#">Об острове</a></li>
+				<li><a href="#">Форментера</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">SOS!</a></li>
+			</ul>
+			<ul>
+				<li><a class="nav-list__bold" href="#">Карта</a></li>
+				<li><a class="nav-list__bold" href="#">События</a></li>
+				<li><a class="nav-list__bold" href="#">Контактная информация</a></li>
+				<li><a class="nav-list__bold" href="#">Коммьюнити</a></li>
+				<li><a href="#">Форум</a></li>
+				<li><a href="#">Посты/Блоги</a></li>
+				<li><a href="#">Рейтинг пользователей</a></li>
+				<li><a href="#">Профиль пользователя</a></li>
+				<li><a href="#">Попутчики</a></li>
+			</ul>
+		</nav>
+		<div class="footer__contacts">
+			<div class="footer__phone">8 (495) 726 59 21, (926) 779 77 70</div>
+			<div class="footer__mail"><a href="mailto:sovet@ibiza.ru">sovet@ibiza.ru</a></div>
+			<div class="footer__adress">
+				<b>Москва</b>
+				<span>м. Кропоткинская</span>
+				<p>Гоголевский бульвар д.8/9, стр. 3, 2 этаж, оф.1,<br>здание Литературного фонда,<br>понедельник – пятница с 10:00 до 19:00</p>
+			</div>			
+		</div>
+		<div class="footer__right">
+			<div class="footer__payment"></div>
+			<ul class="footer__social">
+				<li><a class="footer__vk" href="#">Вконтакте</a></li>
+				<li><a class="footer__tw" href="#">Twitter</a></li>
+				<li><a class="footer__fb" href="#">Facebook</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- END .footer -->
+</div>
+<!-- END .container -->
 </body>
 </html>

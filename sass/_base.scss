@@ -3,6 +3,7 @@
 @import "lib/keyframes";
 //variables
 $blue: #04aeef;
+$green: #aec365;
 // gradients for ie
 $experimental-support-for-svg: true;
 // global sprites
@@ -13,11 +14,14 @@ $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
 }
 //font
 @font-face {
- 	font-family: 'Futuris';
- 	src: url('../fonts/Futuris-Cyrillic.woff');
+ 	font-family: 'AGFutura';
+ 	src: url('../fonts/AGFutura.woff');
 }
 @font-face {
-	font-family: 'Futuris Bold';
-	src: url('../fonts/Futuris-Bold.woff');
-}
-				
+ 	font-family: 'AGFutura Bold';
+ 	src: url('../fonts/AGFutura.woff');
+}	
+@font-face {
+ 	font-family: 'Futuris';
+ 	src: url('../fonts/Futuris.woff');
+}	
