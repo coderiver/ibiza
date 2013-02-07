@@ -10,6 +10,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/common.js"></script>
 </head>
@@ -82,10 +83,10 @@
 		<!-- END .hot-deals -->		
 		<!-- BEGIN .online -->
 		<form class="online" action="">
-			<ul class="online__nav">
-				<li><a href="#" class="online__tour">Тур</a></li>
-				<li><a href="#" class="online__hotel">Отель</a></li>
-				<li><a href="#" class="online__avia active">Авиабилет</a></li>
+			<ul class="online__type">
+				<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
+				<li><label for="ot2" class="online__hotel">Отель<input id="ot2" type="radio" name="ot"></label></li>
+				<li><label for="ot3" class="online__avia active">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
 			</ul>
 			<div class="online__reserv">
 				<div class="txt-field">
@@ -1002,101 +1003,287 @@
 			<!-- BEGIN .afisha -->
 			<div class="afisha">
 				<h2 class="h2">анонс</h2>
-				<ul>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-					<li>
-						<div class="afisha__title">
-							<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-						</div>
-						<div class="afisha__detail">
-							<span class="afisha__comm">33</span>
-							<span class="afisha__like">1</span>
-						</div>
-					</li>
-				</ul>
+				<div class="slider">
+					<ul>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<span class="afisha__comm">33</span>
+								<span class="afisha__like">1</span>
+							</div>
+						</li>
+					</ul>
+				</div>
 				<div class="navi">
 					<button class="navi__prev"></button>
-					<span>1/5</span>
+					<span></span>
 					<button class="navi__next"></button>					
 				</div>
 			</div>
@@ -1154,7 +1341,13 @@
 			</div>			
 		</div>
 		<div class="footer__right">
-			<div class="footer__payment"></div>
+			<ul class="payment">
+				<li class="payment__ym"></li>
+				<li class="payment__sb"></li>
+				<li class="payment__mk"></li>
+				<li class="payment__wm"></li>
+				<li class="payment__kw"></li>
+			</ul>
 			<ul class="footer__social">
 				<li><a class="footer__vk" href="#">Вконтакте</a></li>
 				<li><a class="footer__tw" href="#">Twitter</a></li>

@@ -112,10 +112,14 @@ button {
 	border-right: 1px solid #3b3b3b;	
 }
 .mail {
-	margin-right: 85px;
+	margin-right: 80px;
 }
 .player {
 	position: relative;
+	width: 270px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	padding-left: 18px;
 	&:before {
 		content: "";
@@ -299,9 +303,18 @@ button {
 	padding-left: 30px;
 	border-left: 1px solid #ececec;
 }
-.footer__payment {
-	@include sized-sprite($index_img, payment);
+.payment {
+	overflow: hidden;
+	li {
+		float: left;
+		margin-right: 15px;
+	}
 }
+.payment__ym {@include sized-sprite($index_img, pm1);}
+.payment__sb {@include sized-sprite($index_img, pm2);}
+.payment__mk {@include sized-sprite($index_img, pm3);}
+.payment__wm {@include sized-sprite($index_img, pm4);}
+.payment__kw {@include sized-sprite($index_img, pm5);}
 .footer__social {
 	padding-top: 20px;
 	border-top: 1px solid #ececec;
@@ -698,4 +711,9 @@ button {
 	font-size: 10px;
 	color: #626262;
 	letter-spacing: 2px;
+}
+//slider
+.slider {
+	position: relative;
+	overflow: hidden;
 }

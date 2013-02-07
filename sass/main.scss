@@ -117,7 +117,7 @@
 		width: 310px;
 	}
 }
-.online__nav {
+.online__type {
 	margin-bottom: 8px;
 	@include box-shadow(rgba(0,0,0,0.36) 0 1px 1px);
 	@include border-radius(3px);
@@ -132,7 +132,7 @@
 			border: none;
 		}
 	}
-	a {
+	label {
 		display: block;
 		height: 34px;
 		line-height: 34px;	
@@ -140,6 +140,8 @@
 		font-family: 'AG_Futura Bold';
 		color: #fff;	
 		text-shadow: 0 1px 1px rgba(97,62,0,0.54);
+		cursor: pointer;
+		@extend %us;
 		&.active {
 			margin-left: -1px;
 			padding-left: 1px;
@@ -148,6 +150,9 @@
 			@include background-image(linear-gradient(#ffcc00, #e99400));
 			@include box-shadow(rgba(74,32,0,0.42) 0 1px 7px inset);
 		}
+	}
+	input {
+		display: none;
 	}
 }
 .online__tour {width: 81px;}
@@ -223,8 +228,9 @@
 		padding: 12px 0;
 		color: #fff;
 	}
-	ul {
+	ul {		
 		border-bottom: 1px solid #82d0ee;
+		background: #01aef0;
 	}
 	li {
 		border-top: 1px solid #82d0ee;

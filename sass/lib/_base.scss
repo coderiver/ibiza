@@ -59,6 +59,12 @@ $break-large: 1180px;
   }
   *zoom: 1;
 }
+// user-select
+%us {
+     -moz-user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
 // placeholder color
 @mixin input-placeholder($color) {
   &.placeholder {
