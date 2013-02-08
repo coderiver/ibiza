@@ -1,6 +1,7 @@
 @import "base";
 /*styles for layouts*/
 .cols {
+	margin-bottom: 60px;
 	overflow: hidden;	
 }
 .cols-1 {
@@ -20,16 +21,13 @@
 	&:before {
 		content: "";
 		position: absolute;
-		top: 20px;
+		top: 35px;
 		left: 15px;
 		right: 15px;
-		bottom: 50px;
+		bottom: 80px;
 		@include box-shadow(rgba(0,0,0,0.15) 0 0 100px);
 		@include border-radius(15px);
 		z-index: -1;
-	}
-	.navi {
-		clear: both;
 	}
 }
 .col-3 {

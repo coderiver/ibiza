@@ -211,6 +211,9 @@ button {
 		text-shadow: rgba(0,0,0,0.56) 0 1px 0;
 	}
 }
+.navi_mod {
+	margin-bottom: 60px;
+}
 .online-title {	
 	position: relative;
 	float: right;
@@ -439,19 +442,27 @@ button {
 		right: 5px;
 		@include sized-sprite($index_img, arr);
 	} 
+	select {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 98px;
+		height: 33px;		
+		cursor: pointer;
+		opacity: 0;
+		z-index: 10;
+	}
 }
 //item
 .item {	
-	margin-bottom: 60px;
+	padding-bottom: 60px;
 	text-align: center;
-	.navi {
-		border-top: 1px solid #ececec;
-	}
 }
 .item__pic {
 	margin-bottom: 5px;
 	img {
 		display: inline-block;
+		min-height: 180px;
 	}
 }
 .item__cat, .item__number {		
@@ -486,6 +497,9 @@ button {
 }
 .item__rate {
 	margin-bottom: 23px;
+	img {
+		min-height: 18px;
+	}
 }
 .item__comm {
 	margin-bottom: 10px;
@@ -551,6 +565,7 @@ button {
 //navi
 .navi {
 	padding: 20px 0;
+	border-top: 1px solid #ececec;
 	text-align: center;	
 	font-size: 0;
 	span {
@@ -560,15 +575,27 @@ button {
 		color: #000;
 	}
 }
+.navi__curr, .navi__total {
+	font-weight: normal;	
+	&.disabled {
+		color: #a2a2a2;
+	}
+}
 .navi__prev {
-	@include sized-sprite($index_img, navi_prev_dis);
+	@include sized-sprite($index_img, navi_prev);
+	&.disabled {
+		@include sized-sprite($index_img, navi_prev_dis);
+	}
 }
 .navi__next {
 	@include sized-sprite($index_img, navi_next);
+	&.disabled {
+		@include sized-sprite($index_img, navi_next_dis);
+	}
 }
 //date
 .date {
-	margin-bottom: 16px;
+	margin-bottom: 15px;
 	text-align: center;
 	span {
 		display: inline-block;
@@ -583,6 +610,7 @@ button {
 }
 //tape
 .tape {
+	display: inline-block;
 	margin-bottom: 45px;
 	text-align: center;
 }
@@ -592,9 +620,7 @@ button {
 	border-bottom: 1px solid #ececec;
 }
 .tape_mod-1 {
-	margin-bottom: 0;
 	padding-bottom: 30px;
-	border-bottom: 1px solid #ececec;
 }
 .tape__cat {
 	margin-bottom: 12px;
@@ -703,6 +729,7 @@ button {
 	}
 }
 .circle__pic {
+	min-height: 138px;
 	margin-bottom: 20px;
 }
 .circle__date {
@@ -715,5 +742,58 @@ button {
 //slider
 .slider {
 	position: relative;
+}
+.slider_mod {
+	.item {
+		padding-bottom: 0px;
+	}		
+}
+.slider__item {
+		height: 1667px;
+}
+.slider_circle {
+	.slider__item {
+		height: 414px;
+	}
+}
+//column
+.slider-middle {
+	position: relative;
+	height: 1633px;
+	padding-bottom: 55px;
+}
+.column-wrap {
+	width: auto;
+	height: 1633px;
 	overflow: hidden;
+}
+.column {
+	position: relative;
+	left: 0;
+	height: 1633px;
+	-webkit-column-width: 290px;
+	   -moz-column-width: 290px;
+		      column-width: 290px;
+	-webkit-column-rule: 1px solid #ececec;
+		 -moz-column-rule: 1px solid #ececec;
+					column-rule: 1px solid #ececec;
+	-webkit-column-gap: 1px;
+		 -moz-column-gap: 1px;
+					column-gap: 1px;
+	.tape {
+		margin: 0 10px 45px 10px;
+	}
+	.date {
+		margin: 0 10px 15px 10px;
+	}
+	.tape_mod {
+		margin: 0 10px 30px 10px;
+	}
+}
+.navi_column {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border: none;
 }
