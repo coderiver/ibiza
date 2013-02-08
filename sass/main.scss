@@ -3,8 +3,9 @@
 //main
 .main {
 	position: relative;	
-	margin-bottom: 55px;
+	margin: 93px 0 55px 0;
 	background: url(../img/index_img/main.jpg) no-repeat 50% 0;
+	background-size: cover;
 	z-index: 10;
 	.container {
 		position: relative;
@@ -24,7 +25,7 @@
 //hot-deals
 .hot-deals {
 	position: absolute;
-	top: 310px;
+	bottom: 150px;
 	left: 0;
 }
 .hot-deals__label {
@@ -37,13 +38,14 @@
 	text-transform: uppercase;
 }
 .hot-deals__desc {
-	overflow: hidden;
+	min-height: 200px;
 }
 .hot-deals__pic {
 	float: left;
 	margin-right: 20px;
 	img {
 		display: block;
+		min-height: 104px;
 		@include border-radius(4px);
 	}	
 }
@@ -84,6 +86,7 @@
 	left: 0;
 	width: 100%;
 	font-size: 0;
+	text-align: center;
 	ul {
 		text-align: center;
 	}
@@ -108,13 +111,19 @@
 .online {
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 50%;
 	width: 310px;
+	margin-left: 273px;
 	padding: 18px 21px 21px 21px;
 	background: url(../img/index_img/online_bg.jpg);
 	@include border-radius(0 0 3px 3px);
 	.btn-orange {
 		width: 310px;
+	}	
+	&.active {
+		position: fixed;
+		top: 93px;
+		z-index: 1000;
 	}
 }
 .online__type {
@@ -173,7 +182,8 @@
 		}
 		input {
 			position: relative;
-			width: 142px;			
+			width: 142px;		
+			line-height: 33px;
 		}		
 		&:first-child {
 			float: left;

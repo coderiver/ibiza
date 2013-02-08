@@ -1,8 +1,8 @@
-@font-face { font-family: 'AGFutura'; src: url("../fonts/AGFutura.woff"); }
+@font-face { font-family: 'AG_Futura'; src: url("../fonts/AG_Futura.woff") format("woff"); }
 
-@font-face { font-family: 'AGFutura Bold'; src: url("../fonts/AGFutura.woff"); }
+@font-face { font-family: 'AG_Futura Bold'; src: url("../fonts/AG_Futura Bold.woff") format("woff"); }
 
-@font-face { font-family: 'Futuris'; src: url("../fonts/Futuris.woff"); }
+@font-face { font-family: 'Futuris'; src: url("../fonts/Futuris.woff") format("woff"); }
 
 /*styles for layouts*/
 .cols { margin-bottom: 60px; overflow: hidden; }

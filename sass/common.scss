@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	background: #fff;
-	font-family: 'AG_Futura';
+	font-family: 'Futuris';
 	line-height: 1;
 }
 ol, ul {
@@ -116,7 +116,6 @@ button {
 }
 .player {
 	position: relative;
-	width: 270px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -133,8 +132,9 @@ button {
 	float: right;
 }
 .user {
+	height: 37px;
 	margin-left: 15px;
-	padding: 8px 0 8px 15px;
+	padding: 7px 0 0 15px;
 	border-left: 1px solid #3b3b3b;
 	a {
 		position: relative;
@@ -158,7 +158,6 @@ button {
 	border-bottom: 1px solid #6b6b6b;
 }
 .search {
-	width: 253px;
 	height: 26px; 
 	margin-top: 9px;
 	background: #fff;
@@ -169,8 +168,12 @@ button {
 	}
 	input {
 		float: left;
-		width: 214px;
-		padding: 0 5px;		
+		width: 112px;
+		padding: 0 5px;
+		@include transition(width, 0.3s, linear);
+		&:focus {
+			width: 224px;
+		}	
 	}
 	button {
 		float: right;
@@ -183,6 +186,14 @@ button {
 }
 //top
 .top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+//nav
+.nav-wrap {
 	position: relative;
 	height: 49px;
 	background: #00b8ff;
@@ -196,7 +207,7 @@ button {
 		float: left;
 		&:first-child {
 			a {
-				padding: 0 10px 0 0;
+				padding: 0 9px 0 0;
 			}			
 		}
 	}
@@ -204,7 +215,7 @@ button {
 		display: block;
 		height: 49px;
 		line-height: 49px;
-		padding: 0 10px;
+		padding: 0 9px;
 		font-family: 'AG_Futura Bold';
 		font-size: 13px;
 		color: #fff;
@@ -217,7 +228,7 @@ button {
 .online-title {	
 	position: relative;
 	float: right;
-	width: 332px;
+	width: 352px;
 	height: 49px;
 	padding-left: 20px;
 	background:url(../img/index_img/online_bg.jpg);	
@@ -244,12 +255,18 @@ button {
 	span {
 		position: relative;
 	}
-}
-.online-close {
-	position: absolute;
-	top: 4px;
-	right: -18px;
-	@include sized-sprite($index_img, close);
+	i {
+		position: absolute;
+		top: 4px;
+		right: -18px;
+		@include sized-sprite($index_img, close);
+	}
+	&.no-active {
+		background: none;
+		i {
+			display: none;
+		}
+	}
 }
 //footer
 .footer {

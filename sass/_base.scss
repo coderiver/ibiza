@@ -14,16 +14,16 @@ $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
 }
 //font
  @font-face {
-  	font-family: 'AGFutura';
-  	src: url('../fonts/AGFutura.woff');
+  	font-family: 'AG_Futura';
+  	src: url('../fonts/AG_Futura.woff') format("woff");
  }
  @font-face {
-  	font-family: 'AGFutura Bold';
-  	src: url('../fonts/AGFutura.woff');
+  	font-family: 'AG_Futura Bold';
+  	src: url('../fonts/AG_Futura Bold.woff') format("woff");
  }	
  @font-face {
   	font-family: 'Futuris';
-  	src: url('../fonts/Futuris.woff');
+  	src: url('../fonts/Futuris.woff') format("woff");
  }	
 
 
