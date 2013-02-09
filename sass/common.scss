@@ -256,15 +256,15 @@ button {
 		position: relative;
 	}
 	i {
+		display: none;
 		position: absolute;
 		top: 4px;
 		right: -18px;
 		@include sized-sprite($index_img, close);
 	}
-	&.no-active {
-		background: none;
+	&.open {
 		i {
-			display: none;
+			display: block;
 		}
 	}
 }
@@ -522,11 +522,15 @@ button {
 	margin-bottom: 10px;
 	span {
 		position: relative;
-		padding: 0 66px 0 22px;
+		padding: 0 66px 0 0;			
+	}
+	a {
+		position: relative;
+		padding-left: 22px;
 		font-family: 'PT Sans', sans-serif;
 		font-size: 12px;
 		font-weight: 700;
-		color: #dfdfdf;
+		color: #dfdfdf;	
 		&:before {
 			content: "";
 			position: absolute;
@@ -537,7 +541,7 @@ button {
 	}
 	img {
 		position: absolute;
-		top: 2px;
+		top: 4px;
 		right: 0;
 	}
 }
@@ -565,8 +569,7 @@ button {
 		}
 	}
 	p {
-		padding: 0 10px;
-		margin: 15px 0;
+		padding: 15px 10px;
 		line-height: 1.3;
 		font-family: 'PT Sans', sans-serif;
 		font-size: 14px;
@@ -690,7 +693,7 @@ button {
 .tape__detail {
 	text-align: center;
 	font-size: 0;
-	span {
+	span, a {
 		position: relative;
 		display: inline-block;
 		height: 14px;

@@ -120,10 +120,14 @@
 	.btn-orange {
 		width: 310px;
 	}	
-	&.active {
+	&.online_fixed {
+		display: none;
 		position: fixed;
 		top: 93px;
 		z-index: 1000;
+	}
+	&.online_abs{
+		display: block !important;		
 	}
 }
 .online__type {
@@ -216,19 +220,38 @@
 		padding: 0 24px;
 	}
 	.item__pic {
-		margin-bottom: 0;
+		margin-bottom: 3px;
 	}
 	.item__title {
+		position: relative;
 		height: 60px;
 		line-height: 60px;
+		overflow: hidden;
 		a {
 			font-size: 18px;
 		}		
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 10px;
+			@include background-image(linear-gradient(rgba(255,255,255,0), #fff));
+		}
 	}
 	.item__desc {
-		height: 150px;
-		p {
-			padding: 0;
+		position: relative;
+		height: 170px;
+		overflow: hidden;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 8px;
+			width: 100%;
+			height: 30px;
+			@include background-image(linear-gradient(rgba(255,255,255,0), #fff 70%))
 		}
 	}
 }
