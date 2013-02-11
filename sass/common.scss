@@ -222,9 +222,6 @@ button {
 		text-shadow: rgba(0,0,0,0.56) 0 1px 0;
 	}
 }
-.navi_mod {
-	margin-bottom: 60px;
-}
 .online-title {	
 	position: relative;
 	float: right;
@@ -594,6 +591,12 @@ button {
 		font-size: 14px;
 		color: #000;
 	}
+}
+.navi_mod {
+	margin-bottom: 60px;
+}
+.navi_no-brd {
+	border: none;
 }
 .navi__curr, .navi__total {
 	font-weight: normal;	

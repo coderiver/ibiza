@@ -4,6 +4,8 @@
 
 @font-face { font-family: 'Futuris'; src: url("../fonts/Futuris.woff") format("woff"); }
 
+@font-face { font-family: 'Futuris Bold'; src: url("../fonts/Futuris Bold.woff") format("woff"); }
+
 * { margin: 0; padding: 0; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
@@ -79,8 +81,6 @@ button { background: none; cursor: pointer; }
 .nav li { float: left; }
 .nav li:first-child a { padding: 0 9px 0 0; }
 .nav a { display: block; height: 49px; line-height: 49px; padding: 0 9px; font-family: 'AG_Futura Bold'; font-size: 13px; color: #fff; text-shadow: rgba(0, 0, 0, 0.56) 0 1px 0; }
-
-.navi_mod { margin-bottom: 60px; }
 
 .online-title { position: relative; float: right; width: 352px; height: 49px; padding-left: 20px; background: url(../img/index_img/online_bg.jpg); line-height: 49px; text-align: left; font-family: 'AG_Futura Bold'; font-size: 13px; color: #fff; text-shadow: rgba(0, 0, 0, 0.56) 0 1px 0; }
 .online-title:after, .online-title:before { content: ""; position: absolute; top: 0; width: 1px; height: 49px; background: rgba(255, 255, 255, 0.3); }
@@ -187,6 +187,10 @@ button { background: none; cursor: pointer; }
 
 .navi { padding: 20px 0; border-top: 1px solid #ececec; text-align: center; font-size: 0; }
 .navi span { padding: 0 20px; font-family: 'AG_Futura Bold'; font-size: 14px; color: #000; }
+
+.navi_mod { margin-bottom: 60px; }
+
+.navi_no-brd { border: none; }
 
 .navi__curr, .navi__total { font-weight: normal; }
 .navi__curr.disabled, .navi__total.disabled { color: #a2a2a2; }

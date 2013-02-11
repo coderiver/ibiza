@@ -8,6 +8,8 @@
 
 @font-face { font-family: 'Futuris'; src: url("../fonts/Futuris.woff") format("woff"); }
 
+@font-face { font-family: 'Futuris Bold'; src: url("../fonts/Futuris Bold.woff") format("woff"); }
+
 .main { position: relative; margin: 93px 0 55px 0; background: url(../img/index_img/main.jpg) no-repeat 50% 0; background-size: cover; z-index: 10; }
 .main .container { position: relative; height: 700px; }
 

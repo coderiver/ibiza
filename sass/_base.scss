@@ -8,6 +8,7 @@ $green: #aec365;
 $experimental-support-for-svg: true;
 // global sprites
 $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
+$hotel_img: sprite-map("hotel_img/icons/*.png", $spacing: 10px);
 //extend
 %block {
 	
@@ -25,5 +26,9 @@ $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
   	font-family: 'Futuris';
   	src: url('../fonts/Futuris.woff') format("woff");
  }	
+  @font-face {
+  	font-family: 'Futuris Bold';
+  	src: url('../fonts/Futuris Bold.woff') format("woff");
+ }
 
 
