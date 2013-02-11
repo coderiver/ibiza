@@ -398,19 +398,6 @@ button {
 	}
 }
 //general
-.btn-orange {
-	height: 41px;
-	background: #ffcc00;
-	@include background-image(linear-gradient(#ffcc00, #e99400));
-	@include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
-	@include border-radius(3px);
-	text-align: center;
-	font-family: 'AG_Futura Bold';
-	font-size: 16px;	
-	color: #fff;	
-	text-shadow: 0 1px 1px rgba(97,62,0,0.54);	
-	cursor: pointer;
-}
 .txt-field {
 	margin-bottom: 20px;
 	font-family: 'Futuris';

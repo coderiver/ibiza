@@ -10,8 +10,13 @@ $experimental-support-for-svg: true;
 $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
 $hotel_img: sprite-map("hotel_img/icons/*.png", $spacing: 10px);
 //extend
-%block {
-	
+%btn-orange {
+  @include background-image(linear-gradient(#ffcc00, #e99400));
+  @include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
+  @include border-radius(3px);
+  color: #fff;  
+  text-shadow: 0 1px 1px rgba(97,62,0,0.54);  
+  cursor: pointer;
 }
 //font
  @font-face {

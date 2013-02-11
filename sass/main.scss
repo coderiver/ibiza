@@ -205,6 +205,13 @@
 		}
 	}
 }
+.online__sbt {
+	width: 310px;
+	height: 41px;
+	font-family: 'AG_Futura Bold';
+	font-size: 16px;	
+	@extend %btn-orange;
+}
 //tours
 .tours {
 	margin-bottom: 10px;

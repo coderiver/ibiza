@@ -2,6 +2,8 @@
 
 .online__type label { -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 
+.online__sbt, .hl-tabs a.active, .hl-search__sbt, .hl-hotels__reserve { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5OTQwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #e99400)); background-image: -webkit-linear-gradient(#ffcc00, #e99400); background-image: -moz-linear-gradient(#ffcc00, #e99400); background-image: -o-linear-gradient(#ffcc00, #e99400); background-image: linear-gradient(#ffcc00, #e99400); -webkit-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -moz-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; color: #fff; text-shadow: 0 1px 1px rgba(97, 62, 0, 0.54); cursor: pointer; }
+
 @font-face { font-family: 'AG_Futura'; src: url("../fonts/AG_Futura.woff") format("woff"); }
 
 @font-face { font-family: 'AG_Futura Bold'; src: url("../fonts/AG_Futura Bold.woff") format("woff"); }
@@ -143,8 +145,6 @@ button { background: none; cursor: pointer; }
 .nav-list a { font-family: 'PT Sans', sans-serif; font-size: 13px; color: #0c0c0c; }
 .nav-list .nav-list__bold { font-family: 'AG_Futura Bold'; font-size: 14px; color: #000; line-height: 1.3; }
 
-.btn-orange { height: 41px; background: #ffcc00; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5OTQwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #e99400)); background-image: -webkit-linear-gradient(#ffcc00, #e99400); background-image: -moz-linear-gradient(#ffcc00, #e99400); background-image: -o-linear-gradient(#ffcc00, #e99400); background-image: linear-gradient(#ffcc00, #e99400); -webkit-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -moz-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; text-align: center; font-family: 'AG_Futura Bold'; font-size: 16px; color: #fff; text-shadow: 0 1px 1px rgba(97, 62, 0, 0.54); cursor: pointer; }
-
 .txt-field { margin-bottom: 20px; font-family: 'Futuris'; }
 .txt-field label { display: block; margin-bottom: 4px; font-size: 14px; color: #fff; }
 .txt-field input { width: 300px; height: 33px; padding: 0 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-family: 'Futuris'; font-size: 16px; color: #9a9a9a; }
@@ -273,6 +273,8 @@ button { background: none; cursor: pointer; }
 
 .online__type label { -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 
+.online__sbt, .hl-tabs a.active, .hl-search__sbt, .hl-hotels__reserve { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5OTQwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #e99400)); background-image: -webkit-linear-gradient(#ffcc00, #e99400); background-image: -moz-linear-gradient(#ffcc00, #e99400); background-image: -o-linear-gradient(#ffcc00, #e99400); background-image: linear-gradient(#ffcc00, #e99400); -webkit-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -moz-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; color: #fff; text-shadow: 0 1px 1px rgba(97, 62, 0, 0.54); cursor: pointer; }
+
 @font-face { font-family: 'AG_Futura'; src: url("../fonts/AG_Futura.woff") format("woff"); }
 
 @font-face { font-family: 'AG_Futura Bold'; src: url("../fonts/AG_Futura Bold.woff") format("woff"); }
@@ -310,6 +312,8 @@ button { background: none; cursor: pointer; }
 .logo a { font: 0/0 a; text-shadow: none; color: transparent; }
 
 .online__type label { -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+
+.online__sbt, .hl-tabs a.active, .hl-search__sbt, .hl-hotels__reserve { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5OTQwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #e99400)); background-image: -webkit-linear-gradient(#ffcc00, #e99400); background-image: -moz-linear-gradient(#ffcc00, #e99400); background-image: -o-linear-gradient(#ffcc00, #e99400); background-image: linear-gradient(#ffcc00, #e99400); -webkit-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -moz-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; color: #fff; text-shadow: 0 1px 1px rgba(97, 62, 0, 0.54); cursor: pointer; }
 
 @font-face { font-family: 'AG_Futura'; src: url("../fonts/AG_Futura.woff") format("woff"); }
 
@@ -380,6 +384,8 @@ button { background: none; cursor: pointer; }
 .online__people .select { float: left; margin-left: 8px; }
 .online__people .select:first-child { margin-left: 0px; }
 
+.online__sbt { width: 310px; height: 41px; font-family: 'AG_Futura Bold'; font-size: 16px; }
+
 .tours { margin-bottom: 10px; }
 .tours ul { padding-bottom: 60px; overflow: hidden; }
 .tours li { float: left; }
@@ -415,6 +421,8 @@ button { background: none; cursor: pointer; }
 
 .online__type label { -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 
+.online__sbt, .hl-tabs a.active, .hl-search__sbt, .hl-hotels__reserve { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5OTQwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #e99400)); background-image: -webkit-linear-gradient(#ffcc00, #e99400); background-image: -moz-linear-gradient(#ffcc00, #e99400); background-image: -o-linear-gradient(#ffcc00, #e99400); background-image: linear-gradient(#ffcc00, #e99400); -webkit-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -moz-box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; box-shadow: rgba(0, 0, 0, 0.38) 0 1px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; color: #fff; text-shadow: 0 1px 1px rgba(97, 62, 0, 0.54); cursor: pointer; }
+
 @font-face { font-family: 'AG_Futura'; src: url("../fonts/AG_Futura.woff") format("woff"); }
 
 @font-face { font-family: 'AG_Futura Bold'; src: url("../fonts/AG_Futura Bold.woff") format("woff"); }
@@ -428,21 +436,73 @@ button { background: none; cursor: pointer; }
 .hl-title { position: relative; height: 170px; line-height: 170px; text-align: center; }
 .hl-title span { font-family: 'AG_Futura Bold'; font-size: 48px; }
 .hl-title .logo { top: 34px; }
-.hl-title .logo a { background: url('../img/hotel_img/icons-se07afadd46.png') 0 0 no-repeat; width: 187px; height: 98px; }
+.hl-title .logo a { background: url('../img/hotel_img/icons-s8c7317533d.png') 0 0 no-repeat; width: 187px; height: 98px; }
 
 .hl-tabs { margin-bottom: 30px; text-align: center; font-size: 0; }
-.hl-tabs li { display: inline-block; padding: 0 15px; }
-.hl-tabs a { display: block; height: 30px; padding: 0 10px; line-height: 30px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; font-family: 'Futuris Bold'; font-size: 16px; color: #000; }
-.hl-tabs a.active { background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5OTQwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffcc00), color-stop(100%, #e99400)); background-image: -webkit-linear-gradient(#ffcc00, #e99400); background-image: -moz-linear-gradient(#ffcc00, #e99400); background-image: -o-linear-gradient(#ffcc00, #e99400); background-image: linear-gradient(#ffcc00, #e99400); border-bottom: 1px solid #9e9e9e; color: #fff; }
+.hl-tabs li { display: inline-block; height: 30px; padding: 0 15px; }
+.hl-tabs a { display: block; height: 30px; padding: 0 10px; line-height: 30px; font-family: 'Futuris Bold'; font-size: 16px; color: #000; }
+.hl-tabs a.active { text-shadow: none; }
 .hl-tabs a.active span { border-bottom: none; }
 .hl-tabs span { border-bottom: 1px dotted #000; }
 
-.hl-slider { position: relative; }
-.hl-slider ul { overflow: hidden; }
+.hl-tabs_sort { margin: 35px 0 30px 0; }
+.hl-tabs_sort li:first-child { height: 30px; line-height: 30px; font-family: 'Futuris'; font-size: 18px; }
+
+.hl-slider ul { width: 1250px; height: 370px; }
 .hl-slider li { position: relative; float: left; margin-left: 25px; }
 .hl-slider li:first-child { margin-left: 0; }
 .hl-slider img { display: block; }
 
-.hl-slider__desc { position: absolute; top: 170px; left: 0; width: 100%; text-align: center; }
-.hl-slider__desc span { display: block; font-family: 'Futuris Bold'; font-size: 30px; color: #fff; }
-.hl-slider__desc img { display: inline-block; }
+.hl-slider__desc, .hl-hotels__desc { position: absolute; top: 170px; left: 0; width: 100%; text-align: center; }
+.hl-slider__desc span, .hl-hotels__desc span { display: block; margin-bottom: 3px; font-family: 'Futuris Bold'; font-size: 30px; color: #fff; }
+.hl-slider__desc img, .hl-hotels__desc img { display: inline-block; }
+
+.hl-search .h2 { padding: 55px 0 20px 0; font-family: "Futuris"; letter-spacing: 2px; }
+.hl-search form { padding: 25px 0 25px 215px; border: 1px solid #e6e6e6; border-width: 1px 0 1px 0; overflow: hidden; }
+
+.hl-search__place, .hl-search__people, .hl-search__date, .hl-search__submit { float: left; margin-right: 15px; }
+.hl-search__place label, .hl-search__people label, .hl-search__date label, .hl-search__submit label { display: block; margin-bottom: 5px; font-family: 'Futuris Bold'; font-size: 14px; }
+.hl-search__place input, .hl-search__place span, .hl-search__people input, .hl-search__people span, .hl-search__date input, .hl-search__date span, .hl-search__submit input, .hl-search__submit span { height: 37px; padding: 0 5px; border: 1px solid #e6e6e6; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; background: #f8f8f8; }
+
+.hl-search__place input { width: 330px; }
+
+.hl-search__people span { position: relative; display: block; width: 134px; cursor: pointer; }
+.hl-search__people span:after { content: ""; position: absolute; top: 14px; right: 9px; background: url('../img/hotel_img/icons-s8c7317533d.png') 0 -162px no-repeat; width: 13px; height: 11px; }
+
+.hl-search__date { position: relative; }
+.hl-search__date:after { content: ""; position: absolute; top: 29px; right: 8px; background: url('../img/hotel_img/icons-s8c7317533d.png') 0 -183px no-repeat; width: 18px; height: 18px; }
+.hl-search__date input { width: 138px; }
+
+.hl-search__sbt { height: 39px; padding: 0 25px; margin-top: 19px; font-family: 'Futuris Bold'; font-size: 18px; }
+
+.hl-search__options { margin-top: 20px; clear: both; }
+.hl-search__options span { position: relative; padding-right: 20px; font-family: 'Futuris Bold'; font-size: 14px; cursor: pointer; }
+.hl-search__options span:after { content: ""; position: absolute; top: 4px; right: 0; background: url('../img/hotel_img/icons-s8c7317533d.png') 0 -162px no-repeat; width: 13px; height: 11px; }
+
+.hl-hotels { overflow: hidden; }
+.hl-hotels ul { padding-bottom: 38px; margin: 0 -30px 44px 0; border-bottom: 1px solid #e6e6e6; overflow: hidden; }
+.hl-hotels ul:last-child { border: none; }
+.hl-hotels li { float: left; width: 400px; margin-right: 25px; }
+.hl-hotels p { position: relative; height: 60px; font-size: 18px; }
+
+.hl-hotels__pic { position: relative; margin-bottom: 18px; }
+.hl-hotels__pic img { display: block; }
+
+.hl-hotels__desc img { display: inline-block; }
+
+.hl-hitels__map { position: relative; display: block; margin-bottom: 18px; padding-left: 20px; font-size: 12px; text-transform: uppercase; color: #000; }
+.hl-hitels__map:after { content: ""; position: absolute; top: -2px; left: 0; background: url('../img/hotel_img/icons-s8c7317533d.png') 0 -136px no-repeat; width: 10px; height: 16px; }
+
+.hl-hotels__detail { overflow: hidden; }
+
+.hl-hotels__comm, .hl-hotels__rate { float: left; height: 41px; line-height: 41px; }
+
+.hl-hotels__comm { position: relative; width: 42px; padding-left: 22px; font-size: 12px; color: #000; }
+.hl-hotels__comm:before { content: ""; position: absolute; top: 14px; left: 0; background: url('../img/hotel_img/icons-s8c7317533d.png') 0 -211px no-repeat; width: 16px; height: 14px; }
+
+.hl-hotels__rate { width: 120px; }
+.hl-hotels__rate img { display: block; margin-top: 10px; }
+
+.hl-hotels__eval { float: left; margin-top: 10px; background: url('../img/hotel_img/icons-s8c7317533d.png') 0 -108px no-repeat; width: 16px; height: 18px; }
+
+.hl-hotels__reserve { float: right; height: 41px; padding: 0 20px; line-height: 41px; font-family: 'Futuris Bold'; font-size: 18px; }

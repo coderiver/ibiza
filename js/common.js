@@ -123,18 +123,6 @@ $('.select__value select').change(function() {
 	$(this).prev().html(select_option);
 });
 
-//cycle
-if ($('.hl-slider').length > 0) {
-	$('.hl-slider').cycle({ 
-	  fx:     'scrollHorz', 
-		speed:  'fast', 
-		timeout: 0, 
-		wrap: false,
-	  next: '.hl-slider__next', 
-	  prev: '.hl-slider__prev'
-	});
-};
-
 });
 
 //windows scroll
