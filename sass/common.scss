@@ -90,137 +90,41 @@ button {
 }
 //header
 .header {
-	position: relative;
-	background: #282828;
-	@include background-image(linear-gradient(#282828, #101010));
-	@include box-shadow(rgba(0,0,0,0.36) 0 2px 5px);
-	z-index: 30;
 	.container {
-		height: 44px;
+		height: 66px;
+		padding-left: 180px;	
 	}
 }
-.phone, .mail, .player {
-	float: left;
-	height: 44px;
-	line-height: 44px;
-	font-size: 14px;
-	color: #fff;
+.phone, .mail, .search {
+	float: left;	
+	font-family: Arial, sans-serif;
 }
 .phone {
-	padding-right: 15px;
-	margin-right: 15px;
-	border-right: 1px solid #3b3b3b;	
+	width: 165px;
+	font-size: 17px;
+	color: #666;
+	span {
+		font-size: 13px;
+		font-weight: bold;
+		color: #000;
+	}
 }
 .mail {
-	margin-right: 80px;
-}
-.player {
-	position: relative;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	padding-left: 18px;
-	&:before {
-		content: "";
-		position: absolute;
-		top: 15px;
-		left: 0;
-		@include sized-sprite($index_img, play);
-	}
-}
-.user, .search {
-	float: right;
-}
-.user {
-	height: 37px;
-	margin-left: 15px;
-	padding: 7px 0 0 15px;
-	border-left: 1px solid #3b3b3b;
+	width: 147px;
 	a {
-		position: relative;
-		color: #fff;
+		font-size: 16px;
+		color: #666;
 	}	
-}
-.user__pic {
-	float: left;
-	margin-right: 10px;
-}
-.user__out, .user__name {
-	float: left;
-	padding: 3px 0 1px 0;
-}
-.user__out {
-	
-	border-bottom: 1px dashed #a4a4a4;
-}
-.user__name {
-	margin-right: 10px;
-	border-bottom: 1px solid #6b6b6b;
+	span {
+		font-weight: bold;
+		color: #000;
+	}
 }
 .search {
-	height: 26px; 
-	margin-top: 9px;
-	background: #fff;
-	@include border-radius(3px);
-	input, button {
-		height: 26px;
-		background: none;
-	}
-	input {
-		float: left;
-		width: 112px;
-		padding: 0 5px;
-		@include transition(width, 0.3s, linear);
-		&:focus {
-			width: 224px;
-		}	
-	}
-	button {
-		float: right;
-		padding: 0 7px;		
-	}
-	i {
-		display: block;
-		@include sized-sprite($index_img, search);
-	}
-}
-//top
-.top {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000;
-}
-//nav
-.nav-wrap {
-	position: relative;
-	height: 49px;
-	background: #00b8ff;
-	@include background-image(linear-gradient(#00b8ff, #02a9e9));
-	@include box-shadow(rgba(0,0,0,0.36) 0 2px 5px);
-	z-index: 20;
-}
-.nav {
-	float: left;
-	li {
-		float: left;
-		&:first-child {
-			a {
-				padding: 0 9px 0 0;
-			}			
-		}
-	}
-	a {
-		display: block;
-		height: 49px;
-		line-height: 49px;
-		padding: 0 9px;
-		font-family: 'AG_Futura Bold';
-		font-size: 13px;
-		color: #fff;
-		text-shadow: rgba(0,0,0,0.56) 0 1px 0;
-	}
+	width: 165px;
+	height: 24px;
+	padding-left: 10px;
+	border: 1px solid #e8e8e8;
 }
 .online-title {	
 	position: relative;

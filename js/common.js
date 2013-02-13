@@ -118,10 +118,27 @@ slider_middle();
 $('.js-dp').datepicker();
 
 //select
-$('.select__value select').change(function() {
+$('.js-select select').change(function() {
 	var select_option = $(this).children(':selected').val();
 	$(this).prev().html(select_option);
 });
+
+//options
+$('.hl-search__options span').click(function() {
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+		$(this).next().slideUp();
+	}
+	else {
+		$(this).addClass('active');
+		$(this).next().slideDown();
+	}	
+});
+
+//lazy load
+$('.js-load-pic img').lazyload({
+     effect : 'fadeIn'
+ });
 
 });
 

@@ -15,6 +15,7 @@
 	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>	
+	<script src="js/jquery.lazyload.min.js"></script>	
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -69,12 +70,12 @@
 <!-- BEGIN .container -->
 <section class="container container_inner">
 	<!-- BEGIN .hl-title -->
-	<div class="hl-title">
+	<h1 class="hl-title">
 		<span>Отели</span>
-		<h1 class="logo">
+		<div class="logo">
 			<a href="#">IBIZA.ru</a>
-		</h1>
-	</div>
+		</div>
+	</h1>
 	<!-- END .hl-title -->
 	<!-- BEGIN .hl-tabs -->
 	<ul class="hl-tabs">
@@ -187,9 +188,15 @@
 				<label for="hl-s1">Название отеля/место</label>
 				<input id="hl-s1" type="text">
 			</div>
-			<div class="hl-search__people">
+			<div class="hl-search__people js-select">
 				<label>Количество человек</label>
-				<span></span>
+				<span>1</span>
+				<select>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
 			</div>
 			<div class="hl-search__date">
 				<label for="hl-s2">Даты заезда</label>
@@ -198,6 +205,36 @@
 			<input class="hl-search__sbt" type="submit" value="Найти">
 			<div class="hl-search__options">
 				<span>Дополнительные опции</span>
+				<ul>
+					<li>
+						<label for="hl-so1"><input id="hl-so1" type="checkbox">Чекбокс</label>
+					</li>
+					<li>
+						<label for="hl-so2"><input id="hl-so2" type="checkbox">Чекбокс</label>
+					</li>
+					<li>
+						<select>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+						</select>
+					</li>
+					<li>
+						<select>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+							<option value="">Селект</option>
+						</select>
+					</li>
+				</ul>
 			</div>
 		</form>
 	</div>
@@ -214,7 +251,7 @@
 	<div class="hl-hotels">
 		<ul>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -228,14 +265,18 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
-					<div class="hl-hotels__eval"></div>
+					<a href="#" class="hl-hotels__eval"></a>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -249,13 +290,17 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -269,16 +314,20 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
-					<div class="hl-hotels__eval"></div>
+					<a href="#" class="hl-hotels__eval"></a>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>
 		</ul>
 		<ul>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -292,14 +341,18 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
-					<div class="hl-hotels__eval"></div>
+					<a href="#" class="hl-hotels__eval"></a>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -313,13 +366,17 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -333,16 +390,20 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
-					<div class="hl-hotels__eval"></div>
+					<a href="#" class="hl-hotels__eval"></a>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>
 		</ul>
 		<ul>
 			<li>			
-				<div class="hl-hotels__pic">
+				<div class="hl-hotels__pic js-load-pic">
 					<a href="#">
 						<img src="img/hotel_img/pic1.jpg" alt="">
 						<div class="hl-hotels__desc">
@@ -356,9 +417,13 @@
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
 					<div class="hl-hotels__rate">
-						<img src="img/hotel_img/rate-b.png" alt="">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
 					</div>
-					<div class="hl-hotels__eval"></div>
+					<a href="#" class="hl-hotels__eval"></a>
 					<a class="hl-hotels__reserve" href="#">Бронировать</a>
 				</div>
 			</li>

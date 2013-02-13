@@ -15,186 +15,25 @@
 	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>	
+	<script src="js/jquery.lazyload.min.js"></script>		
 	<script src="js/common.js"></script>
 </head>
 <body>
-<!-- BEGIN .top -->
-<section class="top">
-	<!-- BEGIN .header -->
-	<header class="header">
-		<div class="container">
-			<span class="phone">8 (495) 726 59 21</span>
-			<a class="mail" href="mailto:noexali@ibiza.ru">noexali@ibiza.ru</a>
-			<a href="#" class="player">Радио</a>
-			<div class="user">
-				<div class="user__pic">
-					<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-				</div>
-				<a class="user__name" href="#">Константин Контантинопольский</a>
-				<a class="user__out" href="#">Выйти</a>
-			</div>		
-			<form action="" class="search">
-				<input type="text" placeholder="Поиск">
-				<button><i></i></button>
-			</form>
-		</div>
-	</header>
-	<!-- END .header -->
-	<!-- BEGIN .nav -->
-	<div class="nav-wrap">
-		<div class="container">
-			<nav class="nav">
-				<ul>
-					<li><a href="#">Коммьюнити</a></li>
-					<li><a href="#">Места</a></li>
-					<li><a href="#">Гид</a></li>
-					<li><a href="#">Карта</a></li>
-					<li><a href="#">События</a></li>
-					<li><a href="#">Отели</a></li>
-					<li><a href="#">Пляжи</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">SOS!</a></li>
-					<li><a href="#">Попутчики</a></li>
-					<li><a href="#">Контактная информация</a></li>			
-				</ul>
-			</nav>
-			<button class="online-title">
-				<span>Онлайн бронирование<i></i></span>			
-			</button>
-		</div>
-	</div>
-	<!-- END .nav -->
-</section>
-<!-- END .top -->
-<!-- BEGIN .main -->
-<section class="main">
-	<div class="container">		
-		<h1 class="logo">
-			<a href="#">IBIZA.ru</a>
-		</h1>
-		<!-- BEGIN .hot-deals -->
-		<div class="hot-deals">
-			<button class="hot-deals__prev"></button>		
-			<button class="hot-deals__next"></button>	
-			<div class="hot-deals__label">Горячее предложение</div>
-			<div class="hot-deals__slider">
-				<div class="hot-deals__desc">
-					<div class="hot-deals__pic">
-						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
-					</div>
-					<div class="hot-deals__title">
-						<a href="#">Ultra Music Festival в Майами</a> 
-						<span>17-26 марта, $ 2 100</span>
-					</div>
-				</div>
-				<div class="hot-deals__desc">
-					<div class="hot-deals__pic">
-						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
-					</div>
-					<div class="hot-deals__title">
-						<a href="#">Festival in New York в Майами</a> 
-						<span>13-29 марта, $ 2 100</span>
-					</div>
-				</div>
-				<div class="hot-deals__desc">
-					<div class="hot-deals__pic">
-						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
-					</div>
-					<div class="hot-deals__title">
-						<a href="#">Beer Festival in Berlin в Майами</a> 
-						<span>17-26 марта, $ 2 100</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END .hot-deals -->		
-		<!-- BEGIN .online -->
-		<form class="online" action="">
-			<ul class="online__type">
-				<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
-				<li><label for="ot2" class="online__hotel">Отель<input id="ot2" type="radio" name="ot"></label></li>
-				<li><label for="ot3" class="online__avia active">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
-			</ul>
-			<div class="online__reserv">
-				<div class="txt-field">
-					<label for="on1">Лечу из</label>
-					<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
-				</div>
-				<div class="txt-field">
-					<label for="on2">Пункт назначения</label>
-					<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
-				</div>
-				<div class="online__date">
-					<div class="txt-field">
-						<label for="on3">Вылетаю</label>
-						<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
-					</div>
-					<div class="txt-field">
-						<label for="on4">Возвращаюсь</label>
-						<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
-					</div>
-				</div>
-				<div class="online__people">
-					<div class="select">
-						<div class="select__title">Взрослые</div>
-						<div class="select__value">
-							<span>1</span>
-							<select>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-							</select>
-						</div>
-					</div>
-					<div class="select">
-						<div class="select__title">Дети</div>
-						<div class="select__value">
-							<span>2</span>
-							<select>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-							</select>
-						</div>
-					</div>
-					<div class="select">
-						<div class="select__title">Номера</div>
-						<div class="select__value">
-							<span>3</span>
-							<select>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-			<input class="online__sbt" type="submit">
+<!-- BEGIN .header -->
+<header class="header">
+	<div class="container">
+		<div class="phone"><span>8 (495)</span> 726 59 21</div>
+		<div class="mail"><a href="mailto:go@ibiza.ru"><span>go</span>@ibiza.ru</a></div>
+		<form class="search" action="">
+			<input type="text" placeholder="Поиск">
+			<button><i></i></button>
 		</form>
-		<!-- END .online -->
-		<!-- BEGIN .menu -->
-		<ul class="menu">
-			<li><a href="#">Коммьюнити</a></li>
-			<li><a href="#">Гид по Ибице</a></li>
-			<li><a href="#">Места и события</a></li>
-		</ul>
-		<!-- END .menu -->
-	</section>
-</section>
-<!-- END .main -->
+		<a class="exlusive" href="#"></a>
+		<div class="radio"></div>
+		<div class="enter"></div>
+	</div>
+</header>
+<!-- END .header -->
 <!-- BEGIN .container -->
 <section class="container">
 	<!-- BEGIN .tours -->
@@ -202,7 +41,7 @@
 		<h2 class="h2">каталог готовых туров</h2>
 		<ul>
 			<li class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic1.jpg" alt="">
 					</a>
@@ -223,7 +62,7 @@
 				<div class="item__price">1000$</div>
 			</li>
 			<li class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic1.jpg" alt="">
 					</a>
@@ -244,7 +83,7 @@
 				<div class="item__price">976$</div>
 			</li>
 			<li class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic1.jpg" alt="">
 					</a>
@@ -265,7 +104,7 @@
 				<div class="item__price">1000$</div>
 			</li>
 			<li class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic1.jpg" alt="">
 					</a>
@@ -286,7 +125,7 @@
 				<div class="item__price">976$</div>
 			</li>
 			<li class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic1.jpg" alt="">
 					</a>
@@ -307,7 +146,7 @@
 				<div class="item__price">1000$</div>
 			</li>
 			<li class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic1.jpg" alt="">
 					</a>
@@ -339,7 +178,7 @@
 			<div class="slider slider_mod">
 				<!-- BEGIN .item -->	
 				<div class="item">
-					<div class="item__pic">
+					<div class="item__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic2.jpg" width="290" height="180" alt="">
 						</a>
@@ -365,7 +204,7 @@
 				<!-- END .item -->
 				<!-- BEGIN .item -->	
 				<div class="item">
-					<div class="item__pic">
+					<div class="item__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic2.jpg" alt="">
 						</a>
@@ -391,7 +230,7 @@
 				<!-- END .item -->
 				<!-- BEGIN .item -->	
 				<div class="item">
-					<div class="item__pic">
+					<div class="item__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic2.jpg" alt="">
 						</a>
@@ -425,7 +264,7 @@
 			<h2 class="h2">Бары и Клубы</h2>
 			<!-- BEGIN .item -->			
 			<div class="item">
-				<div class="item__pic">
+				<div class="item__pic js-load-pic">
 					<a href="#">
 						<img src="img/index_img/pic2.jpg" alt="">
 					</a>
@@ -455,7 +294,7 @@
 				<div class="slider__item">
 					<!-- BEGIN .circle -->
 					<div class="circle">
-						<div class="circle__pic">
+						<div class="circle__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic4.jpg" alt="">
 							</a>					
@@ -483,7 +322,7 @@
 				<div class="slider__item">
 					<!-- BEGIN .circle -->
 					<div class="circle">
-						<div class="circle__pic">
+						<div class="circle__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic4.jpg" alt="">
 							</a>					
@@ -511,7 +350,7 @@
 				<div class="slider__item">
 					<!-- BEGIN .circle -->
 					<div class="circle">
-						<div class="circle__pic">
+						<div class="circle__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic4.jpg" alt="">
 							</a>					
@@ -558,7 +397,7 @@
 						</div>
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -574,7 +413,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -591,13 +430,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -613,13 +452,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape tape_mod">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -635,7 +474,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -655,7 +494,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -672,7 +511,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->							
@@ -689,13 +528,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -711,7 +550,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->	
@@ -728,7 +567,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -745,7 +584,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -762,7 +601,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -771,7 +610,7 @@
 						</div>
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -787,7 +626,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->	
@@ -804,7 +643,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -821,7 +660,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -830,7 +669,7 @@
 						</div>
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -846,7 +685,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -863,13 +702,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -885,13 +724,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape tape_mod">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -907,7 +746,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -927,7 +766,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -944,7 +783,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->							
@@ -961,13 +800,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -983,7 +822,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->	
@@ -1000,7 +839,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1017,7 +856,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1034,7 +873,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1043,7 +882,7 @@
 						</div>
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1059,7 +898,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->	
@@ -1076,7 +915,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1093,7 +932,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1102,7 +941,7 @@
 						</div>
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1118,7 +957,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1135,13 +974,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1157,13 +996,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape tape_mod">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1179,7 +1018,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1199,7 +1038,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1216,7 +1055,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->							
@@ -1233,7 +1072,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1242,7 +1081,7 @@
 						</div>
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1258,7 +1097,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1275,13 +1114,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1297,13 +1136,13 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
 						<!-- BEGIN .tape -->				
 						<div class="tape tape_mod">
-							<div class="tape__pic">
+							<div class="tape__pic js-load-pic">
 								<a href="#">
 									<img src="img/index_img/pic3.jpg" alt="">
 								</a>
@@ -1319,7 +1158,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1339,7 +1178,7 @@
 							</div>
 							<div class="tape__detail">
 								<a href="#" class="tape__comm">33</a>
-								<span class="tape__like">1</span>
+								<a href="#" class="tape__like">1</a>
 							</div>
 						</div>
 						<!-- END .tape -->
@@ -1366,7 +1205,7 @@
 					<h2 class="h2">виллы</h2>
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1390,7 +1229,7 @@
 					<!-- END .item -->
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1415,7 +1254,7 @@
 					<h2 class="h2">отели</h2>
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1442,7 +1281,7 @@
 					<h2 class="h2">виллы</h2>
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1466,7 +1305,7 @@
 					<!-- END .item -->
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1491,7 +1330,7 @@
 					<h2 class="h2">отели</h2>
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1518,7 +1357,7 @@
 					<h2 class="h2">виллы</h2>
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1542,7 +1381,7 @@
 					<!-- END .item -->
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1567,7 +1406,7 @@
 					<h2 class="h2">отели</h2>
 					<!-- BEGIN .item -->			
 					<div class="item">
-						<div class="item__pic">
+						<div class="item__pic js-load-pic">
 							<a href="#">
 								<img src="img/index_img/pic2.jpg" alt="">
 							</a>
@@ -1610,7 +1449,7 @@
 			<div class="col-8">
 				<!-- BEGIN .tape -->				
 				<div class="tape tape_mod">
-					<div class="tape__pic">
+					<div class="tape__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic3.jpg" alt="">
 						</a>
@@ -1623,7 +1462,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1638,7 +1477,7 @@
 				<!-- END .tape -->
 				<!-- BEGIN .tape -->				
 				<div class="tape tape_mod">
-					<div class="tape__pic">
+					<div class="tape__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic3.jpg" alt="">
 						</a>
@@ -1651,7 +1490,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1674,7 +1513,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1693,7 +1532,7 @@
 			<div class="col-8">
 				<!-- BEGIN .tape -->				
 				<div class="tape tape_mod">
-					<div class="tape__pic">
+					<div class="tape__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic5.jpg" alt="">
 						</a>
@@ -1706,7 +1545,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1729,7 +1568,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1744,7 +1583,7 @@
 				<!-- END .tape -->
 				<!-- BEGIN .tape -->				
 				<div class="tape">
-					<div class="tape__pic">
+					<div class="tape__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic5.jpg" alt="">
 						</a>
@@ -1757,7 +1596,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1776,7 +1615,7 @@
 			<div class="col-8 col-8_mod">
 				<!-- BEGIN .tape -->				
 				<div class="tape tape_mod">
-					<div class="tape__pic">
+					<div class="tape__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic3.jpg" alt="">
 						</a>
@@ -1789,7 +1628,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1804,7 +1643,7 @@
 				<!-- END .tape -->
 				<!-- BEGIN .tape -->				
 				<div class="tape tape_mod">
-					<div class="tape__pic">
+					<div class="tape__pic js-load-pic">
 						<a href="#">
 							<img src="img/index_img/pic3.jpg" alt="">
 						</a>
@@ -1817,7 +1656,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -1840,7 +1679,7 @@
 					</div>				
 					<div class="tape__detail">
 						<a href="#" class="tape__comm">33</a>
-						<span class="tape__like">1</span>
+						<a href="#" class="tape__like">1</a>
 					</div>
 					<div class="tape__people">
 						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
@@ -2219,3 +2058,134 @@
 <!-- END .container -->
 </body>
 </html>
+
+
+<!-- BEGIN .main -->
+<section class="main">
+	<div class="container">		
+		<h1 class="logo">
+			<a href="#">IBIZA.ru</a>
+		</h1>
+		<!-- BEGIN .hot-deals -->
+		<div class="hot-deals">
+			<button class="hot-deals__prev"></button>		
+			<button class="hot-deals__next"></button>	
+			<div class="hot-deals__label">Горячее предложение</div>
+			<div class="hot-deals__slider">
+				<div class="hot-deals__desc">
+					<div class="hot-deals__pic">
+						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
+					</div>
+					<div class="hot-deals__title">
+						<a href="#">Ultra Music Festival в Майами</a> 
+						<span>17-26 марта, $ 2 100</span>
+					</div>
+				</div>
+				<div class="hot-deals__desc">
+					<div class="hot-deals__pic">
+						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
+					</div>
+					<div class="hot-deals__title">
+						<a href="#">Festival in New York в Майами</a> 
+						<span>13-29 марта, $ 2 100</span>
+					</div>
+				</div>
+				<div class="hot-deals__desc">
+					<div class="hot-deals__pic">
+						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
+					</div>
+					<div class="hot-deals__title">
+						<a href="#">Beer Festival in Berlin в Майами</a> 
+						<span>17-26 марта, $ 2 100</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END .hot-deals -->		
+		<!-- BEGIN .online -->
+		<form class="online" action="">
+			<ul class="online__type">
+				<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
+				<li><label for="ot2" class="online__hotel">Отель<input id="ot2" type="radio" name="ot"></label></li>
+				<li><label for="ot3" class="online__avia active">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
+			</ul>
+			<div class="online__reserv">
+				<div class="txt-field">
+					<label for="on1">Лечу из</label>
+					<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
+				</div>
+				<div class="txt-field">
+					<label for="on2">Пункт назначения</label>
+					<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
+				</div>
+				<div class="online__date">
+					<div class="txt-field">
+						<label for="on3">Вылетаю</label>
+						<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
+					</div>
+					<div class="txt-field">
+						<label for="on4">Возвращаюсь</label>
+						<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
+					</div>
+				</div>
+				<div class="online__people">
+					<div class="select">
+						<div class="select__title">Взрослые</div>
+						<div class="select__value js-select">
+							<span>1</span>
+							<select>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+							</select>
+						</div>
+					</div>
+					<div class="select">
+						<div class="select__title">Дети</div>
+						<div class="select__value js-select">
+							<span>2</span>
+							<select>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+							</select>
+						</div>
+					</div>
+					<div class="select">
+						<div class="select__title">Номера</div>
+						<div class="select__value js-select">
+							<span>3</span>
+							<select>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input class="online__sbt" type="submit">
+		</form>
+		<!-- END .online -->
+		<!-- BEGIN .menu -->
+		<ul class="menu">
+			<li><a href="#">Коммьюнити</a></li>
+			<li><a href="#">Гид по Ибице</a></li>
+			<li><a href="#">Места и события</a></li>
+		</ul>
+		<!-- END .menu -->
+	</section>
+</section>
+<!-- END .main -->

@@ -117,22 +117,25 @@
 	}
 	input, span {
 		height: 37px;
-		padding: 0 5px;
+		padding: 0 10px;
 		border: 1px solid #e6e6e6;
 		@include border-radius(3px);
 		background: #f8f8f8;
+		font-size: 16px;
 	}
 }
 .hl-search__place {
 	input {
-		width: 330px;
+		width: 320px;
 	}
 }
-.hl-search__people {	
+.hl-search__people {
+	position: relative;	
 	span {
 		position: relative;
 		display: block;
 		width: 134px;
+		line-height: 37px;
 		cursor: pointer;
 		&:after {
 			content: "";
@@ -142,18 +145,26 @@
 			@include sized-sprite($hotel_img, arr);
 		}
 	}
+	select {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 156px;
+		height: 39px;
+		opacity: 0;
+	}
 }
 .hl-search__date {
 	position: relative;
 	&:after {
 		content: "";
 		position: absolute;
-		top: 29px;
+		bottom: 10px;
 		right: 8px;
 		@include sized-sprite($hotel_img, date);
 	}
 	input {
-		width: 138px;
+		width: 128px;
 	}
 }
 .hl-search__sbt {
@@ -180,6 +191,15 @@
 			right: 0;
 			@include sized-sprite($hotel_img, arr);
 		}
+		&.active {
+			&:after {
+				@include sized-sprite($hotel_img, arr1);
+			}
+		}
+	}
+	ul {
+		display: none;
+		margin-top: 10px;
 	}
 }
 .hl-hotels {
@@ -233,6 +253,7 @@
 	}
 }
 .hl-hotels__detail {
+	padding-bottom: 1px;
 	overflow: hidden;
 }
 .hl-hotels__comm, .hl-hotels__rate {
@@ -255,10 +276,17 @@
 	}
 }
 .hl-hotels__rate {
-	width: 120px;
-	img {
-		display: block;
-		margin-top: 10px;
+	padding-top: 10px;
+	margin-right: 10px;
+	overflow: hidden;
+	span {
+		float: left;
+		margin-right: 2px;
+		@include sized-sprite($hotel_img, star);
+		cursor: pointer;
+		&.active {
+			@include sized-sprite($hotel_img, star-a);
+		}
 	}
 }
 .hl-hotels__eval {
