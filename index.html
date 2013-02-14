@@ -54,9 +54,88 @@
 					<li><a href="#">Контакты</a></li>    
 				</ul>
 			</nav>			
-			<button class="online-title">
-				<span>Оnline бронирование<i></i></span>			
-			</button>			
+			<!-- BEGIN .online -->
+			<form class="online" action="">
+				<button class="online__title open">
+					<span>Оnline бронирование<i></i></span>			
+				</button>		
+				<div class="online__details" style="display: block">
+					<ul class="online__type">
+						<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
+						<li><label for="ot2" class="online__hotel active">Отель<input id="ot2" type="radio" name="ot"></label></li>
+						<li><label for="ot3" class="online__avia">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
+					</ul>
+					<div class="online__reserve">
+						<div class="txt-field">
+							<label for="on1">Лечу из</label>
+							<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
+						</div>
+						<div class="txt-field">
+							<label for="on2">Пункт назначения</label>
+							<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
+						</div>
+						<div class="online__date">
+							<div class="txt-field">
+								<label for="on3">Вылетаю</label>
+								<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
+							</div>
+							<div class="txt-field">
+								<label for="on4">Возвращаюсь</label>
+								<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
+							</div>
+						</div>
+						<div class="online__people">
+							<div class="select">
+								<div class="select__title">Взрослые</div>
+								<div class="select__value js-select">
+									<span>1</span>
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+									</select>
+								</div>
+							</div>
+							<div class="select">
+								<div class="select__title">Дети</div>
+								<div class="select__value js-select">
+									<span>2</span>
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+									</select>
+								</div>
+							</div>
+							<div class="select">
+								<div class="select__title">Номера</div>
+								<div class="select__value js-select">
+									<span>3</span>
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<input class="online__sbt" type="submit">
+					</div>
+				</div>
+			</form>
+			<!-- END .online -->	
 		</div>		
 	</div>		
 </header>
@@ -2113,83 +2192,6 @@
 	<!-- END .footer -->
 </section>
 <!-- END .container -->
-<!-- BEGIN .online -->
-<form class="online" action="">
-	<ul class="online__type">
-		<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
-		<li><label for="ot2" class="online__hotel active">Отель<input id="ot2" type="radio" name="ot"></label></li>
-		<li><label for="ot3" class="online__avia">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
-	</ul>
-	<div class="online__reserve">
-		<div class="txt-field">
-			<label for="on1">Лечу из</label>
-			<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
-		</div>
-		<div class="txt-field">
-			<label for="on2">Пункт назначения</label>
-			<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
-		</div>
-		<div class="online__date">
-			<div class="txt-field">
-				<label for="on3">Вылетаю</label>
-				<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
-			</div>
-			<div class="txt-field">
-				<label for="on4">Возвращаюсь</label>
-				<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
-			</div>
-		</div>
-		<div class="online__people">
-			<div class="select">
-				<div class="select__title">Взрослые</div>
-				<div class="select__value js-select">
-					<span>1</span>
-					<select>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-					</select>
-				</div>
-			</div>
-			<div class="select">
-				<div class="select__title">Дети</div>
-				<div class="select__value js-select">
-					<span>2</span>
-					<select>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-					</select>
-				</div>
-			</div>
-			<div class="select">
-				<div class="select__title">Номера</div>
-				<div class="select__value js-select">
-					<span>3</span>
-					<select>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		<input class="online__sbt" type="submit">
-	</div>
-</form>
-<!-- END .online -->
 </body>
 </html>
 
