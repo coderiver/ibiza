@@ -4,6 +4,7 @@
 //variables
 $blue: #04aeef;
 $green: #aec365;
+$orange: #ffc000;
 // gradients for ie
 $experimental-support-for-svg: true;
 // global sprites
@@ -16,6 +17,16 @@ $hotel_img: sprite-map("hotel_img/icons/*.png", $spacing: 10px);
   @include border-radius(3px);
   color: #fff;  
   text-shadow: 0 1px 1px rgba(97,62,0,0.54);  
+  cursor: pointer;
+}
+%btn-blue {
+  height: 34px;
+  padding: 0 15px;
+  background: $blue;
+  @include border-radius(17px);
+  font-family: 'Futuris';
+  font-size: 18px;
+  color: #fff;
   cursor: pointer;
 }
 //font

@@ -20,20 +20,77 @@
 </head>
 <body>
 <!-- BEGIN .header -->
-<header class="header">
-	<div class="container">
-		<div class="phone"><span>8 (495)</span> 726 59 21</div>
-		<div class="mail"><a href="mailto:go@ibiza.ru"><span>go</span>@ibiza.ru</a></div>
-		<form class="search" action="">
-			<input type="text" placeholder="Поиск">
-			<button><i></i></button>
-		</form>
-		<a class="exlusive" href="#"></a>
-		<div class="radio"></div>
-		<div class="enter"></div>
+<header class="header">		
+	<div class="header__top">
+		<div class="container">				
+			<div class="phone"><span>8 (495)</span> 726 59 21</div>
+			<div class="mail"><a href="mailto:go@ibiza.ru"><span>go</span>@ibiza.ru</a></div>
+			<form class="search" action="">
+				<input type="text" placeholder="Поиск">
+				<button><i></i></button>
+			</form>
+			<a class="exlusive" href="#"></a>
+			<a class="radio" href="#">radio</a>
+			<div class="enter">
+				<a class="enter__fb" href="#"></a>
+				<a class="enter__vk" href="#"></a>
+				<a class="enter__gen" href="#">Вход</a>
+			</div>
+		</div>
 	</div>
+	<div class="header__bottom">
+		<div class="container">
+			<div class="logo">
+				<a href="#">IBIZA.ru</a>
+			</div>	
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Коммьюнити</a></li>
+					<li><a href="#">Места</a></li>
+					<li><a href="#">Гид</a></li>
+					<li><a href="#">Карта</a></li>
+					<li><a href="#">События</a></li>
+					<li><a href="#">Отели</a></li>
+					<li><a href="#">Контакты</a></li>    
+				</ul>
+			</nav>			
+			<button class="online-title">
+				<span>Оnline бронирование<i></i></span>			
+			</button>			
+		</div>		
+	</div>		
 </header>
 <!-- END .header -->
+<!-- BEGIN .main -->
+<section class="main">
+	<div class="container">
+		<!-- BEGIN .hot-deals -->
+		<div class="hot-deals">			
+			<div class="hot-deals__label">Горячее<br>предложение</div>
+			<div class="hot-deals__slider">
+				<div class="hot-deals__desc">
+					<a href="#">Ultra Music Festival в Майами</a> 
+					<span>17-26 марта, $ 2 100</span>
+				</div>
+				<div class="hot-deals__desc">
+					<a href="#">Festival in New York в Майами</a> 
+					<span>13-29 марта, $ 2 100</span>
+				</div>
+				<div class="hot-deals__desc">
+					<a href="#">Beer Festival in Berlin в Майами</a> 
+					<span>17-26 марта, $ 2 100</span>
+				</div>
+			</div>
+			<div class="hot-deals__nav">
+				<button class="hot-deals__prev"></button>				
+				<div class="hot-deals__navi"></div>
+				<button class="hot-deals__next"></button>
+			</div>
+		</div>
+		<!-- END .hot-deals -->	
+	</div>
+</section>
+<!-- END .main -->
 <!-- BEGIN .container -->
 <section class="container">
 	<!-- BEGIN .tours -->
@@ -2056,136 +2113,85 @@
 	<!-- END .footer -->
 </section>
 <!-- END .container -->
+<!-- BEGIN .online -->
+<form class="online" action="">
+	<ul class="online__type">
+		<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
+		<li><label for="ot2" class="online__hotel active">Отель<input id="ot2" type="radio" name="ot"></label></li>
+		<li><label for="ot3" class="online__avia">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
+	</ul>
+	<div class="online__reserve">
+		<div class="txt-field">
+			<label for="on1">Лечу из</label>
+			<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
+		</div>
+		<div class="txt-field">
+			<label for="on2">Пункт назначения</label>
+			<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
+		</div>
+		<div class="online__date">
+			<div class="txt-field">
+				<label for="on3">Вылетаю</label>
+				<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
+			</div>
+			<div class="txt-field">
+				<label for="on4">Возвращаюсь</label>
+				<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
+			</div>
+		</div>
+		<div class="online__people">
+			<div class="select">
+				<div class="select__title">Взрослые</div>
+				<div class="select__value js-select">
+					<span>1</span>
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+				</div>
+			</div>
+			<div class="select">
+				<div class="select__title">Дети</div>
+				<div class="select__value js-select">
+					<span>2</span>
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+				</div>
+			</div>
+			<div class="select">
+				<div class="select__title">Номера</div>
+				<div class="select__value js-select">
+					<span>3</span>
+					<select>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<input class="online__sbt" type="submit">
+	</div>
+</form>
+<!-- END .online -->
 </body>
 </html>
 
 
-<!-- BEGIN .main -->
-<section class="main">
-	<div class="container">		
-		<h1 class="logo">
-			<a href="#">IBIZA.ru</a>
-		</h1>
-		<!-- BEGIN .hot-deals -->
-		<div class="hot-deals">
-			<button class="hot-deals__prev"></button>		
-			<button class="hot-deals__next"></button>	
-			<div class="hot-deals__label">Горячее предложение</div>
-			<div class="hot-deals__slider">
-				<div class="hot-deals__desc">
-					<div class="hot-deals__pic">
-						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
-					</div>
-					<div class="hot-deals__title">
-						<a href="#">Ultra Music Festival в Майами</a> 
-						<span>17-26 марта, $ 2 100</span>
-					</div>
-				</div>
-				<div class="hot-deals__desc">
-					<div class="hot-deals__pic">
-						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
-					</div>
-					<div class="hot-deals__title">
-						<a href="#">Festival in New York в Майами</a> 
-						<span>13-29 марта, $ 2 100</span>
-					</div>
-				</div>
-				<div class="hot-deals__desc">
-					<div class="hot-deals__pic">
-						<a href="#"><img src="img/index_img/hot.jpg" alt=""></a>
-					</div>
-					<div class="hot-deals__title">
-						<a href="#">Beer Festival in Berlin в Майами</a> 
-						<span>17-26 марта, $ 2 100</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END .hot-deals -->		
-		<!-- BEGIN .online -->
-		<form class="online" action="">
-			<ul class="online__type">
-				<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
-				<li><label for="ot2" class="online__hotel">Отель<input id="ot2" type="radio" name="ot"></label></li>
-				<li><label for="ot3" class="online__avia active">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
-			</ul>
-			<div class="online__reserv">
-				<div class="txt-field">
-					<label for="on1">Лечу из</label>
-					<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
-				</div>
-				<div class="txt-field">
-					<label for="on2">Пункт назначения</label>
-					<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
-				</div>
-				<div class="online__date">
-					<div class="txt-field">
-						<label for="on3">Вылетаю</label>
-						<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
-					</div>
-					<div class="txt-field">
-						<label for="on4">Возвращаюсь</label>
-						<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
-					</div>
-				</div>
-				<div class="online__people">
-					<div class="select">
-						<div class="select__title">Взрослые</div>
-						<div class="select__value js-select">
-							<span>1</span>
-							<select>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-							</select>
-						</div>
-					</div>
-					<div class="select">
-						<div class="select__title">Дети</div>
-						<div class="select__value js-select">
-							<span>2</span>
-							<select>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-							</select>
-						</div>
-					</div>
-					<div class="select">
-						<div class="select__title">Номера</div>
-						<div class="select__value js-select">
-							<span>3</span>
-							<select>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-			<input class="online__sbt" type="submit">
-		</form>
-		<!-- END .online -->
-		<!-- BEGIN .menu -->
-		<ul class="menu">
-			<li><a href="#">Коммьюнити</a></li>
-			<li><a href="#">Гид по Ибице</a></li>
-			<li><a href="#">Места и события</a></li>
-		</ul>
-		<!-- END .menu -->
-	</section>
-</section>
-<!-- END .main -->
+	

@@ -66,7 +66,11 @@ if ($('.hot-deals__slider').length > 0) {
 	  timeout: 0, 
 	  wrap: false,
 	  next: '.hot-deals__next', 
-	  prev: '.hot-deals__prev'
+	  prev: '.hot-deals__prev',
+	  pager: '.hot-deals__navi',
+	  pagerAnchorBuilder: function(index, el) {
+      return '<button></button>';
+     }
 	});
 };
 
@@ -144,7 +148,7 @@ $('.js-load-pic img').lazyload({
 
 //windows scroll
 $(window).scroll(function() {
-    //online    
+  //online    
 	if ($('.online').length > 0) {
 		if ($('body').scrollTop() > 400) {
 			$('.online-title').addClass('can-open');
