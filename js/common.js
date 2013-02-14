@@ -1,14 +1,5 @@
 $(document).ready(function() {
 
-//main pic
-function main_pic() {
-	var wnd_height = $(window).height();
-	if (wnd_height > 650 && wnd_height < 793) {
-		$('.main .container').height(wnd_height - 93);
-	};
-}
-main_pic();
-
 //online hide-visible
 $('.can-open').live('click', function() {
 	if ($(this).hasClass('open')) {
