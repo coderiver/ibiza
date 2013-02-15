@@ -50,7 +50,7 @@ button { background: none; cursor: pointer; }
 
 .header__bottom .container { position: relative; height: 23px; background: #fff; }
 
-.logo { position: absolute; top: -34px; left: -21px; }
+.logo { position: absolute; top: -34px; left: 0; }
 .logo a { display: block; background: url('../img/index_img/icons-s01ad4186fe.png') 0 0 no-repeat; width: 160px; height: 83px; }
 .logo:before { content: ''; position: absolute; top: -6px; left: -7px; width: 96px; height: 96px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #fff; z-index: -1; }
 

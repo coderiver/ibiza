@@ -56,7 +56,7 @@ button { background: none; cursor: pointer; }
 
 .header__bottom .container { position: relative; height: 23px; background: #fff; }
 
-.logo { position: absolute; top: -34px; left: -21px; }
+.logo { position: absolute; top: -34px; left: 0; }
 .logo a { display: block; background: url('../img/index_img/icons-s01ad4186fe.png') 0 0 no-repeat; width: 160px; height: 83px; }
 .logo:before { content: ''; position: absolute; top: -6px; left: -7px; width: 96px; height: 96px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #fff; z-index: -1; }
 
@@ -333,7 +333,7 @@ button { background: none; cursor: pointer; }
 .main { position: relative; margin: 0 0 50px 0; background: url(../img/index_img/main.jpg) no-repeat 50% 50%; background-size: cover; border-bottom: 5px solid #1a113a; }
 .main .container { position: relative; height: 470px; }
 
-.hot-deals { position: absolute; bottom: 30px; left: -35px; width: 586px; height: 298px; padding: 70px 50px 0 35px; background: url(../img/index_img/figure.png) no-repeat 0 0; }
+.hot-deals { position: absolute; bottom: 30px; left: 0; width: 586px; height: 298px; padding: 70px 50px 0 35px; background: url(../img/index_img/figure.png) no-repeat 0 0; }
 
 .hot-deals__label { margin-bottom: 8px; font-family: 'AG_Futura Bold', Arial, sans-serif; color: #ffc000; font-size: 16px; line-height: 1.2; text-shadow: rgba(0, 0, 0, 0.56) 0 1px 0; letter-spacing: 5px; text-transform: uppercase; }
 

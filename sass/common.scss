@@ -111,7 +111,7 @@ button {
 .logo {
 	position: absolute;
 	top: -34px;
-	left: -21px;
+	left: 0;
 	a {
 		display: block;
 		@include sized-sprite($index_img, logo);

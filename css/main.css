@@ -13,7 +13,7 @@
 .main { position: relative; margin: 0 0 50px 0; background: url(../img/index_img/main.jpg) no-repeat 50% 50%; background-size: cover; border-bottom: 5px solid #1a113a; }
 .main .container { position: relative; height: 470px; }
 
-.hot-deals { position: absolute; bottom: 30px; left: -35px; width: 586px; height: 298px; padding: 70px 50px 0 35px; background: url(../img/index_img/figure.png) no-repeat 0 0; }
+.hot-deals { position: absolute; bottom: 30px; left: 0; width: 586px; height: 298px; padding: 70px 50px 0 35px; background: url(../img/index_img/figure.png) no-repeat 0 0; }
 
 .hot-deals__label { margin-bottom: 8px; font-family: 'AG_Futura Bold', Arial, sans-serif; color: #ffc000; font-size: 16px; line-height: 1.2; text-shadow: rgba(0, 0, 0, 0.56) 0 1px 0; letter-spacing: 5px; text-transform: uppercase; }
 
