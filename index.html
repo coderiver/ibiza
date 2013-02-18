@@ -31,11 +31,11 @@
 			</form>
 			<a class="exlusive" href="#"></a>
 			<a class="radio" href="#">radio</a>
-			<div class="enter">
-				<a class="enter__fb" href="#"></a>
-				<a class="enter__vk" href="#"></a>
-				<a class="enter__gen" href="#">Вход</a>
-			</div>
+			<button class="enter-btn js-enter-open">
+				<span class="enter-btn__fb"></span>
+				<span class="enter-btn__vk"></span>
+				<span class="enter-btn__gen">Вход</span>
+			</button>
 		</div>
 	</div>
 	<div class="header__bottom">
@@ -1580,256 +1580,28 @@
 	<div class="cols-1">		
 		<!-- BEGIN .col-6 -->
 		<div class="col-6">
-			<h2 class="h2 h2_today">18 января, пятница, сегодня</h2>
-			<!-- BEGIN .col-8 -->
-			<div class="col-8">
-				<!-- BEGIN .tape -->				
-				<div class="tape tape_mod">
-					<div class="tape__pic js-load-pic">
-						<a href="#">
-							<img src="img/index_img/pic3.jpg" alt="">
-						</a>
+			<!-- BEGIN .calendar -->
+			<div class="calendar">
+				<div class="event">
+					<div class="event__pic">
+						<a href="#"><img src="img/index_img/pic5.jpg" alt=""></a>
 					</div>
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
+					<div class="event__date">18 января, 20:00</div>
+					<div class="event__desc">
+						<div class="event__cat">
+							<a href="#">презентация</a>
+						</div>
+						<div class="event__title">
+							<a href="#">HALLOWEEN EDITION, Totem hall</a>
+						</div>
+						<div class="event__detail">
+							<a class="event__comm" href="#">33</a>
+							<a class="event__like" href="#">1</a>
+						</div>
 					</div>
 				</div>
-				<!-- END .tape -->
-				<!-- BEGIN .tape -->				
-				<div class="tape tape_mod">
-					<div class="tape__pic js-load-pic">
-						<a href="#">
-							<img src="img/index_img/pic3.jpg" alt="">
-						</a>
-					</div>
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я уже неиду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-				<!-- BEGIN .tape -->				
-				<div class="tape">
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
 			</div>
-			<!-- END .col-8 -->	
-			<!-- BEGIN .col-8 -->
-			<div class="col-8">
-				<!-- BEGIN .tape -->				
-				<div class="tape tape_mod">
-					<div class="tape__pic js-load-pic">
-						<a href="#">
-							<img src="img/index_img/pic5.jpg" alt="">
-						</a>
-					</div>
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-				<!-- BEGIN .tape -->				
-				<div class="tape tape_mod">
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-				<!-- BEGIN .tape -->				
-				<div class="tape">
-					<div class="tape__pic js-load-pic">
-						<a href="#">
-							<img src="img/index_img/pic5.jpg" alt="">
-						</a>
-					</div>
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-			</div>
-			<!-- END .col-8 -->	
-			<!-- BEGIN .col-8 -->
-			<div class="col-8 col-8_mod">
-				<!-- BEGIN .tape -->				
-				<div class="tape tape_mod">
-					<div class="tape__pic js-load-pic">
-						<a href="#">
-							<img src="img/index_img/pic3.jpg" alt="">
-						</a>
-					</div>
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-				<!-- BEGIN .tape -->				
-				<div class="tape tape_mod">
-					<div class="tape__pic js-load-pic">
-						<a href="#">
-							<img src="img/index_img/pic3.jpg" alt="">
-						</a>
-					</div>
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я уже неиду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-				<!-- BEGIN .tape -->				
-				<div class="tape">
-					<div class="tape__cat">
-						<a href="#">Конкурсы</a>
-					</div>
-					<div class="tape__title">
-						<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
-					</div>				
-					<div class="tape__detail">
-						<a href="#" class="tape__comm">33</a>
-						<a href="#" class="tape__like">1</a>
-					</div>
-					<div class="tape__people">
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-						<a href="#"><img src="img/index_img/user.jpg" alt=""></a>
-					</div>
-					<div class="tape__go">
-						<a href="#">Я пойду</a>
-					</div>
-				</div>
-				<!-- END .tape -->
-			</div>
-			<!-- END .col-8 -->	
+			<!-- END .calendar -->
 		</div>
 		<!-- END .col-6 -->
 		<!-- BEGIN .col-7 -->
@@ -2192,6 +1964,27 @@
 	<!-- END .footer -->
 </section>
 <!-- END .container -->
+<!-- BEGIN .popup -->
+<div class="popup-bg"></div>
+<div class="popup popup_enter">
+	<div class="popup__title">Авторизация<button class="popup__close js-enter-close"></button></div>
+	<div class="enter">
+		<div class="enter__social">
+			<button class="enter__social-fb">Вход через Facebook<i></i></button>
+			<button class="enter__social-vk">Вход через Вконтакте<i></i></button>
+		</div>
+		<div class="enter__extra-open js-enter-extra">
+			<button>Войти с помощью логина и пароля</button>
+		</div>
+		<form class="enter__extra" action="">
+			<input type="text" placeholder="Логин">
+			<input type="password" placeholder="Пароль">
+			<a href="#">Забыл пароль</a>
+			<input type="submit" value="Войти">
+		</form>
+	</div>
+</div>
+<!-- END .popup -->
 </body>
 </html>
 

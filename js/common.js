@@ -128,8 +128,19 @@ $('.hl-search__options span').click(function() {
 
 //lazy load
 $('.js-load-pic img').lazyload({
-     effect : 'fadeIn'
- });
+  effect : 'fadeIn'
+});
+
+//popup
+$('.js-enter-open').click(function() {
+	$('.popup-bg, .popup_enter').fadeIn();
+});
+$('.js-enter-close').click(function() {
+	$('.popup-bg, .popup_enter').fadeOut();
+});
+$('.js-enter-extra').click(function() {
+	$('.enter__extra').slideDown();
+});
 
 });
 
