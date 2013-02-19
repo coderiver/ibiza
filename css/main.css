@@ -10,7 +10,7 @@
 
 @font-face { font-family: 'Futuris Bold'; src: url("../fonts/Futuris Bold.woff") format("woff"); }
 
-.main { position: relative; margin: 0 0 50px 0; background: url(../img/index_img/main.jpg) no-repeat 50% 50%; background-size: cover; border-bottom: 5px solid #1a113a; -webkit-box-shadow: whitesmoke 0 20px 0; -moz-box-shadow: whitesmoke 0 20px 0; box-shadow: whitesmoke 0 20px 0; }
+.main { position: relative; margin: -20px 0 70px 0; background: url(../img/index_img/main.jpg) no-repeat 50% 50%; background-size: cover; border-bottom: 5px solid #1a113a; -webkit-box-shadow: whitesmoke 0 34px 0; -moz-box-shadow: whitesmoke 0 34px 0; box-shadow: whitesmoke 0 34px 0; }
 .main .container { position: relative; height: 470px; }
 
 .hot-deals { position: absolute; bottom: 30px; left: 0; width: 586px; height: 298px; padding: 70px 50px 0 35px; background: url(../img/index_img/figure.png) no-repeat 0 0; }
@@ -41,14 +41,13 @@
 .menu a:before { content: "- "; }
 .menu a:after { content: " -"; }
 
-.online { position: relative; float: right; width: 275px; margin-top: -12px; background: url(../img/index_img/online_bg.jpg); -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -ms-border-radius: 3px 3px 0 0; -o-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; }
-.online .online__sbt { width: 245px; }
+.online { position: relative; float: right; width: 275px; margin-top: -12px; background: url(../img/index_img/online_bg.jpg); -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: rgba(1, 108, 180, 0.5) 0 0 5px inset, rgba(1, 108, 180, 0.5) 0 -5px 15px inset; -moz-box-shadow: rgba(1, 108, 180, 0.5) 0 0 5px inset, rgba(1, 108, 180, 0.5) 0 -5px 15px inset; box-shadow: rgba(1, 108, 180, 0.5) 0 0 5px inset, rgba(1, 108, 180, 0.5) 0 -5px 15px inset; }
 
-.online__details { display: none; position: absolute; top: 35px; left: 0; width: 245px; padding: 15px; background: url(../img/index_img/online_bg.jpg); -webkit-border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; -ms-border-radius: 0 0 3px 3px; -o-border-radius: 0 0 3px 3px; border-radius: 0 0 3px 3px; }
+.online__details { display: none; width: 245px; padding: 15px; }
 
-.online__title { position: relative; width: 275px; height: 35px; padding-left: 15px; border-bottom: 1px solid #03c3f7; -webkit-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -ms-border-radius: 3px 3px 0 0; -o-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; line-height: 35px; text-align: left; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 13px; text-transform: uppercase; color: #fff; text-shadow: rgba(0, 0, 0, 0.56) 0 1px 1px; }
+.online__title { position: relative; width: 275px; height: 40px; padding-left: 15px; text-align: left; font-family: 'Futuris Bold', Arial, sans-serif; font-size: 14px; text-transform: uppercase; color: #fff; text-shadow: rgba(0, 0, 0, 0.56) 0 1px 1px; }
 .online__title span { position: relative; }
-.online__title i { display: none; position: absolute; top: 3px; right: -18px; background: url('../img/index_img/icons-s735836c9a1.png') 0 -936px no-repeat; width: 10px; height: 12px; }
+.online__title i { display: none; position: absolute; top: 2px; right: -18px; background: url('../img/index_img/icons-s735836c9a1.png') 0 -936px no-repeat; width: 10px; height: 12px; }
 .online__title.open i { display: block; }
 
 .online__detail { padding: 15px; }
@@ -78,7 +77,7 @@
 .online__people .select:first-child { margin-left: 0px; }
 .online__people .select__value { width: 71px; }
 
-.online__sbt { width: 310px; height: 41px; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 16px; }
+.online__sbt { width: 245px; height: 41px; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 16px; }
 
 .tours { margin-bottom: 10px; }
 .tours ul { padding-bottom: 60px; overflow: hidden; }

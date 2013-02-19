@@ -10,6 +10,7 @@ $experimental-support-for-svg: true;
 // global sprites
 $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
 $hotel_img: sprite-map("hotel_img/icons/*.png", $spacing: 10px);
+$community_img: sprite-map("community_img/icons/*.png", $spacing: 10px);
 //extend
 %btn-orange {
   @include background-image(linear-gradient(#ffcc00, #e99400));
@@ -26,6 +27,17 @@ $hotel_img: sprite-map("hotel_img/icons/*.png", $spacing: 10px);
   @include border-radius(17px);
   font-family: 'Futuris';
   font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+%btn-blue-mod {
+  height: 40px;
+  padding: 0 20px;
+  background: $blue;
+  @include box-shadow(rgba(0,0,0,0.4) 0 1px 2px, rgba(255,255,255,0.4) 0 1px 0 inset);
+  @include border-radius(5px);
+  font-family: 'AG_Futura Bold', Arial, sans-serif;
+  font-size: 13px;
   color: #fff;
   cursor: pointer;
 }

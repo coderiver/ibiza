@@ -7,7 +7,7 @@
 @font-face { font-family: 'Futuris Bold'; src: url("../fonts/Futuris Bold.woff") format("woff"); }
 
 /*styles for layouts*/
-.cols { margin-bottom: 60px; overflow: hidden; }
+.cols { margin-bottom: 40px; overflow: hidden; }
 
 .cols-1 { margin: 0 -15px 50px 0; overflow: hidden; }
 
@@ -27,3 +27,5 @@
 .col-6 { float: left; width: 925px; }
 
 .col-7 { float: right; width: 290px; padding: 15px; background: #01aef0; }
+
+.col-8 { float: left; width: 835px; }

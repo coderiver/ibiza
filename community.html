@@ -1,0 +1,631 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link rel="stylesheet" media="screen" href="css/jquery-ui-1.10.0.custom.min.css">	
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
+	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>	
+	<script src="js/jquery.lazyload.min.js"></script>		
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.raty.min.js"></script>
+	<script src="js/jHtmlArea-0.7.5.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .header -->
+<header class="header">		
+	<div class="header__top">
+		<div class="container">				
+			<div class="phone"><span>8 (495)</span> 726 59 21</div>
+			<div class="mail"><a href="mailto:go@ibiza.ru"><span>go</span>@ibiza.ru</a></div>
+			<form class="search" action="">
+				<input type="text" placeholder="Поиск">
+				<button><i></i></button>
+			</form>
+			<a class="exlusive" href="#"></a>
+			<a class="radio" href="#">radio</a>
+			<button class="enter-btn js-enter-open">
+				<span class="enter-btn__fb"></span>
+				<span class="enter-btn__vk"></span>
+				<span class="enter-btn__gen">Вход</span>
+			</button>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container">
+			<div class="logo">
+				<a href="#">IBIZA.ru</a>
+			</div>	
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Коммьюнити</a></li>
+					<li><a href="#">Места</a></li>
+					<li><a href="#">Гид</a></li>
+					<li><a href="#">Карта</a></li>
+					<li><a href="#">События</a></li>
+					<li><a href="#">Отели</a></li>
+					<li><a href="#">Контакты</a></li>    
+				</ul>
+			</nav>			
+			<!-- BEGIN .online -->
+			<form class="online" action="">
+				<button class="online__title">
+					<span>Оnline бронирование<i></i></span>			
+				</button>		
+				<div class="online__details">
+					<ul class="online__type">
+						<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
+						<li><label for="ot2" class="online__hotel active">Отель<input id="ot2" type="radio" name="ot"></label></li>
+						<li><label for="ot3" class="online__avia">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
+					</ul>
+					<div class="online__reserve">
+						<div class="txt-field">
+							<label for="on1">Лечу из</label>
+							<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
+						</div>
+						<div class="txt-field">
+							<label for="on2">Пункт назначения</label>
+							<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
+						</div>
+						<div class="online__date">
+							<div class="txt-field">
+								<label for="on3">Вылетаю</label>
+								<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
+							</div>
+							<div class="txt-field">
+								<label for="on4">Возвращаюсь</label>
+								<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
+							</div>
+						</div>
+						<div class="online__people">
+							<div class="select">
+								<div class="select__title">Взрослые</div>
+								<div class="select__value js-select">
+									<span>1</span>
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+									</select>
+								</div>
+							</div>
+							<div class="select">
+								<div class="select__title">Дети</div>
+								<div class="select__value js-select">
+									<span>2</span>
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+									</select>
+								</div>
+							</div>
+							<div class="select">
+								<div class="select__title">Номера</div>
+								<div class="select__value js-select">
+									<span>3</span>
+									<select>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<input class="online__sbt" type="submit">
+					</div>
+				</div>
+			</form>
+			<!-- END .online -->				
+		</div>		
+	</div>		
+</header>
+<!-- END .header -->
+<!-- BEGIN .container -->
+<section class="container container_cm">
+	<!-- BEGIN .cols -->
+	<div class="cols">
+		<!-- BEGIN .col-8 -->
+		<div class="col-8">
+			<!-- BEGIN .cm-top -->
+			<div class="cm-top">
+				<h1 class="cm-title">Коммьюнити</h1>
+				<div class="cm-add">
+					<button class="cm-add__open js-add-post">Написать пост</button>
+					<div class="cm-add__detail">
+						<button class="cm-add__pic"></button>
+						<button class="cm-add__video"></button>
+						<button class="cm-add__audio"></button>
+						<button class="cm-add__desc"></button>
+						<button class="cm-add__man"></button>
+					</div>
+					</ul>
+				</div>				
+			</div>		
+			<!-- END .cm-top -->
+			<!-- BEGIN .cm-add-post -->
+			<form class="cm-add-post" action="">
+				<div class="cm-add-post__title">Cоздание нового поста</div>
+				<div class="cm-add-post__desc">
+					<label for="ap1">Заголовок сообщения</label>
+					<input id="ap1" type="text">
+					<label for="ap2">Текст</label>
+					<textarea class="js-html-area"></textarea>
+				</div>					
+				<ul class="cm-add-post__detail">
+					<li><button class="cm-add-post__pic">Загрузить изображение<i></i></button></li>
+					<li><button class="cm-add-post__video">Загрузить видео<i></i></button></li>
+					<li><button class="cm-add-post__audio">Загрузить аудио (mp3, mp4)<i></i></button></li>
+				</ul>
+				<div class="cm-add-post__btns">
+					<input class="cm-add-post__publish" type="submit" value="Публиковать">
+					<input class="cm-add-post__save" type="button" value="Сохранить как черновик">
+				</div>
+			</form>
+			<!-- END .cm-add-post -->
+			<!-- BEGIN .cm-article -->
+			<article class="cm-article">
+				<h2 class="cm-article__title"><span>Россияне тратят больше всех! Поддержим экономику Ибицы :)</span></h2>
+				<!-- BEGIN .cm-desc -->
+				<div class="cm-desc">
+					<div class="cm-author">
+						<img src="img/community_img/pic1.jpg" alt="">
+						<a href="#">Утка</a>
+					</div>
+					<p>Больше миллиона российских туристов .Одно из лучших мест для завтрака на Ибице, крvуассаv из слоеного теста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйца и ветчина на Ибице, крvуассаv из слоеного теста, мюсли, свежевыжатые соки, тосты из муки грубого помола, яйца и ветчина</p>
+				</div>
+				<!-- END .cm-desc -->				
+				<!-- BEGIN .cm-detail -->				
+				<div class="cm-detail">
+					<span class="cm-detail__date">17 января, 2013</span>
+					<span class="cm-detail__view">6692</span>
+					<a class="cm-detail__comm" href="#">23</a>
+					<a class="cm-detail__like" href="#">62</a>		    
+				</div>
+				<!-- END .cm-detail -->
+				<!-- BEGIN .cm-users -->
+				<div class="cm-users">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<img src="img/community_img/pic1.jpg" alt="">
+					<p>Посмотреть <a href="#">всех пользователей</a>, кому это нравится...</p>
+				</div>
+				<!-- END .cm-users -->
+				<!-- BEGIN .cm-comm -->
+				<div class="cm-comm">
+					<div class="cm-comm__view-all">
+						<a href="#">Смотреть  все комментарии</a>						
+					</div>
+					<div class="cm-comm__item">
+						<div class="cm-comm__detail">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Утка</a>
+							<span>23 января 2013</span>
+						</div>
+						<p>Очень даже ))) очень к месту! Очень даже ))) очень к месту! Очень даже ))) очень к месту! </p>
+					</div>
+					<div class="cm-comm__item">
+						<div class="cm-comm__detail">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Утка</a>
+							<span>23 января 2013</span>
+						</div>
+						<p>Очень даже ))) очень к месту! Очень даже ))) очень к месту! Очень даже ))) очень к месту! </p>
+					</div>
+					<!-- BEGIN .cm-comm__add -->
+					<form class="cm-comm__add" action="">
+						<img src="img/community_img/pic1.jpg" alt="">
+						<textarea></textarea>
+					</form>
+					<!-- END .cm-comm__add -->
+					<!-- BEGIN .cm-pagination -->
+					<div class="cm-pagination">
+						<a class="cm-pagination__prev" href="#"></a>
+						<a href="#">1</a>
+						<a class="active" href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">Следующая</a>
+						<a class="cm-pagination__next" href="#"></a>
+					</div>
+					<!-- END .cm-pagination -->
+				</div>
+				<!-- END .cm-comm -->
+			</article>
+			<!-- END .cm-article -->
+		</div>
+		<!-- END .col-8 -->
+		<!-- BEGIN .col-7 -->
+		<div class="col-7">
+			<!-- BEGIN .afisha -->
+			<div class="afisha">
+				<h2 class="h2">анонс</h2>
+				<div class="slider" style="width: 290px; height: 1061px; overflow: hidden;">
+					<ul style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1;">
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+					</ul>
+					<ul style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2;">
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+					</ul>
+					<ul style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1;">
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+						<li>
+							<div class="afisha__title">
+								<a href="#">DAR sessions John Digweed, Denis A 21 июля 2012 в 23:00</a>
+							</div>
+							<div class="afisha__detail">
+								<a class="afisha__comm" href="#">33</a>
+								<a class="afisha__like" href="#">1</a>
+							</div>
+						</li>
+					</ul>
+				</div>	
+				<div class="navi">
+					<button class="navi__prev js-navi-prev"></button>
+					<span>1/3</span>
+					<button class="navi__next js-navi-next"></button>
+				</div>		
+			</div>
+			<!-- END .afisha -->
+		</div>
+		<!-- END .col-7 -->
+	</div>
+	<!-- END .cols -->
+	<!-- BEGIN .banner-wide -->
+	<div class="banner-wide">
+		<img src="img/community_img/banner.jpg" alt="">
+	</div>
+	<!-- END .banner-wide -->
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<nav class="nav-list">
+			<ul>
+				<li><a class="nav-list__bold" href="#">Гид</a></li>
+				<li><a href="#">Отели и жилье</a></li>
+				<li><a href="#">Диджеи и музыка</a></li>
+				<li><a href="#">Российский центр</a></li>
+				<li><a href="#">Прокат автомобилей</a></li>
+				<li><a href="#">Транспорт</a></li>
+				<li><a href="#">Пляжи</a></li>
+				<li><a href="#">Шоппинг</a></li>
+				<li><a class="nav-list__bold" href="#">Места</a></li>
+				<li><a href="#">Рестораны и бары</a></li>
+				<li><a href="#">Клубы</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Gay Ibiza</a></li>
+				<li><a href="#">Спорт, здоровье, йога</a></li>
+				<li><a href="#">Hippy</a></li>
+				<li><a href="#">Семейный отдых</a></li>
+				<li><a href="#">Праздники и фестивали</a></li>
+				<li><a href="#">Об острове</a></li>
+				<li><a href="#">Форментера</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">SOS!</a></li>
+			</ul>
+			<ul>
+				<li><a class="nav-list__bold" href="#">Карта</a></li>
+				<li><a class="nav-list__bold" href="#">События</a></li>
+				<li><a class="nav-list__bold" href="#">Контактная информация</a></li>
+				<li><a class="nav-list__bold" href="#">Коммьюнити</a></li>
+				<li><a href="#">Форум</a></li>
+				<li><a href="#">Посты/Блоги</a></li>
+				<li><a href="#">Рейтинг пользователей</a></li>
+				<li><a href="#">Профиль пользователя</a></li>
+				<li><a href="#">Попутчики</a></li>
+			</ul>
+		</nav>
+		<div class="footer__contacts">
+			<div class="footer__phone">8 (495) 726 59 21, (926) 779 77 70</div>
+			<div class="footer__mail"><a href="mailto:sovet@ibiza.ru">sovet@ibiza.ru</a></div>
+			<div class="footer__adress">
+				<b>Москва</b>
+				<span>м. Кропоткинская</span>
+				<p>Гоголевский бульвар д.8/9, стр. 3, 2 этаж, оф.1,<br>здание Литературного фонда,<br>понедельник – пятница с 10:00 до 19:00</p>
+			</div>			
+		</div>
+		<div class="footer__right">
+			<ul class="payment">
+				<li class="payment__ym"></li>
+				<li class="payment__sb"></li>
+				<li class="payment__mk"></li>
+				<li class="payment__wm"></li>
+				<li class="payment__kw"></li>
+			</ul>
+			<ul class="footer__social">
+				<li><a class="footer__vk" href="#">Вконтакте</a></li>
+				<li><a class="footer__tw" href="#">Twitter</a></li>
+				<li><a class="footer__fb" href="#">Facebook</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- END .footer -->
+</section>
+<!-- END .container -->
+</body>
+</html>
