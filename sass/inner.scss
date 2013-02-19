@@ -96,16 +96,16 @@
 		overflow: hidden;
 	}
 }
-.hl-search__place, .hl-search__people, .hl-search__date, .hl-search__submit {
+.hl-search__place, .hl-search__rating {
 	float: left;
 	margin-right: 15px;
-	label {
+	label, span {
 		display: block;
 		margin-bottom: 5px;
 		font-family: 'Futuris Bold', Arial, sans-serif;
 		font-size: 14px;
 	}
-	input, span {
+	input {
 		height: 37px;
 		padding: 0 10px;
 		border: 1px solid #e6e6e6;
@@ -119,45 +119,13 @@
 		width: 320px;
 	}
 }
-.hl-search__people {
-	position: relative;	
+.hl-search__rating {
 	span {
-		position: relative;
-		display: block;
-		width: 134px;
-		line-height: 37px;
-		cursor: pointer;
-		&:after {
-			content: "";
-			position: absolute;
-			top: 14px;
-			right: 9px;
-			@include sized-sprite($hotel_img, arr);
-		}
-	}
-	select {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 156px;
-		height: 39px;
-		opacity: 0;
-	}
-}
-.hl-search__date {
-	position: relative;
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 10px;
-		right: 8px;
-		@include sized-sprite($hotel_img, date);
-	}
-	input {
-		width: 128px;
+		margin-bottom: 15px;
 	}
 }
 .hl-search__sbt {
+	float: left;
 	height: 39px;
 	padding: 0 25px;
 	margin-top: 19px;
@@ -218,6 +186,10 @@
 		font-size: 16px;
 		overflow: hidden;
 	}
+	.rating {
+		float: left;
+		margin: 5px 5px 0 0;
+	}
 }
 .hl-hotels__pic {
 	position: relative;
@@ -252,11 +224,6 @@
 .hl-hotels__detail {
 	padding-bottom: 1px;
 	overflow: hidden;
-	.hl-rate {
-		float: left;
-		padding-top: 5px;
-		margin-right: 5px;
-	}
 }
 .hl-hotels__comm {
 	position: relative;	
@@ -273,18 +240,6 @@
 		top: 8px;
 		left: 0;
 		@include sized-sprite($hotel_img, comm);
-	}
-}
-.hl-rate {	
-	overflow: hidden;
-	span {
-		float: left;
-		margin-right: 2px;
-		@include sized-sprite($hotel_img, star);
-		cursor: pointer;
-		&.active {
-			@include sized-sprite($hotel_img, star-a);
-		}
 	}
 }
 .hl-hotels__eval {
@@ -382,9 +337,6 @@
 	button {
 		@extend %btn-blue;
 	}
-	.hl-rate {
-		margin-bottom: 20px;
-	}
 }
 .hl-hotel-map {
 	margin-bottom: 80px;
@@ -439,9 +391,6 @@
 	overflow: hidden;
 	a {
 		color: #000;
-	}
-	.hl-rate {
-		margin-bottom: 15px;
 	}
 }
 .hl-comm-list__name {
@@ -504,9 +453,6 @@
 		padding: 7px 10px;
 		height: 214px;
 		resize: vertical;
-	}
-	.hl-rate {
-		margin: 5px 0 25px 0;
 	}
 }
 .hl-comm-add__title {

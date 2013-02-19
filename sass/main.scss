@@ -339,7 +339,7 @@
 .afisha__detail {
 	text-align: center;
 	font-size: 0;
-	span {
+	a {
 		position: relative;
 		display: inline-block;
 		height: 14px;
@@ -371,14 +371,38 @@
 }
 //calendar of events
 .calendar {
+	width: 925px;
+	margin-bottom: 50px;
 	overflow: hidden;
+	ul {
+		margin-right: -30px;
+		overflow: hidden;
+	}
 	.event {
 		float: left;
 		width: 220px;
-		margin-right: 15px;
+		margin: 0 15px 15px 0;
 	}
 }
+.calendar-nav {
+	position: relative;
+	button {
+		position: absolute;
+		top: 3px;
+	}
+}
+.calendar-nav__prev {
+	left: 0;
+	@include sized-sprite($index_img, navi_prev);
+}
+.calendar-nav__next {
+	right: 0;
+	@include sized-sprite($index_img, navi_next);
+}
 //event
+.event {
+	text-align: center;
+}
 .event__pic {
 	img {
 		display: block;
@@ -388,7 +412,6 @@
 	height: 24px;
 	line-height: 24px;
 	background: #0dbca9;
-	text-align: center;
 	font-family: 'AG_Futura Bold', Arial, sans-serif;
 	font-size: 10px;
 	text-transform: uppercase;
@@ -403,7 +426,6 @@
 }
 .event__cat {	
 	margin-bottom: 10px;
-	text-align: center;
 	a {
 		font-family: 'AG_Futura Bold', Arial, sans-serif;
 		font-size: 10px;
@@ -414,7 +436,6 @@
 }
 .event__title {
 	margin-bottom: 20px;
-	text-align: center;
 	a {
 		font-family: 'AG_Futura Bold', Arial, sans-serif;
 		font-size: 14px;
@@ -424,8 +445,18 @@
 	}
 }
 .event__detail {
+	position: relative;
+	margin-bottom: 20px;
 	font-size: 0;
-	text-align: center;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 8px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #ededed;
+	}
 	a {
 		position: relative;
 		display: inline-block;
@@ -436,6 +467,7 @@
 		font-size: 14px;
 		font-weight: bold;
 		color: #e1e1e1;
+		z-index: 10;
 		&:before {
 			content: "";
 			position: absolute;
@@ -444,15 +476,43 @@
 	}
 }
 .event__comm {	
-	margin-right: 8px;
+	padding-right: 8px;
 	&:before {
 		left: 3px;
 		@include sized-sprite($index_img, comm-event);
 	}
 }
 .event__like {	
+	padding-right: 2px;
 	&:before {
 		left: 0;
 		@include sized-sprite($index_img, like-event);
+	}
+}
+.event__go {
+	display: inline-block;
+	height: 22px;
+	padding: 3px;
+	line-height: 22px;
+	@include border-radius(20px);
+	border: 1px solid #d2d2d2;
+	strong, a {
+		float: left;
+		margin-right: 20px;
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	strong {		
+		padding: 0 15px;
+		background: #d8d8d8;		
+		@include border-radius(11px);
+		color: #fff
+	}
+	a {
+		color: #000;
+	}
+	span {
+		border-bottom: 1px dashed #a3a3a3;
 	}
 }

@@ -102,8 +102,8 @@
 .afisha__title a { border-bottom: 1px solid #67c4f4; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 12px; color: #fff; }
 
 .afisha__detail { text-align: center; font-size: 0; }
-.afisha__detail span { position: relative; display: inline-block; height: 14px; line-height: 14px; font-family: 'PT Sans', Arial, sans-serif; font-size: 13px; color: #fff; font-weight: 700; }
-.afisha__detail span:before { content: ""; position: absolute; top: 0; left: 0; }
+.afisha__detail a { position: relative; display: inline-block; height: 14px; line-height: 14px; font-family: 'PT Sans', Arial, sans-serif; font-size: 13px; color: #fff; font-weight: 700; }
+.afisha__detail a:before { content: ""; position: absolute; top: 0; left: 0; }
 
 .afisha__comm { padding-left: 21px; }
 .afisha__comm:before { background: url('../img/index_img/icons-s735836c9a1.png') 0 -1067px no-repeat; width: 16px; height: 14px; }
@@ -111,26 +111,44 @@
 .afisha__like { padding-left: 25px; margin-left: 9px; }
 .afisha__like:before { background: url('../img/index_img/icons-s735836c9a1.png') 0 -822px no-repeat; width: 18px; height: 14px; }
 
-.calendar { overflow: hidden; }
-.calendar .event { float: left; width: 220px; margin-right: 15px; }
+.calendar { width: 925px; margin-bottom: 50px; overflow: hidden; }
+.calendar ul { margin-right: -30px; overflow: hidden; }
+.calendar .event { float: left; width: 220px; margin: 0 15px 15px 0; }
+
+.calendar-nav { position: relative; }
+.calendar-nav button { position: absolute; top: 3px; }
+
+.calendar-nav__prev { left: 0; background: url('../img/index_img/icons-s735836c9a1.png') 0 -958px no-repeat; width: 8px; height: 12px; }
+
+.calendar-nav__next { right: 0; background: url('../img/index_img/icons-s735836c9a1.png') 0 -1045px no-repeat; width: 8px; height: 12px; }
+
+.event { text-align: center; }
 
 .event__pic img { display: block; }
 
-.event__date { height: 24px; line-height: 24px; background: #0dbca9; text-align: center; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 10px; text-transform: uppercase; color: #fff; letter-spacing: 2px; }
+.event__date { height: 24px; line-height: 24px; background: #0dbca9; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 10px; text-transform: uppercase; color: #fff; letter-spacing: 2px; }
 
 .event__desc { padding: 15px 10px 15px 10px; border-style: solid; border-width: 0 1px 1px 1px; border-color: #f1f1f1; }
 
-.event__cat { margin-bottom: 10px; text-align: center; }
+.event__cat { margin-bottom: 10px; }
 .event__cat a { font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 10px; text-transform: uppercase; color: #000; letter-spacing: 2px; }
 
-.event__title { margin-bottom: 20px; text-align: center; }
+.event__title { margin-bottom: 20px; }
 .event__title a { font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 14px; color: #000; border-bottom: 1px solid #d4d4d4; line-height: 1.3; }
 
-.event__detail { font-size: 0; text-align: center; }
-.event__detail a { position: relative; display: inline-block; height: 18px; padding-left: 27px; background: #fff; line-height: 18px; font-size: 14px; font-weight: bold; color: #e1e1e1; }
+.event__detail { position: relative; margin-bottom: 20px; font-size: 0; }
+.event__detail:before { content: ""; position: absolute; top: 8px; left: 0; width: 100%; height: 1px; background: #ededed; }
+.event__detail a { position: relative; display: inline-block; height: 18px; padding-left: 27px; background: #fff; line-height: 18px; font-size: 14px; font-weight: bold; color: #e1e1e1; z-index: 10; }
 .event__detail a:before { content: ""; position: absolute; top: 0; }
 
-.event__comm { margin-right: 8px; }
+.event__comm { padding-right: 8px; }
 .event__comm:before { left: 3px; background: url('../img/index_img/icons-s735836c9a1.png') 0 -622px no-repeat; width: 20px; height: 18px; }
 
+.event__like { padding-right: 2px; }
 .event__like:before { left: 0; background: url('../img/index_img/icons-s735836c9a1.png') 0 -547px no-repeat; width: 21px; height: 18px; }
+
+.event__go { display: inline-block; height: 22px; padding: 3px; line-height: 22px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; border: 1px solid #d2d2d2; }
+.event__go strong, .event__go a { float: left; margin-right: 20px; font-family: 'PT Sans', Arial, sans-serif; font-size: 14px; font-weight: 700; }
+.event__go strong { padding: 0 15px; background: #d8d8d8; -webkit-border-radius: 11px; -moz-border-radius: 11px; -ms-border-radius: 11px; -o-border-radius: 11px; border-radius: 11px; color: white; }
+.event__go a { color: #000; }
+.event__go span { border-bottom: 1px dashed #a3a3a3; }

@@ -15,7 +15,9 @@
 	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>	
-	<script src="js/jquery.lazyload.min.js"></script>	
+	<script src="js/jquery.lazyload.min.js"></script>		
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.raty.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -31,11 +33,11 @@
 			</form>
 			<a class="exlusive" href="#"></a>
 			<a class="radio" href="#">radio</a>
-			<div class="enter">
-				<a class="enter__fb" href="#"></a>
-				<a class="enter__vk" href="#"></a>
-				<a class="enter__gen" href="#">Вход</a>
-			</div>
+			<button class="enter-btn js-enter-open">
+				<span class="enter-btn__fb"></span>
+				<span class="enter-btn__vk"></span>
+				<span class="enter-btn__gen">Вход</span>
+			</button>
 		</div>
 	</div>
 	<div class="header__bottom">
@@ -256,20 +258,10 @@
 				<label for="hl-s1">Название отеля/место</label>
 				<input id="hl-s1" type="text">
 			</div>
-			<div class="hl-search__people js-select">
-				<label>Количество человек</label>
-				<span>1</span>
-				<select>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-			</div>
-			<div class="hl-search__date">
-				<label for="hl-s2">Даты заезда</label>
-				<input id="hl-s2" class="js-dp" type="text">
-			</div>
+			<div class="hl-search__rating">
+				<span>Рейтинг</span>
+				<div class="rating-choice js-rating-choice"></div>
+			</div>				
 			<input class="hl-search__sbt" type="submit" value="Найти">
 			<div class="hl-search__options">
 				<span>Дополнительные опции</span>
@@ -332,13 +324,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге,  вы попадете в Boutique Hostal Salinas</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<a href="#" class="hl-hotels__eval"></a>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
@@ -357,13 +343,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
 			</li>
@@ -381,13 +361,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
 			</li>
@@ -405,13 +379,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге,  вы попадете в Boutique Hostal Salinas</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<a href="#" class="hl-hotels__eval"></a>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
@@ -432,13 +400,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
 			</li>
@@ -456,13 +418,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге,  вы попадете в Boutique Hostal Salinas</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<a href="#" class="hl-hotels__eval"></a>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
@@ -481,13 +437,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
 			</li>
@@ -505,13 +455,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге,  вы попадете в Boutique Hostal Salinas</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<a href="#" class="hl-hotels__eval"></a>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>
@@ -532,13 +476,7 @@
 				<p>С правой стороны от пляжа Las Salinas, двигаясь по уединенной дороге,  вы попадете в Boutique Hostal Salinas</p>
 				<div class="hl-hotels__detail">
 					<a class="hl-hotels__comm" href="#">262</a>
-					<div class="hl-rate">
-						<span class="active"></span>
-						<span class="active"></span>
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-					</div>
+					<div class="rating js-rating-read" data-score="4"></div>
 					<a href="#" class="hl-hotels__eval"></a>
 					<button class="hl-hotels__reserve" href="#">Бронировать</button>
 				</div>

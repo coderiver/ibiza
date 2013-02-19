@@ -48,8 +48,8 @@ if ($('.slider').length > 0) {
 //slider main
 if ($('.hot-deals__slider').length > 0) {
 	$('.hot-deals__slider').cycle({ 
-	  fx:     'fade', 
-	  speed:  'fast', 
+	  fx: 'fade', 
+	  speed: 'fast', 
 	  timeout: 0, 
 	  wrap: false,
 	  next: '.hot-deals__next', 
@@ -60,6 +60,44 @@ if ($('.hot-deals__slider').length > 0) {
      }
 	});
 };
+if ($('.calendar').length > 0) {
+	$('.calendar').cycle({ 
+	  fx: 'scrollHorz', 
+	  speed: 'slow', 
+	  timeout: 0, 
+	  wrap: false,
+	  next: '.calendar-nav__next', 
+	  prev: '.calendar-nav__prev'
+	});
+};
+
+//masonry
+if ($('.event-list').length > 0) {
+	$('.event-list').masonry();
+};
+
+//rating
+if ($('.js-rating-read').length > 0) {
+	$('.js-rating-read').raty({
+		readOnly: true,
+		space: false,
+		number: 5,
+  	starOff: 'img/index_img/star-off.png',
+  	starOn : 'img/index_img/star-on.png',
+  	score: function() {
+    	return $(this).attr('data-score');
+ 		}
+	});
+};
+if ($('.js-rating-choice').length > 0) {
+	$('.js-rating-choice').raty({
+		space: false,
+		number: 5,
+  	starOff: 'img/index_img/star-off.png',
+  	starOn : 'img/index_img/star-on.png'
+	});
+};
+
 
 //slider middle
 function slider_middle() {
