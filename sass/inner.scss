@@ -1,5 +1,13 @@
 @import "base";
 //styles for inner pages
+.inner {
+	height: 70px;
+	margin-top: -20px;
+	background: url(../img/hotel_img/inner.jpg) no-repeat 50% 0;
+	background-size: cover;
+	border-bottom: 5px solid #1a113a;
+}
+//hotels
 .hl-title {
 	padding: 60px 0;
 	text-align: center;
@@ -671,10 +679,8 @@
 
 
 //community
-.container_cm {
-	margin-top: 60px;
-}
 .cm-top {
+	min-height: 90px;
 	overflow: hidden;
 }
 .cm-title {
@@ -686,7 +692,7 @@
 	float: right;
 	padding-top: 15px;
 }
-.cm-add__open {
+.cm-add__btn {
 	width: 150px;
 	margin-bottom: 10px;
 	@extend %btn-blue-mod;
@@ -1024,6 +1030,264 @@
 .cm-pagination__next {
 	margin-top: 2px;
 	@include sized-sprite($community_img, navi_next);
+}
+//cm-gallery
+.cm-gallery {
+	position: relative;
+	height: 190px;
+	margin-bottom: 20px;
+}
+.cm-gallery__slider {
+	position: relative;	
+	overflow: hidden;	
+}
+.cm-gallery__items {
+	overflow: hidden;
+	img {
+		float: left;
+	}
+}
+.cm-gallery__prev, .cm-gallery__next {
+	position: absolute;
+	top: 0;
+	width: 23px;
+	height: 190px;
+	background: rgba(155,155,155,0.5);
+	i {
+		position: absolute;
+		top: 97;		
+	}
+}
+.cm-gallery__prev {
+	left: 0;
+	i {
+		left: 5px;
+		@include sized-sprite($community_img, gallery_prev);
+	}
+}
+.cm-gallery__next {
+	right: 0;
+	i {
+		right: 5px;
+		@include sized-sprite($community_img, gallery_next);
+	}
+}
+//cm_profile
+.cm-profile {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.cm-profile__pic {
+	float: left;
+	padding: 6px;
+	background: #fff;
+	border: 1px solid #bfbfbf;
+	@include border-radius(4px);
+	img {
+		display: block;
+	}
+}
+.cm-profile__detail {
+	float: right;
+	width: 1057px;
+	height: 148px;
+	padding: 20px 0 0 15px;
+	background: #f6f6f6;
+	border: 1px solid #bfbfbf;
+	@include border-radius(3px);
+}
+.cm-user__info {
+	font-family: 'PT Sans', Arial, sans-serif;
+	float: left;
+	width: 345px;
+}
+.cm-user__name {
+	margin-bottom: 15px;
+	font-weight: 700;
+	color: $blue;
+	font-size: 21px;
+}
+.cm-user__meta {
+	margin-bottom: 10px;
+	li {
+		margin-bottom: 5px;
+		font-size: 15px;
+		color: #666;
+		&:first-child {
+			margin-bottom: 15px;
+		}
+	}
+	span {	
+		margin-left: 5px;
+		font-weight: 700;
+		color: #000;
+	}
+}
+.cm-user__social {
+	font-size: 0;
+	a {
+		display: inline-block;
+		margin-right: 3px;
+		@include border-radius(5px);
+		@include box-shadow(rgba(255,255,255,0.3) 0 2px 1px inset, rgba(0,0,0,0.3) 0 -2px 1px inset, rgba(0,0,0,0.25) 0 3px 2px);
+	}
+	i {
+		display: block;
+	}
+}
+.cm-user__fb {
+	border: 1px solid #3259a6;
+	background: #5681cf;
+	@include background-image(linear-gradient(#5681cf, #2e56ae));
+	i {
+		@include sized-sprite($community_img, pr-fb);
+	}	
+}
+.cm-user__vk {
+	border: 1px solid #329fd6;
+	background: #5cc3f3;
+	@include background-image(linear-gradient(#5cc3f3, #3fade0));
+	i {
+		@include sized-sprite($community_img, pr-vk);
+	}
+}
+.cm-friends__title, .cm-user-photo__title, .cm-user-like_photo {
+	margin-bottom: 15px;
+	font-family: 'AG_Futura Bold', Arial, sans-serif;
+	font-size: 13px;
+	color: $blue;
+	text-transform: uppercase;
+	text-align: center;
+	&:before {
+		content: "- ";
+	}
+	&:after {
+		content: " -";
+	}
+}
+//cm-friends
+.cm-friends {
+	float: left;
+	width: 200px;
+	margin-right: 50px;
+	ul {
+		overflow: hidden;
+	}
+	li {
+		position: relative;
+		float: left;
+		padding: 4px 3px;
+	}
+	img {
+		display: block;
+		border: 2px solid #fff;
+		@include border-radius(3px);
+		@include box-shadow(rgba(0,0,0,0.3) 0 2px 4px);
+	}
+	span {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include border-radius(50%);
+		@include box-shadow(rgba(255,255,255,0.3) 0 2px 1px inset, rgba(0,0,0,0.3) 0 -2px 1px inset, rgba(0,0,0,0.25) 0 1px 2px);
+	}
+	i {
+		display: block;
+	}
+}
+.cm-friends__fb {
+	span {
+		border: 1px solid #3259a6;
+		background: #5681cf;
+		@include background-image(linear-gradient(#5681cf, #2e56ae));
+	}	
+	i {
+		@include sized-sprite($community_img, fr-fb);
+	}
+}
+.cm-friends__vk {	
+	span {
+		border: 1px solid #329fd6;
+		background: #5cc3f3;
+		@include background-image(linear-gradient(#5cc3f3, #3fade0));
+	}
+	i {
+		@include sized-sprite($community_img, fr-vk);
+	}
+}
+//cm-user-photo
+.cm-user-photo {
+	float: left;
+	margin-right: 50px;
+}
+.cm-user-photo__title {
+	margin-bottom: 9px;
+}
+.cm-user-photo__pic {
+	position: relative;
+	padding: 10px;
+	overflow: hidden;
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		width: 56px;
+		height: 56px;
+		background: #f6f6f6;
+		@include box-shadow(rgba(0,0,0,0.3) 0 0 10px);
+		@include border-radius(5px);
+		@include rotate(45);
+	}
+	&:before {
+		bottom: -30px;
+		left: -30px;
+	}
+	&:after {
+		top: -30px;
+		right: -30px;
+	}
+	img {
+		display: block;
+		border: 2px solid #fff;
+		@include border-radius(3px);
+		@include box-shadow(rgba(0,0,0,0.3) 0 2px 4px);
+	}
+}
+//cm-user-like
+.cm-user-like {
+	float: left;
+	padding: 0 5px 5px 0;
+}
+.cm-user-like__block {
+	position: relative;	
+	&:before {
+		content: "";
+		position: absolute;
+		top: 3px;
+		right: -2px;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		@include border-radius(3px);
+		@include box-shadow(rgba(0,0,0,0.3) 0 2px 4px);
+ 	}
+	
+}
+.cm-user-like__pic {
+	position: relative;
+	border: 2px solid #fff;
+	@include border-radius(3px);
+	@include box-shadow(rgba(0,0,0,0.3) 0 2px 4px);
+	overflow: hidden;
+	z-index: 10;
+	a {
+		float: left;
+		&:first-child {
+			margin-right: 2px;
+		}
+	}
+	img {
+		display: block;
+	}
 }
 //banner-wide
 .banner-wide {

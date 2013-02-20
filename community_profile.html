@@ -18,6 +18,7 @@
 	<script src="js/jquery.lazyload.min.js"></script>		
 	<script src="js/jquery.masonry.min.js"></script>
 	<script src="js/jquery.raty.min.js"></script>
+	<script src="js/jHtmlArea-0.7.5.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -147,37 +148,106 @@
 <!-- BEGIN .inner -->
 <div class="inner"></div>
 <!-- END .inner -->
+<!-- BEGIN .breadcrumps -->
+<div class="breadcrumps">
+	<div class="container">
+		<ul>
+			<li><a href="#">Главная</a><span>/</span></li>
+			<li>Профиль </li>
+		</ul>
+	</div>
+</div>
+<!-- END .breadcrumps -->
 <!-- BEGIN .container -->
 <section class="container">
-	<!-- BEGIN .hl-title -->
-	<h1 class="hl-title">Карта</h1>
-	<!-- END .hl-title -->	
-	<!-- BEGIN .hl-map -->
-	<div class="hl-map">
-		<ul class="hl-map__type">
-			<li><a class="hl-map__t1 active" href="#"><span>Рестораны и бары</span><i></i></a></li>
-			<li><a class="hl-map__t2" href="#"><span>Клубы</span><i></i></a></li>
-			<li><a class="hl-map__t3" href="#"><span>Отели</span><i></i></a></li>
-			<li><a class="hl-map__t4" href="#"><span>Диджеи и музыка</span><i></i></a></li>
-			<li><a class="hl-map__t5" href="#"><span>Российский центр</span><i></i></a></li>
-			<li><a class="hl-map__t6" href="#"><span>Прокат автомобилей</span><i></i></a></li>
-			<li><a class="hl-map__t7" href="#"><span>Пляжи</span><i></i></a></li>
-			<li><a class="hl-map__t8" href="#"><span>Шоппинг</span><i></i></a></li>
-			<li><a class="hl-map__t9" href="#"><span>Gay Ibiza</span><i></i></a></li>
-			<li><a class="hl-map__t10" href="#"><span>Праздники и фестивали</span><i></i></a></li>
-			<li><a class="hl-map__t11" href="#"><span>Семейный отдых</span><i></i></a></li>
-			<li><a class="hl-map__t12" href="#"><span>Hippy</span><i></i></a></li>
-		</ul>
-		<div class="hl-map__search">
-			<label for="ms">Я ищу</label>
-			<input id="ms" type="text" placeholder="Место по названию">
-			<input type="submit" value="Найти">
-		</div>
-		<div class="hl-map__container">
-			<img src="img/hotel_img/map.jpg" alt="">
-		</div>
+	<!-- BEGIN .cm-top -->
+	<div class="cm-top">
+		<h1 class="cm-title">Коммьюнити</h1>
+		<div class="cm-add">
+			<button class="cm-add__btn">Настройки</button>
+		</div>				
 	</div>
-	<!-- END .hl-map -->
+	<!-- END .cm-top -->
+	<!-- BEGIN .cm-profile -->
+	<div class="cm-profile">
+		<!-- BEGIN .cm-profile__pic -->		
+		<div class="cm-profile__pic">
+			<img src="img/community_img/user.jpg" alt="">
+		</div>
+		<!-- END .cm-profile__pic -->
+		<!-- BEGIN .cm-profile__detail -->		
+		<div class="cm-profile__detail">
+			<!-- BEGIN .cm-user__info -->
+			<div class="cm-user__info">
+				<div class="cm-user__name">Аграфена Кирова-Свиридова</div>
+				<ul class="cm-user__meta">
+					<li>Когда на Ибице:<span>12 апреля-15 марта</span></li>
+					<li>Логин:<span>Agrafena_1981</span></li>
+					<li>Город:<span>Москва</span></li>
+				</ul>
+				<div class="cm-user__social">
+					<a class="cm-user__fb" href="#"><i></i></a>
+					<a class="cm-user__vk" href="#"><i></i></a>
+				</div>
+			</div>
+			<!-- END .cm-user__info -->
+			<!-- BEGIN .cm-friends -->
+			<div class="cm-friends">
+				<div class="cm-friends__title">Друзья</div>
+				<ul class="cm-friends__list">
+					<li><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li class="cm-friends__fb"><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li class="cm-friends__fb"><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li class="cm-friends__vk"><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+					<li class="cm-friends__vk"><a href="#"><img src="img/community_img/pic2.jpg" alt=""><span><i></i></span></a></li>
+				</ul>
+			</div>
+			<!-- END .cm-friends -->
+			<!-- BEGIN .cm-user-photo -->
+			<div class="cm-user-photo">
+				<div class="cm-user-photo__title">ФОТОГРАФИИ</div>
+				<div class="cm-user-photo__pic">
+					<a href="#"><img src="img/community_img/pic3.jpg" alt=""></a>
+				</div>
+			</div>
+			<!-- END .cm-user-photo -->
+			<!-- BEGIN .cm-user-like -->
+			<div class="cm-user-like">
+				<div class="cm-user-photo__title">МНЕ НРАВИТСЯ</div>
+				<div class="cm-user-like__block">
+					<div class="cm-user-like__pic">
+						<a href="#"><img src="img/community_img/pic4.jpg" alt=""></a>
+						<a href="#"><img src="img/community_img/pic4.jpg" alt=""></a>
+					</div>					
+				</div>
+			</div>
+			<!-- END .cm-user-like -->
+		</div>
+		<!-- END .cm-profile__detail -->
+		<!-- BEGIN .cols -->
+		<div class="cols">
+			<!-- BEGIN .col-9 -->
+			<div class="col-9">
+				
+			</div>
+			<!-- END .col-9 -->
+			<!-- BEGIN .col-3 -->
+			<div class="col-3">
+				
+			</div>
+			<!-- END .col-3 -->
+		</div>
+		<!-- END .cols -->
+	</div>
+	<!-- END .cm-profile -->
+	<!-- BEGIN .banner-wide -->
+	<div class="banner-wide">
+		<img src="img/community_img/banner.jpg" alt="">
+	</div>
+	<!-- END .banner-wide -->
 	<!-- BEGIN .footer -->
 	<footer class="footer">
 		<nav class="nav-list">
