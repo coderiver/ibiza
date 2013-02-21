@@ -1034,24 +1034,33 @@
 //cm-gallery
 .cm-gallery {
 	position: relative;
-	height: 190px;
 	margin-bottom: 20px;
+}
+.cm-gallery-show {
+	margin-bottom: 5px;
+	img {
+		display: block;
+	}
 }
 .cm-gallery__slider {
 	position: relative;	
+	height: 190px;
 	overflow: hidden;	
 }
-.cm-gallery__items {
+.cm-gallery__items {	
 	overflow: hidden;
-	img {
+	a {
 		float: left;
+	}
+	img {
+		display: block;
 	}
 }
 .cm-gallery__prev, .cm-gallery__next {
 	position: absolute;
 	top: 0;
 	width: 23px;
-	height: 190px;
+	height: 100%;
 	background: rgba(155,155,155,0.5);
 	i {
 		position: absolute;
@@ -1292,4 +1301,193 @@
 //banner-wide
 .banner-wide {
 	margin-bottom: 20px;
+}
+//icons
+.ico-pub-write {
+	@include sized-sprite($community_img, add-desc);
+}
+.ico-pub-photo {
+	@include sized-sprite($community_img, add-pic);
+}
+.ico-pub-audio {
+	@include sized-sprite($community_img, add-audio);
+}
+.ico-pub-video {
+	@include sized-sprite($community_img, add-video);
+}
+.ico-pub-man {
+	@include sized-sprite($community_img, add-man);
+}
+//cm-publich
+.cm-publish {	
+	margin-bottom: 35px;
+	border: 1px solid #bebebe;
+}
+.cm-publish__type {
+	height: 37px;
+	padding: 5px 0 0 8px;	
+	background: #f9f9f9;
+	@include background-image(linear-gradient(#f9f9f9 0px, #ededed 45px));
+	li {
+		position: relative;
+		float: left;
+		height: 22px;
+		padding: 15px 20px 0 45px;
+		border-left: 1px solid #dbdbdb;		
+		@include box-shadow(#fff -1px 0 0);
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 13px;
+		color: $blue;
+		cursor: pointer;
+		&:last-child {
+			border-right: 1px solid #dbdbdb;
+			@include box-shadow(#fff -1px 0 0, #fff -1px 0 0 inset);
+		}
+		&.active {
+			position: relative;
+			top: 1px;
+			background: #fff;
+			font-weight: 700;
+			color: #444;
+			cursor: default;
+		}
+	}
+	i {
+		position: absolute;
+		top: 9px;
+		left: 8px;
+	}
+}
+.cm-publish__content {
+	textarea {
+		display: block;
+		width: 848px;
+		height: 90px;
+		padding: 20px 10px 10px 10px;		
+		border-top: 1px solid #c4c4c4;
+		border-bottom: 1px solid #dcdcdc;
+		resize: vertical;
+		font-family: 'PT Sans', Arial, sans-serif;
+	}
+}
+.cm-pudlish__go {
+	padding: 4px;
+	background: #efefef;
+	overflow: hidden;
+	input {
+		float: right;
+		height: 29px;
+		padding: 0 15px;
+		background: $blue;
+		@include border-radius(4px);
+		@include box-shadow(rgba(255,255,255,0.7) 0 1px 0);
+		border: 1px solid #0168a9;
+		font-family: 'AG_Futura Bold', Arial, sans-serif;
+		font-size: 12px;
+		color: #fff;
+		cursor: pointer;
+	}
+}
+//cm-wall
+.cm-wall {
+
+}
+//cm-post
+.cm-post {
+	width: 410px;
+	border: 1px solid #bebebe;
+}
+.cm-post_pic {
+	.cm-post__top {
+		i {
+			@include sized-sprite($community_img, add-pic);
+		}
+	}	
+}
+.cm-post__top {
+	padding: 10px 0 10px 8px;
+	border-bottom: 1px solid #dcdcdc;
+	overflow: hidden;
+	font-family: 'PT Sans', Arial, sans-serif;
+	img, a {
+		float: left;
+	}
+	img {
+		margin-right: 12px;
+	}
+	a {
+		width: 150px;		
+		font-size: 13px;
+		color: $blue;
+		text-decoration: underline;
+		font-weight: 700;
+	}
+	span, i {
+		float: right;
+	}
+	span {
+		height: 26px;
+		margin-right: 3px;
+		line-height: 26px;
+		font-size: 12px;
+		color: #666;
+	}
+	i {
+		margin: 1px 3px 0 0;
+	}
+}
+.cm-post__gallery {
+	padding: 10px 8px 0 8px;
+	strong {
+		display: block;
+		margin-bottom: 10px;
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-weight: 700;
+		font-size: 16px;
+		color: #242020;
+	}
+	.cm-gallery {
+		margin-bottom: 10px;
+	}
+	.cm-gallery__slider {
+		height: 90px;
+	}
+}
+.cm-post__detail {
+	height: 30px;
+	padding: 0 15px;
+	line-height: 30px;
+	background: #efefef;
+	overflow: hidden;
+}
+.cm-post__detail-comm, .cm-post__detail-like {
+	float: left;
+	width: 50%;
+	a {
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 13px;
+		color: $blue;
+	}
+	span {
+		position: relative;
+		padding-left: 30px;
+		font-size: 11px;
+		font-weight: 700;
+		color: #9e9e9e;
+	}
+	i {
+		position: absolute;
+		top: 2px;
+		left: 11px;
+	}
+}
+.cm-post__detail-comm {
+	i {
+		@include sized-sprite($community_img, post-comm);
+	}
+}
+.cm-post__detail-like {
+	i {
+		@include sized-sprite($community_img, post-like);
+	}
 }

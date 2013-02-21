@@ -148,7 +148,7 @@ $('.js-load-pic img').lazyload({
 $('.js-enter-open').click(function() {
 	$('.popup-bg, .popup_enter').fadeIn();
 });
-$('.js-enter-close').click(function() {
+$('.js-enter-close, .popup-bg').click(function() {
 	$('.popup-bg, .popup_enter').fadeOut();
 });
 $('.js-enter-extra').click(function() {
@@ -166,11 +166,10 @@ function js_gallery() {
 	var item = $('.js-gallery-items');	
 	var item_prev = $('.js-gallery-prev');	
 	var item_next = $('.js-gallery-next');	
-	var item_pic = 'js-gallery_pic';
-	item.children('img').load(function() {
+	var item_pic_show = $('.js-gallery-show');
+	item.children().children('img').load(function() {
 		var gal_width = 0;
-		item.children('img').each(function() {
-			//$(this).attr('id', item_pic + i);
+		item.children().children('img').each(function() {
 			gal_width += $(this).width();
 			return(gal_width);
 		});
@@ -181,6 +180,11 @@ function js_gallery() {
 	});
 	item_prev.click(function() {
 		item_parent.scrollTo('-=200px', 400);
+	});
+	item.children('a').click(function() {		
+		var item_pic_cur = $(this).attr('href');
+		item_pic_show.children('img').attr('src', item_pic_cur);
+		return false;
 	});
 }
 js_gallery();
