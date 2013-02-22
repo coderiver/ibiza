@@ -153,7 +153,7 @@ button { background: none; cursor: pointer; }
 .breadcrumps span { margin-left: 7px; color: #666; }
 .breadcrumps a { color: #666; font-weight: 400; }
 
-.rating, .rating-choice { width: 100px !important; overflow: hidden; }
+.rating, .rating-choice { width: 100px !important; height: 18px; overflow: hidden; }
 .rating img, .rating-choice img { float: left; margin-right: 2px; }
 
 .txt-field { margin-bottom: 20px; font-family: 'Futuris', Arial, sans-serif; }
