@@ -762,7 +762,40 @@
 .hl-map__container {
 	margin-bottom: 50px;
 }
-
+//map-content
+.map-content {
+	width: 300px;
+	overflow: hidden;
+}
+.map-content__pic {
+	float: left;
+	margin-right: 20px;
+	img {
+		display: block;
+	}
+}
+.map-content__cat, .map-content__title {
+	a {
+		font-family: 'AG_Futura Bold', Arial, sans-serif;
+	}
+}
+.map-content__cat {
+	margin-bottom: 10px;
+	a {
+		color: #aec365;
+		font-size: 10px;
+		letter-spacing: 2px;
+	}	
+}
+.map-content__title {
+	margin-bottom: 10px;
+	a {
+		font-size: 16px;
+		color: #000;
+		border-bottom: 1px solid #d4d4d4;
+		line-height: 1.3;
+	}	
+}
 
 //community
 .cm-top {
