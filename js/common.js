@@ -192,45 +192,70 @@ function js_gallery() {
 js_gallery();
 
 //map
-function initialize() {     
-    var myLatlng = new google.maps.LatLng(38.90895099999999, 1.4281150);
-    var myOptions = {
-        zoom: 15,
-        center: myLatlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+if ($('#map_canvas').length > 0) {
+	function initialize() {     
+	    var myLatlng = new google.maps.LatLng(38.90895099999999, 1.4281150);
+	    var myOptions = {
+	        zoom: 15,
+	        center: myLatlng,
+	        mapTypeId: google.maps.MapTypeId.ROADMAP
+	    }
+	    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+	
+	    //markers
+	
+			//marker window
+			var contentString = '<div class="map-content">\
+														 <div class="map-content__pic">\
+														 	<a href="#"><img src="img/hotel_img/map.jpg" alt=""></a>\
+														 </div>\
+														 <div class="map-content__cat">\
+														 	<a href="#">классика</a>\
+														 </div>\
+														 <div class="map-content__title">\
+														 	<a href="#">Croissanteria Jesus</a>\
+														 </div>\
+													   <div class="rating js-rating-read" data-score="4"></div>\
+													 </div>';
+			var infowindow = new google.maps.InfoWindow({
+			  content: contentString
+			});
+			var image = 'img/hotel_img/icons/marker.png';
+			var marker = new google.maps.Marker({
+			  position: myLatlng,
+			  map: map,
+			  icon: image
+			});
+			google.maps.event.addListener(marker, 'click', function() {
+			  infowindow.open(map,marker);
+			  rating();
+			});
+	}
+	initialize();
+};
 
-    //markers
+//checkbox
+if ($('.js-checkbox').length > 0) {
+	$('.js-checkbox input').change(function() {
+		if ($(this).parent().hasClass('active')) {
+			$(this).parent().removeClass('active');
+		}
+		else {
+			$(this).parent().addClass('active');
+		}
+	});
+};
 
-		//marker window
-		var contentString = '<div class="map-content">\
-													 <div class="map-content__pic">\
-													 	<a href="#"><img src="img/hotel_img/map.jpg" alt=""></a>\
-													 </div>\
-													 <div class="map-content__cat">\
-													 	<a href="#">классика</a>\
-													 </div>\
-													 <div class="map-content__title">\
-													 	<a href="#">Croissanteria Jesus</a>\
-													 </div>\
-												   <div class="rating js-rating-read" data-score="4"></div>\
-												 </div>';
-		var infowindow = new google.maps.InfoWindow({
-		  content: contentString
-		});
-		var image = 'img/hotel_img/icons/marker.png';
-		var marker = new google.maps.Marker({
-		  position: myLatlng,
-		  map: map,
-		  icon: image
-		});
-		google.maps.event.addListener(marker, 'click', function() {
-		  infowindow.open(map,marker);
-		  rating();
-		});
-}
-initialize();
+//tabs
+$('.js-tabs-item:gt(0)').hide();
+$('.js-tabs li').click(function() {
+	$('.js-tabs li').removeClass('active');
+	$(this).addClass('active');
+	var item = $(this).attr('data-item');
+	$('.js-tabs-item').slideUp();
+	$('#' + item).slideDown();
+});
+
 
 });
 

@@ -1,0 +1,556 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link rel="stylesheet" media="screen" href="css/jquery-ui-1.10.0.custom.min.css">	
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
+	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>	
+	<script src="js/jquery.lazyload.min.js"></script>		
+	<script src="js/jquery.masonry.min.js"></script>
+	<script src="js/jquery.raty.min.js"></script>
+	<script src="js/jHtmlArea-0.7.5.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .header -->
+<header class="header">		
+	<div class="header__top">
+		<div class="container">				
+			<div class="phone"><span>8 (495)</span> 726 59 21</div>
+			<div class="mail"><a href="mailto:go@ibiza.ru"><span>go</span>@ibiza.ru</a></div>
+			<form class="search" action="">
+				<input type="text" placeholder="Поиск">
+				<button><i></i></button>
+			</form>
+			<a class="exlusive" href="#"></a>
+			<a class="radio" href="#">radio</a>
+			<button class="enter-btn js-enter-open">
+				<span class="enter-btn__fb"></span>
+				<span class="enter-btn__vk"></span>
+				<span class="enter-btn__gen">Вход</span>
+			</button>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container">
+			<div class="logo">
+				<a href="#">IBIZA.ru</a>
+			</div>	
+			<nav class="nav">
+				<ul>
+					<li><a href="#">Коммьюнити</a></li>
+					<li><a href="#">Места</a></li>
+					<li><a href="#">Гид</a></li>
+					<li><a href="#">Карта</a></li>
+					<li><a href="#">События</a></li>
+					<li><a href="#">Отели</a></li>
+					<li><a href="#">Контакты</a></li>    
+				</ul>
+			</nav>			
+			<!-- BEGIN .online -->
+			<div class="online">
+				<form action="">
+					<button class="online__title">
+						<span>Оnline бронирование<i></i></span>			
+					</button>		
+					<div class="online__details">
+						<ul class="online__type">
+							<li><label for="ot1" class="online__tour">Тур<input id="ot1" type="radio" name="ot"></label></li>
+							<li><label for="ot2" class="online__hotel active">Отель<input id="ot2" type="radio" name="ot"></label></li>
+							<li><label for="ot3" class="online__avia">Авиабилет<input id="ot3" type="radio" name="ot"></label></li>
+						</ul>
+						<div class="online__reserve">
+							<div class="txt-field">
+								<label for="on1">Лечу из</label>
+								<input id="on1" type="text" placeholder="Домодедово (DME), Москва" required="required">
+							</div>
+							<div class="txt-field">
+								<label for="on2">Пункт назначения</label>
+								<input id="on2" type="text" placeholder="Ибица (IBZ), Испания" required="required">
+							</div>
+							<div class="online__date">
+								<div class="txt-field">
+									<label for="on3">Вылетаю</label>
+									<input id="on3" class="js-dp" type="text" placeholder="4 февраля" required="required">
+								</div>
+								<div class="txt-field">
+									<label for="on4">Возвращаюсь</label>
+									<input id="on4" class="js-dp" type="text" placeholder="12 января" required="required">
+								</div>
+							</div>
+							<div class="online__people">
+								<div class="select">
+									<div class="select__title">Взрослые</div>
+									<div class="select__value js-select">
+										<span>1</span>
+										<select>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+										</select>
+									</div>
+								</div>
+								<div class="select">
+									<div class="select__title">Дети</div>
+									<div class="select__value js-select">
+										<span>2</span>
+										<select>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+										</select>
+									</div>
+								</div>
+								<div class="select">
+									<div class="select__title">Номера</div>
+									<div class="select__value js-select">
+										<span>3</span>
+										<select>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<input class="online__sbt" type="submit">
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- END .online -->				
+		</div>		
+	</div>		
+</header>
+<!-- END .header -->
+<!-- BEGIN .inner -->
+<div class="inner"></div>
+<!-- END .inner -->
+<!-- BEGIN .breadcrumps -->
+<div class="breadcrumps">
+	<div class="container">
+		<ul>
+			<li><a href="#">Главная</a><span>/</span></li>
+			<li>Профиль </li>
+		</ul>
+	</div>
+</div>
+<!-- END .breadcrumps -->
+<!-- BEGIN .container -->
+<section class="container">
+	<!-- BEGIN .cm-top -->
+	<div class="cm-top">
+		<h1 class="cm-title">настройки</h1>
+		<div class="cm-add">
+			<button class="cm-add__btn">Вернуться</button>
+		</div>				
+	</div>
+	<!-- END .cm-top -->
+	<!-- BEGIN .cols -->
+	<div class="cols">
+		<!-- BEGIN .col-9 -->
+		<div class="col-9">
+			<!-- BEGIN .cm-settings -->
+			<div class="cm-settings">
+				<ul class="cm-tabs js-tabs">
+					<li data-item="settings-general" class="active">Общее<i class="ico-stg-gen"></i></li>
+					<li data-item="settings-private">Приватность<i class="ico-stg-priv"></i></li>
+					<li data-item="settings-notific">Оповещение<i class="ico-stg-notif"></i></li>
+				</ul>
+				<!-- BEGIN .cm-settings__general -->
+				<form id="settings-general" class="js-tabs-item" action="">
+					<div class="cm-settings__general">
+						<div class="cm-settings__user">
+							<img src="img/community_img/user.jpg" alt="">
+							<strong>Аграфена<br>Кирова-Свиридова</strong>
+							<p><span>Город:</span>Москва</p>
+						</div>
+						<div class="cm-settings__album">
+							<div class="cm-settings__album-title">альбом аваторов</div>
+							<ul class="cm-settings__ava">
+								<li><img src="img/community_img/album.jpg" alt=""><button><i></i></button></li>
+								<li><img src="img/community_img/album.jpg" alt=""><button><i></i></button></li>
+								<li><img src="img/community_img/album.jpg" alt=""><button><i></i></button></li>
+								<li><img src="img/community_img/album.jpg" alt=""><button><i></i></button></li>
+								<li><img src="img/community_img/album.jpg" alt=""><button><i></i></button></li>
+							</ul>
+							<div class="cm-settings__btn">
+								<button>Загрузить</button>
+								<button>Выбрать аватар на обложку</button>
+							</div>
+						</div>
+					</div>
+					<div class="cm-settings__social">
+						<strong>Мои социальные сети:</strong>
+						<ul>
+							<li>
+								<i class="ico-stg-fb"></i>
+								<p><span>Аграфена</span>в Facebook</p>
+								<button><em></em></button>
+							</li>
+							<li>
+								<i class="ico-stg-tw"></i>
+								<p><span>Аграфена</span>в Twitter</p>
+								<button><em></em></button>
+							</li>
+							<li>
+								<i class="ico-stg-vk"></i>
+								<p><a href="#">Добавить</a></p>
+							</li>
+							<li>
+								<i class="ico-stg-pn"></i>
+								<p><span>Аграфена</span>в Pinterest</p>
+								<button><em></em></button>
+							</li>
+						</ul>
+						<div class="cm-settings__bottom">
+							<input type="submit" value="Сохранить изменения">
+						</div>
+					</div>
+				</form>
+				<!-- END .cm-settings__general -->
+				<!-- BEGIN .cm-settings__private -->
+				<form id="settings-private" class="js-tabs-item" action="">
+					<div class="cm-settings__private">
+						<div class="cm-settings__title"><strong>Отображения ленты активности:</strong></div>
+						<ul class="cm-settings__list">
+							<li>
+								<label class="js-checkbox active" for="stg1"><input id="stg1" type="checkbox" checked><i></i><span>Показывать сообщения «Мне нравится»</span></label>
+								<label class="js-checkbox active" for="stg2"><input id="stg2" type="checkbox" checked><i></i><span>Показывать сообщения «Добавления фото»</span></label>
+							</li>
+							<li>
+								<label class="js-checkbox" for="stg3"><input id="stg3" type="checkbox"><i></i><span>Показывать сообщения «Поиск попутчика»</span></label>
+								<label class="js-checkbox" for="stg4"><input id="stg4" type="checkbox"><i></i><span>Показывать сообщения  «Добавление видео»</span></label>
+							</li>
+							<li>
+								<label class="js-checkbox active" for="stg5"><input id="stg5" type="checkbox" checked><i></i><span>Показывать сообщения «Дружбы»</span></label>
+								<label class="js-checkbox" for="stg6"><input id="stg6" type="checkbox"><i></i><span>Показывать все типы сообщений</span></label>
+							</li>
+							<li>
+								<label class="js-checkbox" for="stg7"><input id="stg7" type="checkbox"><i></i><span>Показывать сообщения «Добавления аудио»</span></label>
+							</li>
+						</ul>
+						<div class="cm-settings__bottom">
+							<input type="submit" value="Сохранить изменения">
+						</div>
+					</div>
+				</form>
+				<!-- END .cm-settings__private -->
+				<!-- BEGIN .cm-settings__notific -->
+				<form id="settings-notific" class="js-tabs-item" action="">
+					<div class="cm-settings__notific">
+						<div class="cm-settings__title"><strong>Имейл для оповещения:</strong><span>agrafena_1981@yandex.ru</span><button></button></div>
+						<ul class="cm-settings__list">
+							<li>
+								<label class="js-checkbox active" for="stg8"><input id="stg8" type="checkbox" checked><i></i><span>Оповещать о новых комментариях</span></label>
+								<label class="js-checkbox active" for="stg9"><input id="stg9" type="checkbox" checked><i></i><span>Оповещать о новостях</span></label>
+							</li>
+							<li>
+								<label class="js-checkbox" for="stg10"><input id="stg10" type="checkbox"><i></i><span>Оповещать об отметке «лайк»</span></label>
+								<label class="js-checkbox" for="stg11"><input id="stg11" type="checkbox"><i></i><span>Оповещать об акциях</span></label>
+							</li>
+							<li>
+								<label class="js-checkbox active" for="stg12"><input id="stg12" type="checkbox" checked><i></i><span>Оповещать о сообщении для пользователя</span></label>
+								<label class="js-checkbox" for="stg13"><input id="stg13" type="checkbox"><i></i><span>Оповещать о спецпредложениях ibiza.ru</span></label>
+							</li>
+						</ul>
+						<div class="cm-settings__bottom">
+							<input type="submit" value="Сохранить изменения">
+						</div>
+					</div>
+				</form>
+				<!-- END .cm-settings__notific -->
+			</div>
+			<!-- END .cm-settings -->
+		</div>
+		<!-- END .col-9 -->
+		<!-- BEGIN .col-10 -->
+		<div class="col-10">
+			<!-- BEGIN .cm-box -->
+			<div class="cm-box cm-box_action">					
+				<div class="cm-box__top"><a href="#">Недавние действия</a><i></i></div>
+				<div class="cm-box__content">
+					<!-- BEGIN .cm-box__actions -->
+					<ul class="cm-box__actions">
+						<li class="cm-box__actions-like">
+							<div class="cm-box__actions-pic">
+								<a href="#">
+									<i></i>
+									<img src="img/community_img/pic15.jpg" alt="">
+								</a>
+							</div>	
+							<p>Аграфене нравится <a href="#">TriangleSunny</a></p>
+						</li>
+						<li class="cm-box__actions-audio">
+							<div class="cm-box__actions-pic">
+								<a href="#">
+									<i></i>
+									<img src="img/community_img/pic15.jpg" alt="">
+								</a>
+							</div>	
+							<p>Аграфене нравится <a href="#">TriangleSunny</a></p>
+							<div class="cm-box__info">
+								<a class="cm-box__info-like" href="#">1<i></i></a>
+								<a class="cm-box__info-comm" href="#">1<i></i></a>
+							</div>
+						</li>
+						<li class="cm-box__actions-friend">
+							<div class="cm-box__actions-pic">
+								<a href="#">
+									<i></i>
+									<img src="img/community_img/pic15.jpg" alt="">
+								</a>
+							</div>	
+							<p>Аграфене нравится <a href="#">TriangleSunny</a></p>
+						</li>
+					</ul>
+					<!-- END .cm-box__actions -->
+				</div>
+				<div class="cm-box__all">
+					<a href="#">Показать больше недавних действий</a>
+				</div>
+			</div>
+			<!-- END .cm-box -->
+			<!-- BEGIN .cm-box -->
+			<div class="cm-box cm-box_friends">					
+				<div class="cm-box__top"><a href="#">Друзья</a><i></i></div>
+				<div class="cm-box__content">
+					<!-- BEGIN .cm-box__list -->
+					<ul class="cm-box__list">
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<strong>Юрий Фастов</strong>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<strong>Юрий Фастов</strong>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<strong>Юрий Фастов</strong>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<strong>Юрий Фастов</strong>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<strong>Юрий Фастов</strong>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<strong>Юрий Фастов</strong>
+							</a>
+						</li>
+					</ul>
+					<!-- END .cm-box__list -->
+				</div>
+				<div class="cm-box__all">
+					<a href="#">Показать всех друзей</a>
+				</div>
+			</div>
+			<!-- END .cm-box -->
+			<!-- BEGIN .cm-box -->
+			<div class="cm-box cm-box_pic">					
+				<div class="cm-box__top"><a href="#">Фотографии</a><i></i></div>
+				<div class="cm-box__content">
+					<!-- BEGIN .cm-box__friends -->
+					<ul class="cm-box__list">
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+							</a>
+						</li>
+					</ul>
+					<!-- END .cm-box__list -->
+				</div>
+				<div class="cm-box__all">
+					<a href="#">Показать все фотографии</a>
+				</div>
+			</div>
+			<!-- END .cm-box -->
+						<!-- BEGIN .cm-box -->
+			<div class="cm-box cm-box_like">					
+				<div class="cm-box__top"><a href="#">Нравится</a><i></i></div>
+				<div class="cm-box__content">
+					<!-- BEGIN .cm-box__list -->
+					<ul class="cm-box__list">
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<span>Majestic</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<span>Majestic</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<span>Majestic</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<span>Majestic</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<span>Majestic</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/community_img/pic16.jpg" alt="">
+								<span>Majestic</span>
+							</a>
+						</li>
+					</ul>
+					<!-- END .cm-box__list -->
+				</div>
+				<div class="cm-box__all">
+					<a href="#">Показать все</a>
+				</div>
+			</div>
+			<!-- END .cm-box -->
+		</div>
+		<!-- END .col-10 -->
+	</div>
+	<!-- END .cols -->
+	<!-- BEGIN .banner-wide -->
+	<div class="banner-wide">
+		<img src="img/community_img/banner.jpg" alt="">
+	</div>
+	<!-- END .banner-wide -->
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<nav class="nav-list">
+			<ul>
+				<li><a class="nav-list__bold" href="#">Гид</a></li>
+				<li><a href="#">Отели и жилье</a></li>
+				<li><a href="#">Диджеи и музыка</a></li>
+				<li><a href="#">Российский центр</a></li>
+				<li><a href="#">Прокат автомобилей</a></li>
+				<li><a href="#">Транспорт</a></li>
+				<li><a href="#">Пляжи</a></li>
+				<li><a href="#">Шоппинг</a></li>
+				<li><a class="nav-list__bold" href="#">Места</a></li>
+				<li><a href="#">Рестораны и бары</a></li>
+				<li><a href="#">Клубы</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Gay Ibiza</a></li>
+				<li><a href="#">Спорт, здоровье, йога</a></li>
+				<li><a href="#">Hippy</a></li>
+				<li><a href="#">Семейный отдых</a></li>
+				<li><a href="#">Праздники и фестивали</a></li>
+				<li><a href="#">Об острове</a></li>
+				<li><a href="#">Форментера</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">SOS!</a></li>
+			</ul>
+			<ul>
+				<li><a class="nav-list__bold" href="#">Карта</a></li>
+				<li><a class="nav-list__bold" href="#">События</a></li>
+				<li><a class="nav-list__bold" href="#">Контактная информация</a></li>
+				<li><a class="nav-list__bold" href="#">Коммьюнити</a></li>
+				<li><a href="#">Форум</a></li>
+				<li><a href="#">Посты/Блоги</a></li>
+				<li><a href="#">Рейтинг пользователей</a></li>
+				<li><a href="#">Профиль пользователя</a></li>
+				<li><a href="#">Попутчики</a></li>
+			</ul>
+		</nav>
+		<div class="footer__contacts">
+			<div class="footer__phone">8 (495) 726 59 21, (926) 779 77 70</div>
+			<div class="footer__mail"><a href="mailto:sovet@ibiza.ru">sovet@ibiza.ru</a></div>
+			<div class="footer__adress">
+				<b>Москва</b>
+				<span>м. Кропоткинская</span>
+				<p>Гоголевский бульвар д.8/9, стр. 3, 2 этаж, оф.1,<br>здание Литературного фонда,<br>понедельник – пятница с 10:00 до 19:00</p>
+			</div>			
+		</div>
+		<div class="footer__right">
+			<ul class="payment">
+				<li class="payment__ym"></li>
+				<li class="payment__sb"></li>
+				<li class="payment__mk"></li>
+				<li class="payment__wm"></li>
+				<li class="payment__kw"></li>
+			</ul>
+			<ul class="footer__social">
+				<li><a class="footer__vk" href="#">Вконтакте</a></li>
+				<li><a class="footer__tw" href="#">Twitter</a></li>
+				<li><a class="footer__fb" href="#">Facebook</a></li>
+			</ul>
+		</div>
+	</footer>
+	<!-- END .footer -->
+</section>
+<!-- END .container -->
+</body>
+</html>
