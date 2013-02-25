@@ -1,0 +1,87 @@
+@import "base";
+//styles for inner pages
+//events
+//ev-top
+.ev-top {
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+.ev-title {
+	float: left;
+	font-family: 'AG_Futura Bold', Arial, sans-serif;
+	font-size: 60px;
+	text-transform: uppercase;
+}
+.ev-nav {
+	float: right;
+	height: 19px;
+	margin-top: 38px;
+	line-height: 19px;
+	a, span {
+		position: relative;
+		float: left;
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 13px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #000;
+	}
+	a {
+		&.no-active {
+			color: #999;
+			.ev-ico-prev {
+				@include sized-sprite($events_img, prev-dis);
+			}
+			.ev-ico-next {
+				@include sized-sprite($events_img, next-dis);
+			}
+		}
+	}
+	span {
+		padding: 0 25px;
+	}
+	i {
+		position: absolute;
+		top: 0;
+	}
+}
+.ev-nav__prev {
+	padding-left: 35px;
+}
+.ev-nav__next {
+	padding-right: 35px;
+}
+.ev-ico-prev {
+	left: 0;
+	@include sized-sprite($events_img, prev);
+}
+.ev-ico-next {
+	right: 0;
+	@include sized-sprite($events_img, next);
+}
+//ev-filter
+.ev-filter {
+	padding: 14px 15px;
+	background: #f7f7f7;
+	border: 1px solid #c1c1c1;
+	@include background-image(linear-gradient(#f7f7f7, #e7e7e7));
+	overflow: hidden;
+}
+.ev-search {
+	float: left;
+	input[type="text"] {
+		width: 790px;
+		height: 37px;
+		padding: 0 15px;
+		background: #f8f8f8;
+		border: 1px solid #dcdcdc;
+		@include border-radius(3px);
+	}
+	input[type="submit"] {
+		height: 39px;
+		@extend %btn-orange;
+		padding: 0 25px;
+		font-family: 'Futuris Bold', Arial, sans-serif;
+		font-size: 18px;
+	}
+}

@@ -228,3 +228,5 @@ button { background: none; cursor: pointer; }
 .enter__extra input[type="password"] { margin-bottom: 10px; }
 .enter__extra input[type="submit"] { width: 310px; height: 40px; margin-top: 10px; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 18px; }
 .enter__extra a { font-family: Arial, Tahoma, sans-serif; font-size: 12px; color: #464646; text-decoration: underline; }
+
+.inner { height: 70px; margin-top: -20px; background: url(../img/hotel_img/inner.jpg) no-repeat 50% 0; background-size: cover; border-bottom: 5px solid #1a113a; }

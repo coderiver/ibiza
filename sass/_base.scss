@@ -11,6 +11,7 @@ $experimental-support-for-svg: true;
 $index_img: sprite-map("index_img/icons/*.png", $spacing: 10px);
 $hotel_img: sprite-map("hotel_img/icons/*.png", $spacing: 10px);
 $community_img: sprite-map("community_img/icons/*.png", $spacing: 10px);
+$events_img: sprite-map("events_img/icons/*.png", $spacing: 10px);
 //extend
 %btn-orange {
   @include background-image(linear-gradient(#ffcc00, #e99400));

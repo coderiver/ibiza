@@ -249,11 +249,13 @@ if ($('.js-checkbox').length > 0) {
 //tabs
 $('.js-tabs-item:gt(0)').hide();
 $('.js-tabs li').click(function() {
-	$('.js-tabs li').removeClass('active');
-	$(this).addClass('active');
-	var item = $(this).attr('data-item');
-	$('.js-tabs-item').slideUp();
-	$('#' + item).slideDown();
+	if (!$(this).hasClass('active')) {
+		$('.js-tabs li').removeClass('active');
+		$(this).addClass('active');
+		var item = $(this).attr('data-item');
+		$('.js-tabs-item').slideUp();
+		$('#' + item).slideDown();
+	};
 });
 
 
