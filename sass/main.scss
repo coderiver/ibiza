@@ -3,11 +3,11 @@
 //main
 .main {
 	position: relative;	
-	margin: -20px 0 70px 0;
+	margin: -20px 0 25px 0;
 	background: url(../img/index_img/main.jpg) no-repeat 50% 50%;
 	background-size: cover;
 	border-bottom: 5px solid #1a113a;
-	@include box-shadow(#f5f5f5 0 34px 0	);
+	@include box-shadow(#f5f5f5 0 7px 0	);
 	.container {
 		position: relative;
 		height: 470px;
@@ -20,7 +20,7 @@
 	left: 0;
 	width: 586px;
 	height: 298px;
-	padding: 70px 50px 0 35px;
+	padding: 73px 50px 0 60px;
 	background: url(../img/index_img/figure.png) no-repeat 0 0;
 }
 .hot-deals__label {
@@ -109,147 +109,10 @@
 		}
 	}
 }
-//online
-.online {
-	position: relative;
-	float: right;
-	width: 275px;
-	margin-top: -12px;		
-	form {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 275px;
-		background: url(../img/index_img/online_bg.jpg);
-		@include border-radius(3px);
-		@include box-shadow(rgba(1,108,180,0.5) 0 0 5px inset, rgba(1,108,180,0.5) 0 -5px 15px inset);
-	}
-}
-.online__details {
-	display: none;
-	width: 245px;
-	padding: 15px;	
-}
-.online__title {	
-	position: relative;
-	width: 275px;
-	height: 40px;	
-	padding-left: 15px;
-	text-align: left;
-	font-family: 'Futuris Bold', Arial, sans-serif;	
-	font-size: 14px;
-	text-transform: uppercase;
-	color: #fff;
-	text-shadow: rgba(0,0,0,0.56) 0 1px 1px;
-	span {
-		position: relative;
-	}
-	i {
-		display: none;
-		position: absolute;
-		top: 2px;
-		right: -18px;
-		@include sized-sprite($index_img, close);
-	}
-	&.open {
-		i {
-			display: block;
-		}
-	}
-}
-.online__detail {
-	padding: 15px;	
-}
-.online__type {
-	height: 34px;
-	margin-bottom: 8px;
-	@include box-shadow(rgba(0,0,0,0.36) 0 1px 1px);
-	@include border-radius(3px);
-	text-align: center;
-	li {
-		float: left;
-		background: #00b8ff;
-		@include background-image(linear-gradient(#00b8ff, #02a9e9));
-	}
-	label {
-		display: block;
-		height: 34px;
-		line-height: 34px;	
-		font-size: 13px;
-		font-family: 'AG_Futura Bold', Arial, sans-serif;
-		color: #fff;	
-		text-shadow: 0 1px 1px rgba(97,62,0,0.54);
-		cursor: pointer;
-		@extend %us;
-		&.active {
-			background: #ffcc00;
-			@include background-image(linear-gradient(#ffcc00, #e99400));
-			@include box-shadow(rgba(74,32,0,0.42) 0 1px 7px inset);
-		}
-	}
-	input {
-		display: none;
-	}
-}
-.online__tour {width: 60px;}
-.online__hotel {width: 75px;}
-.online__avia {width: 110px;}
-.online__reserve {
-	.txt-field {
-		input {
-			width: 235px;
-		}		
-	}
-}
-.online__date {
-	height: 51px;
-	margin-bottom: 20px;
-	.txt-field {
-		position: relative;
-		float: right;
-		&:after {
-			content: "";
-			position: absolute;
-			top: 25px;
-			right: 5px;
-			@include sized-sprite($index_img, date);
-		}
-		input {
-			position: relative;
-			width: 110px;		
-			line-height: 33px;
-		}		
-		&:first-child {
-			float: left;
-		}
-	}
-}
-.online__people {
-	height: 51px;
-	margin-bottom: 20px;
-	.select {
-		float: left;
-		margin-left: 8px;
-		&:first-child {
-			margin-left: 0px;
-		}
-	}
-	.select__value {
-		width: 71px;
-	}
-}
-.online__sbt {
-	width: 245px;
-	height: 41px;
-	font-family: 'AG_Futura Bold', Arial, sans-serif;
-	font-size: 16px;	
-	@extend %btn-orange;
-}
 //tours
 .tours {
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 	ul {
-		padding-bottom: 60px;
 		overflow: hidden;
 	}	
 	li {
@@ -260,7 +123,48 @@
 		padding: 0 24px;
 	}
 	.item__pic {
-		margin-bottom: 3px;
+		position: relative;
+		margin-bottom: 45px;
+		strong {
+			position: absolute;
+			left: 50%;
+			text-align: center;
+			font-family: 'AG_Futura Bold', Arial, sans-serif;
+			font-size: 22px;
+		}
+	}
+	.item__price-yc {		
+		bottom: -40px;		
+		margin-left: -49px;
+		@include sized-sprite($index_img, stick);		
+		color: #fff;
+		@include rotate(-20);
+		span {
+			display: block;
+			margin-top: 33px;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	}
+	.item__price-wc {		
+		bottom: -40px;		
+		margin-left: -49px;
+		@include sized-sprite($index_img, stick1);		
+		color: #000;
+		line-height: 102px;
+		span {
+			display: none;
+		}
+	}
+	.item__price-yr {	
+		bottom: -20px;	
+		margin-left: -61px;
+		@include sized-sprite($index_img, stick2);		
+		color: #fff;
+		line-height: 45px;
+		span {
+			display: none;
+		}
 	}
 	.item__title {
 		position: relative;
@@ -293,11 +197,6 @@
 			height: 30px;
 			@include background-image(linear-gradient(rgba(255,255,255,0), #fff 70%))
 		}
-	}
-	.item__price {
-		border-top: 1px solid #dedada;
-		border-bottom: none;
-		margin: 0 20px;
 	}
 }
 //afisha
@@ -516,6 +415,46 @@
 	font-family: 'AG_Futura Bold', Arial, sans-serif;
 	font-size: 18px;
 	color: #000;
+}
+//tape-links
+.tape-links {
+	margin-bottom: 20px;
+	padding: 0 17px;
+	overflow: hidden;
+	ul {
+		float: left;
+	}
+	li {
+		float: left;
+		height: 24px;
+		padding: 0 24px;
+		border-right: 1px solid #e5e5e5;
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 13px;
+		color: #999;
+		text-transform: uppercase;
+		line-height: 24px;
+		&:first-child {
+			border: none;
+			padding: 0;
+		}
+	}
+	a {
+		color: $blue;
+	}
+	button {
+		float: right;
+		height: 27px;
+		padding: 0 25px;
+		border: 1px solid #0167a9;
+		@include border-radius(6px);
+		background-color: #09f;
+		@include box-shadow(inset 1px 1px 0 rgba(255,255,255,.4));
+		@include background-image(linear-gradient(bottom, rgba(0,0,0,.05) 0%, rgba(125,125,125,.05) 50%, rgba(255,255,255,.05) 100%));
+		font-family: 'AG_Futura Bold', Arial, sans-serif;
+		font-size: 12px;
+		color: #fff;
+	}
 }
 //tape
 .tape {
