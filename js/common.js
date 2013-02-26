@@ -74,7 +74,40 @@ if ($('.calendar').length > 0) {
 
 //masonry
 if ($('.js-masonry').length > 0) {
-	$('.js-masonry').masonry();
+
+  var $container = $('.js-masonry');
+  $container.masonry({isAnimated: true});  
+  var $boxes = $('<li class="ev-item">\
+										<div class="ev-item__pic">\
+											<a href="#"><img src="img/events_img/pic1.jpg" alt=""></a>\
+										</div>\
+										<div class="ev-item__cat">\
+											<a href="#">вечеринка</a>\
+										</div>\
+										<div class="ev-item__title">\
+											<a href="#">PENNAYA PARTY VUMATE</a>\
+										</div>\
+										<div class="ev-item__persons">DJ Nujdin</div>\
+										<div class="ev-item__place">\
+											<a href="#">BARBARABAR</a>\
+										</div>\
+										<div class="ev-item__style">DnB, Dubstep, Electro</div>\
+										<div class="ev-item__detail">\
+											<a class="ev-item__comm" href="#">33<i></i></a>\
+											<a class="ev-item__like" href="#">33<i></i></a>\
+										</div>\
+										<div class="ev-item__go">\
+											<strong>157</strong>\
+											<a href="#"><span>Я пойду</span></a>\
+										</div>\
+									</li>');
+  $('.js-masonry-add').click(function(){
+  	if (!$(this).hasClass('no-active')) {
+    	$(this).parent().next().append($boxes).masonry('appended', $boxes);
+    	$(this).addClass('no-active');
+    }
+  });
+  
 };
 
 //rating
@@ -258,6 +291,13 @@ $('.js-tabs li').click(function() {
 	};
 });
 
+//events filter
+$('.js-events-filter').click(function() {
+	$(this).next().fadeIn();
+});
+$('.js-filter-close').click(function() {
+	$(this).parent().fadeOut();
+});
 
 });
 

@@ -171,12 +171,482 @@
 	<!-- END .ev-top -->
 	<!-- BEGIN .ev-filter -->
 	<div class="ev-filter">
-		<div class="ev-search">
+		<div class="ev-filter__search">
 			<input type="text" placeholder="Поиск по имени DJ,  названию события...">
-			<input type="submit" value="Найти">
+			<input type="submit" value="Найти">			
 		</div>
+		<ul class="ev-filter__type">
+			<li><span>Место</span></li>
+			<li>
+				<span class="js-events-filter">Cтиль музыки</span>
+				<div class="ev-filter__popup">
+					<button class="js-filter-close"><i></i></button>
+					<label class="js-checkbox" for="evf1"><input id="evf1" type="checkbox">Drum n Bass<i></i></label>
+					<label class="js-checkbox active" for="evf2"><input id="evf2" type="checkbox" checked>Rock<i></i></label>
+					<label class="js-checkbox" for="evf3"><input id="evf3" type="checkbox">Dubstep<i></i></label>
+					<label class="js-checkbox" for="evf4"><input id="evf4" type="checkbox">Fusion<i></i></label>
+					<label class="js-checkbox" for="evf5"><input id="evf5" type="checkbox">Electro<i></i></label>
+					<label class="js-checkbox" for="evf6"><input id="evf6" type="checkbox">Pop<i></i></label>
+					<label class="js-checkbox" for="evf7"><input id="evf7" type="checkbox">Rap<i></i></label>
+					<label class="js-checkbox" for="evf8"><input id="evf8" type="checkbox">Trance<i></i></label>
+					<label class="js-checkbox" for="evf9"><input id="evf9" type="checkbox">Trap<i></i></label>
+					<label class="js-checkbox active" for="evf10"><input id="evf10" type="checkbox" checked>House<i></i></label>
+					<label class="js-checkbox" for="evf11"><input id="evf11" type="checkbox">Punk<i></i></label>
+					<label class="js-checkbox" for="evf12"><input id="evf12" type="checkbox">Lounge<i></i></label>
+					<label class="js-checkbox active" for="evf13"><input id="evf13" type="checkbox" checked>Funk<i></i></label>
+					<label class="js-checkbox" for="evf14"><input id="evf14" type="checkbox">Jazz<i></i></label>
+					<label class="js-checkbox" for="evf15"><input id="evf15" type="checkbox">Soul<i></i></label>
+				</div>
+			</li>
+		</ul>
 	</div>
 	<!-- END .ev-filter -->
+	<!-- BEGIN .ev-events -->
+	<div class="ev-events">
+		<!-- BEGIN .ev-events__items -->
+		<div class="ev-events__items">
+			<div class="ev-events__title">
+				<span>Пятница,</span>
+				<strong>сегодня / 7 событий</strong>
+				<button class="js-masonry-add">все события этого дня</button>
+			</div>
+			<ul class="ev-events__list js-masonry">				
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- END .ev-events__items -->
+		<!-- BEGIN .ev-events__items -->
+		<div class="ev-events__items">
+			<div class="ev-events__title">
+				<span>Суббота,</span>
+				<strong>завтра / 3 события</strong>
+				<button class="no-active">все события этого дня</button>
+			</div>
+			<ul class="ev-events__list">
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- END .ev-events__items -->
+		<!-- BEGIN .ev-events__items -->
+		<div class="ev-events__items">
+			<div class="ev-events__title">
+				<span>Суббота,</span>
+				<strong>19 февраля / 1 событие</strong>
+				<button class="no-active">все события этого дня</button>
+			</div>
+			<ul class="ev-events__list">
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- END .ev-events__items -->
+		<!-- BEGIN .ev-events__items -->
+		<div class="ev-events__items">
+			<div class="ev-events__title">
+				<span>Суббота,</span>
+				<strong>21 февраля / нет событий</strong>
+				<button class="no-active">все события этого дня</button>
+			</div>
+		</div>
+		<!-- END .ev-events__items -->
+		<!-- BEGIN .ev-events__items -->
+		<div class="ev-events__items">
+			<div class="ev-events__title">
+				<span>Пятница,</span>
+				<strong>22 февраля / 7 событий</strong>
+				<button class="js-masonry-add">все события этого дня</button>
+			</div>
+			<ul class="ev-events__list js-masonry">				
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA PARTY VUMATE</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz, «Pompeya»,  DJ Nero, DJ Grad, DJ Nujdin</div>
+					<div class="ev-item__place">
+						<a href="#">BARBARABAR</a>
+					</div>
+					<div class="ev-item__style">DnB, Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>157</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+				<li class="ev-item">
+					<div class="ev-item__pic">
+						<a href="#"><img src="img/events_img/pic1.jpg" width="187" height="188" alt=""></a>
+					</div>
+					<div class="ev-item__cat">
+						<a href="#">вечеринка</a>
+					</div>
+					<div class="ev-item__title">
+						<a href="#">PENNAYA</a>
+					</div>
+					<div class="ev-item__persons">DJ NikOne,  DJ Fuzz</div>
+					<div class="ev-item__place">
+						<a href="#">BAR</a>
+					</div>
+					<div class="ev-item__style">Dubstep, Electro</div>
+					<div class="ev-item__detail">
+						<a class="ev-item__comm" href="#">33<i></i></a>
+						<a class="ev-item__like" href="#">33<i></i></a>
+					</div>
+					<div class="ev-item__go">
+						<strong>15</strong>
+						<a href="#"><span>Я пойду</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- END .ev-events__items -->
+	</div>
+	<!-- END .ev-events -->
+	<!-- BEGIN .banner-wide -->
+	<div class="banner-wide">
+		<img src="img/community_img/banner.jpg" alt="">
+	</div>
+	<!-- END .banner-wide -->
 	<!-- BEGIN .footer -->
 	<footer class="footer">
 		<nav class="nav-list">
