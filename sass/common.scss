@@ -232,6 +232,7 @@ button {
 .enter-btn {
 	float: right;
 	padding: 0 20px 0 6px;	
+	line-height: 1;
 	span {
 		float: left;
 		font-family: 'AG_Futura Bold', Arial, sans-serif;
@@ -558,7 +559,7 @@ button {
 //breadcrumps
 .breadcrumps {	
 	background: #f5f5f5;
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 	.container {
 		height: 34px;
 		line-height: 34px;

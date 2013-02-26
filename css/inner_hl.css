@@ -10,7 +10,12 @@
 
 .h2_hl { margin-bottom: 30px; border-bottom: 1px solid #e8e8e8; }
 
-.hl-title { margin-bottom: 25px; text-align: center; font-family: 'Futuris Bold', Arial, sans-serif; font-size: 48px; }
+.hl-top { margin-bottom: 25px; overflow: hidden; }
+.hl-top .hl-tabs, .hl-top .rating { float: right; }
+.hl-top .hl-tabs { margin: 10px 0 0 0; }
+.hl-top .rating { margin-top: 15px; }
+
+.hl-title { float: left; font-family: 'Futuris Bold', Arial, sans-serif; font-size: 48px; }
 
 .hl-rating { margin-bottom: 25px; text-align: center; font-size: 0; }
 .hl-rating .rating { display: inline-block; }

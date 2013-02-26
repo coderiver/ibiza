@@ -38,16 +38,16 @@
 .menu a:after { content: " -"; }
 
 .tours { margin-bottom: 40px; }
-.tours ul { overflow: hidden; }
+.tours ul { padding-top: 45px; overflow: hidden; }
 .tours li { float: left; }
 .tours .item { width: 160px; padding: 0 24px; }
-.tours .item__pic { position: relative; margin-bottom: 45px; }
-.tours .item__pic strong { position: absolute; left: 50%; text-align: center; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 22px; }
-.tours .item__price-yc { bottom: -40px; margin-left: -49px; background: url('../img/index_img/icons-s81a8954d34.png') 0 -193px no-repeat; width: 98px; height: 98px; color: #fff; -moz-transform: rotate(-20deg); -o-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); -ms-transform: rotate(-20deg); transform: rotate(-20deg); }
+.tours .item__pic { position: relative; }
+.tours .item__pic strong { position: absolute; text-align: center; font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 22px; }
+.tours .item__price-yc { left: 25px; top: -45px; margin-left: -49px; background: url('../img/index_img/icons-s81a8954d34.png') 0 -193px no-repeat; width: 98px; height: 98px; color: #fff; -moz-transform: rotate(-20deg); -o-transform: rotate(-20deg); -webkit-transform: rotate(-20deg); -ms-transform: rotate(-20deg); transform: rotate(-20deg); }
 .tours .item__price-yc span { display: block; margin-top: 33px; font-size: 10px; text-transform: uppercase; }
-.tours .item__price-wc { bottom: -40px; margin-left: -49px; background: url('../img/index_img/icons-s81a8954d34.png') 0 -391px no-repeat; width: 98px; height: 98px; color: #000; line-height: 102px; }
+.tours .item__price-wc { left: 50%; top: -45px; margin-left: -49px; background: url('../img/index_img/icons-s81a8954d34.png') 0 -391px no-repeat; width: 98px; height: 98px; color: #000; line-height: 102px; }
 .tours .item__price-wc span { display: none; }
-.tours .item__price-yr { bottom: -20px; margin-left: -61px; background: url('../img/index_img/icons-s81a8954d34.png') 0 -583px no-repeat; width: 122px; height: 46px; color: #fff; line-height: 45px; }
+.tours .item__price-yr { left: 50%; top: -23px; margin-left: -61px; background: url('../img/index_img/icons-s81a8954d34.png') 0 -583px no-repeat; width: 122px; height: 46px; color: #fff; line-height: 45px; }
 .tours .item__price-yr span { display: none; }
 .tours .item__title { position: relative; height: 60px; line-height: 60px; overflow: hidden; }
 .tours .item__title a { font-size: 18px; }
@@ -90,7 +90,7 @@
 .item .rating { display: inline-block; height: 18px; margin-bottom: 23px; }
 
 .item__pic { margin-bottom: 5px; }
-.item__pic img { display: inline-block; min-height: 180px; }
+.item__pic img { display: inline-block; }
 
 .item__cat a, .item__cat span, .item__number a, .item__number span { font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 9px; text-transform: uppercase; color: #aec365; letter-spacing: 2px; }
 

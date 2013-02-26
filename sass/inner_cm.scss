@@ -733,12 +733,17 @@
 }
 //cm-wall
 .cm-wall {
-
+	overflow: hidden;
+}
+.cm-wall__posts {
+	margin-right: -50px;
+	overflow: hidden;
 }
 //cm-post
 .cm-post {
+	float: left;
 	width: 410px;
-	margin-bottom: 10px;
+	margin: 0 46px 10px 0;
 	border: 1px solid #bebebe;
 }
 .cm-post_pic {

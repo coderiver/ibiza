@@ -5,9 +5,21 @@
 	margin-bottom: 30px;
 	border-bottom: 1px solid #e8e8e8;
 }
-.hl-title {
+.hl-top {
 	margin-bottom: 25px;
-	text-align: center;
+	overflow: hidden;
+	.hl-tabs, .rating {
+		float: right;
+	}
+	.hl-tabs {
+		margin: 10px 0 0 0;
+	}
+	.rating {
+		margin-top: 15px;
+	}
+}
+.hl-title {
+	float: left;
 	font-family: 'Futuris Bold', Arial, sans-serif;
 	font-size: 48px;
 }

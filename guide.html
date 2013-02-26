@@ -8,6 +8,7 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link rel="stylesheet" media="screen" href="css/lightbox.css">
 	<link rel="stylesheet" media="screen" href="css/jquery-ui-1.10.0.custom.min.css">	
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
@@ -18,6 +19,10 @@
 	<script src="js/jquery.lazyload.min.js"></script>		
 	<script src="js/jquery.masonry.min.js"></script>
 	<script src="js/jquery.raty.min.js"></script>
+	<script src="js/jHtmlArea-0.7.5.min.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/rating.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -176,7 +181,7 @@
 				<div class="gd-item__pic">
 					<a href="#">
 						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
+						<div class="gd-item__cat">Hippy</div>
 					</a>
 				</div>
 				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
@@ -219,11 +224,14 @@
 			</div>		
 			<!-- END .gd-item -->
 			<!-- BEGIN .gd-item -->
-			<div class="gd-item">
+			<div class="gd-item gd-item_mod">
 				<div class="gd-item__pic">
 					<a href="#">
 						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
+						<div class="gd-ribble">
+							<span>диджеи и музыка</span>
+							<strong></strong>
+						</div>
 					</a>
 				</div>
 				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
@@ -233,192 +241,9 @@
 					</div>
 					<div class="gd-item__detail-item">
 						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-			</div>
-					<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-			</div>
-			<!-- END .gd-item -->
-			<!-- BEGIN .gd-item -->
-			<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-				<div class="gd-item__comm">
-					<ul class="gd-item__comm-list">
-						<li>
-							<div class="gd-item__comm-pic">
-								<img src="img/community_img/pic1.jpg" alt="">
-							</div>
-							<div class="gd-item__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
-							<div class="gd-item__comm-detail">
-								<span class="gd-item-date">1 января 2013</span>
-								<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-							</div>					
-						</li>
-						<li>
-							<div class="gd-item__comm-pic">
-								<img src="img/community_img/pic1.jpg" alt="">
-							</div>
-							<div class="gd-item__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
-							<div class="gd-item__comm-detail">
-								<span class="gd-item-date">1 января 2013</span>
-								<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-							</div>					
-						</li>
-					</ul>
-					<div class="gd-item__comm-add">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<textarea placeholder="Написать комментарий..."></textarea>
 					</div>
 				</div>
 			</div>		
-			<!-- END .gd-item -->
-			<!-- BEGIN .gd-item -->
-			<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-			</div>
-					<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-			</div>
-			<!-- END .gd-item -->
-			<!-- BEGIN .gd-item -->
-			<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-				<div class="gd-item__comm">
-					<ul class="gd-item__comm-list">
-						<li>
-							<div class="gd-item__comm-pic">
-								<img src="img/community_img/pic1.jpg" alt="">
-							</div>
-							<div class="gd-item__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
-							<div class="gd-item__comm-detail">
-								<span class="gd-item-date">1 января 2013</span>
-								<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-							</div>					
-						</li>
-						<li>
-							<div class="gd-item__comm-pic">
-								<img src="img/community_img/pic1.jpg" alt="">
-							</div>
-							<div class="gd-item__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
-							<div class="gd-item__comm-detail">
-								<span class="gd-item-date">1 января 2013</span>
-								<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-							</div>					
-						</li>
-					</ul>
-					<div class="gd-item__comm-add">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<textarea placeholder="Написать комментарий..."></textarea>
-					</div>
-				</div>
-			</div>		
-			<!-- END .gd-item -->
-			<!-- BEGIN .gd-item -->
-			<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-			</div>
-					<div class="gd-item">
-				<div class="gd-item__pic">
-					<a href="#">
-						<img src="img/guide_img/pic1.jpg" width="278" height="258" alt="">
-						<strong>Hippy</strong>
-					</a>
-				</div>
-				<div class="gd-item__desc">Ваши любимые диджеи и самая угарная музыка. Только на Ибице. Только хардкор</div>
-				<div class="gd-item__detail">
-					<div class="gd-item__detail-item">
-						<a class="gd-item-comm" href="#">Комментировать<span>1<i></i></span></a>
-					</div>
-					<div class="gd-item__detail-item">
-						<a class="gd-item-like" href="#">Нравится<span>1<i></i></span></a>
-					</div>
-				</div>
-			</div>
 			<!-- END .gd-item -->
 		</div>
 	</div>

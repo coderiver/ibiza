@@ -242,7 +242,11 @@
 .cm-pudlish__go, .cm-settings__bottom { padding: 5px 15px 5px 5px; background: #efefef; border-top: 1px solid #dbdbdb; overflow: hidden; }
 .cm-pudlish__go input, .cm-settings__bottom input { float: right; height: 29px; padding: 0 15px; background: #0099ff; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4); -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4); font-family: 'AG_Futura Bold', Arial, sans-serif; font-size: 12px; color: #fff; cursor: pointer; }
 
-.cm-post { width: 410px; margin-bottom: 10px; border: 1px solid #bebebe; }
+.cm-wall { overflow: hidden; }
+
+.cm-wall__posts { margin-right: -50px; overflow: hidden; }
+
+.cm-post { float: left; width: 410px; margin: 0 46px 10px 0; border: 1px solid #bebebe; }
 
 .cm-post_pic .cm-post__top span { margin-right: 3px; }
 .cm-post_pic .cm-post__top i { background: url('../img/community_img/icons-sdf3d773b10.png') 0 -172px no-repeat; width: 30px; height: 25px; }

@@ -8,6 +8,7 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link rel="stylesheet" media="screen" href="css/lightbox.css">
 	<link rel="stylesheet" media="screen" href="css/jquery-ui-1.10.0.custom.min.css">	
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
@@ -18,6 +19,10 @@
 	<script src="js/jquery.lazyload.min.js"></script>		
 	<script src="js/jquery.masonry.min.js"></script>
 	<script src="js/jquery.raty.min.js"></script>
+	<script src="js/jHtmlArea-0.7.5.min.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/rating.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -251,285 +256,287 @@
 			<!-- END .cm-publish -->
 			<!-- BEGIN .cm-wall -->
 			<div class="cm-wall">
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post cm-post_pic">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<div class="cm-post__text">Запостила кучу фоток!</div>
-					<!-- BEGIN .cm-post__gallery -->					
-					<div class="cm-post__gallery">						
-						<div class="gallery-show js-gallery-show">
-							<img src="img/community_img/pic9_1.jpg" alt="">
-						</div>
-						<div class="gallery">							
-							<div class="gallery__slider js-gallery">
-								<div class="gallery__items js-gallery-items">
-									<a href="img/community_img/pic9_1.jpg"><img src="img/community_img/pic9.jpg" alt=""></a>
-									<a href="img/community_img/pic10_1.jpg"><img src="img/community_img/pic10.jpg" alt=""></a>
-									<a href="img/community_img/pic11_1.jpg"><img src="img/community_img/pic11.jpg" alt=""></a>
-									<a href="img/community_img/pic12_1.jpg"><img src="img/community_img/pic12.jpg" alt=""></a>
-									<a href="img/community_img/pic9_1.jpg"><img src="img/community_img/pic9.jpg" alt=""></a>
-									<a href="img/community_img/pic10_1.jpg"><img src="img/community_img/pic10.jpg" alt=""></a>
-									<a href="img/community_img/pic11_1.jpg"><img src="img/community_img/pic11.jpg" alt=""></a>
-									<a href="img/community_img/pic12_1.jpg"><img src="img/community_img/pic12.jpg" alt=""></a>
-								</div>
-							</div>
-							<button class="gallery__prev js-gallery-prev"><i></i></button>
-							<button class="gallery__next js-gallery-next"><i></i></button>
-						</div>
-					</div>
-					<!-- END .cm-post__gallery -->
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>
-				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post cm-post_write">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<div class="cm-post__text">Сегодня проснулась с отличным настроением, хотя всю ночь меня тошнило от выпитого алкоголя. А вот сейчас будто заново родилась... хотя во рту вкус алкоголя и рвоты, но он мне реально нравится ))))</div>
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>
-					<!-- BEGIN .cm-post__comm -->
-					<div class="cm-post__comm">
-						<ul class="cm-post__comm-list">
-							<li>
-								<div class="cm-post__comm-pic">
-									<img src="img/community_img/pic1.jpg" alt="">
-								</div>
-								<div class="cm-post__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
-								<div class="cm-post__comm-detail">
-									<span class="cm-post-date">1 января 2013</span>
-									<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-								</div>					
-							</li>
-							<li>
-								<div class="cm-post__comm-pic">
-									<img src="img/community_img/pic1.jpg" alt="">
-								</div>
-								<div class="cm-post__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
-								<div class="cm-post__comm-detail">
-									<span class="cm-post-date">1 января 2013</span>
-									<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-								</div>					
-							</li>
-						</ul>
-						<div class="cm-post__comm-add">
+				<div class="cm-wall__posts js-masonry">
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post cm-post_pic">
+						<div class="cm-post__top">
 							<img src="img/community_img/pic1.jpg" alt="">
-							<textarea placeholder="Написать комментарий..."></textarea>
-						</div>
-					</div>
-					<!-- END .cm-post__comm -->
-				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<!-- BEGIN .cm-post__place -->
-					<div class="cm-post__place">
-						<div class="cm-post__place-pic">
-							<a href="#"><img src="img/hotel_img/pic6.jpg" alt=""></a>					
-						</div>
-						<div class="cm-post__place-detail">
-							<div class="cm-post__place-cat">
-								<a href="#">бары и рестораны</a>
-							</div>
-							<div class="cm-post__place-title">
-								<a href="#">Croissanteria Jesus</a>
-							</div>
-							<div class="cm-post__place-map">
-								<a href="#">Ctra Cala Llonga, Jesus</a>
-								<i></i>
-							</div>
-							<div class="rating js-rating-read" data-score="4"></div>
-							<div class="cm-post__place-rate">– Оценила Аграфена</div>
-						</div>
-					</div>
-					<!-- END .cm-post__place -->
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>					
-				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<!-- BEGIN .cm-post__like -->
-					<div class="cm-post__like">
-						<div class="ribble">
-							<span>мне<i></i>нравится</span>
-							<strong></strong>
-						</div>
-						<div class="cm-post__like-detail">
-							<div class="cm-post__like-pic">
-								<a href="#"><img src="img/community_img/pic13.jpg" alt=""></a>
-							</div>
-							<div class="cm-post__like-cat">
-								<a href="#">кинопросмотр</a>
-							</div>
-							<div class="cm-post__like-title">
-								<a href="#">NRJ GLOBALDANCE: HALLOWEEN EDITION, Totem hall</a>
-							</div>
-						</div>
-					</div>
-					<!-- END .cm-post__like -->
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>					
-				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post cm-post_man">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<!-- BEGIN .cm-post__man -->
-					<div class="cm-post__man">
-						<div class="ribble ribble_red">
-							<span>Ищу попутчика</span>
-							<strong></strong>
-						</div>
-						<div class="cm-post__man-detail">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
 							<i></i>
-							<strong>На Ибицу, с 15 августа по 20 сентября. Преимущественно мужского пола.</strong>
+							<span>2 часа назад</span>
 						</div>
-					</div>
-					<!-- END .cm-post__man -->
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>					
-				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<!-- BEGIN .cm-post__event -->
-					<div class="cm-post__event">
-						<div class="cm-post__event-pic">
-							<a href="#"><img src="img/community_img/pic14.jpg" alt=""></a>
-						</div>
-						<div class="cm-post__event-desc">
-							<div class="cm-post__event-date">18 января, 20:00</div>
-							<div class="cm-post__event-cat">
-								<a href="#">вечеринка</a>
+						<div class="cm-post__text">Запостила кучу фоток!</div>
+						<!-- BEGIN .cm-post__gallery -->					
+						<div class="cm-post__gallery">						
+							<div class="gallery-show js-gallery-show">
+								<img src="img/community_img/pic9_1.jpg" alt="">
 							</div>
-							<div class="cm-post__event-title">
-								<a href="#">NRJ GLOBALDANCE: HALLOWEEN EDITION, Totem</a>
+							<div class="gallery">							
+								<div class="gallery__slider js-gallery js-gallery-show">
+									<div class="gallery__items js-gallery-items">
+										<a href="img/community_img/pic9_1.jpg"><img src="img/community_img/pic9.jpg" alt=""></a>
+										<a href="img/community_img/pic10_1.jpg"><img src="img/community_img/pic10.jpg" alt=""></a>
+										<a href="img/community_img/pic11_1.jpg"><img src="img/community_img/pic11.jpg" alt=""></a>
+										<a href="img/community_img/pic12_1.jpg"><img src="img/community_img/pic12.jpg" alt=""></a>
+										<a href="img/community_img/pic9_1.jpg"><img src="img/community_img/pic9.jpg" alt=""></a>
+										<a href="img/community_img/pic10_1.jpg"><img src="img/community_img/pic10.jpg" alt=""></a>
+										<a href="img/community_img/pic11_1.jpg"><img src="img/community_img/pic11.jpg" alt=""></a>
+										<a href="img/community_img/pic12_1.jpg"><img src="img/community_img/pic12.jpg" alt=""></a>
+									</div>
+								</div>
+								<button class="gallery__prev js-gallery-prev"><i></i></button>
+								<button class="gallery__next js-gallery-next"><i></i></button>
 							</div>
-							<div class="cm-post__event-go">
-								<strong>157</strong>
-								<a href="#"><span>Я иду</span></a>
+						</div>
+						<!-- END .cm-post__gallery -->
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
 							</div>
 						</div>
 					</div>
-					<!-- END .cm-post__event -->
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post cm-post_write">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
 						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+						<div class="cm-post__text">Сегодня проснулась с отличным настроением, хотя всю ночь меня тошнило от выпитого алкоголя. А вот сейчас будто заново родилась... хотя во рту вкус алкоголя и рвоты, но он мне реально нравится ))))</div>
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
 						</div>
-					</div>					
+						<!-- BEGIN .cm-post__comm -->
+						<div class="cm-post__comm">
+							<ul class="cm-post__comm-list">
+								<li>
+									<div class="cm-post__comm-pic">
+										<img src="img/community_img/pic1.jpg" alt="">
+									</div>
+									<div class="cm-post__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
+									<div class="cm-post__comm-detail">
+										<span class="cm-post-date">1 января 2013</span>
+										<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+									</div>					
+								</li>
+								<li>
+									<div class="cm-post__comm-pic">
+										<img src="img/community_img/pic1.jpg" alt="">
+									</div>
+									<div class="cm-post__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
+									<div class="cm-post__comm-detail">
+										<span class="cm-post-date">1 января 2013</span>
+										<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+									</div>					
+								</li>
+							</ul>
+							<div class="cm-post__comm-add">
+								<img src="img/community_img/pic1.jpg" alt="">
+								<textarea placeholder="Написать комментарий..."></textarea>
+							</div>
+						</div>
+						<!-- END .cm-post__comm -->
+					</div>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
+						</div>
+						<!-- BEGIN .cm-post__place -->
+						<div class="cm-post__place">
+							<div class="cm-post__place-pic">
+								<a href="#"><img src="img/community_img/pic6.jpg" width="125" height="115" alt=""></a>					
+							</div>
+							<div class="cm-post__place-detail">
+								<div class="cm-post__place-cat">
+									<a href="#">бары и рестораны</a>
+								</div>
+								<div class="cm-post__place-title">
+									<a href="#">Croissanteria Jesus</a>
+								</div>
+								<div class="cm-post__place-map">
+									<a href="#">Ctra Cala Llonga, Jesus</a>
+									<i></i>
+								</div>
+								<div class="rating js-rating-read" data-score="4"></div>
+								<div class="cm-post__place-rate">– Оценила Аграфена</div>
+							</div>
+						</div>
+						<!-- END .cm-post__place -->
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
+						</div>					
+					</div>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
+						</div>
+						<!-- BEGIN .cm-post__like -->
+						<div class="cm-post__like">
+							<div class="ribble">
+								<span>мне<i></i>нравится</span>
+								<strong></strong>
+							</div>
+							<div class="cm-post__like-detail">
+								<div class="cm-post__like-pic">
+									<a href="#"><img src="img/community_img/pic13.jpg" width="72" height="78" alt=""></a>
+								</div>
+								<div class="cm-post__like-cat">
+									<a href="#">кинопросмотр</a>
+								</div>
+								<div class="cm-post__like-title">
+									<a href="#">NRJ GLOBALDANCE: HALLOWEEN EDITION, Totem hall</a>
+								</div>
+							</div>
+						</div>
+						<!-- END .cm-post__like -->
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
+						</div>					
+					</div>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post cm-post_man">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
+						</div>
+						<!-- BEGIN .cm-post__man -->
+						<div class="cm-post__man">
+							<div class="ribble ribble_red">
+								<span>Ищу попутчика</span>
+								<strong></strong>
+							</div>
+							<div class="cm-post__man-detail">
+								<i></i>
+								<strong>На Ибицу, с 15 августа по 20 сентября. Преимущественно мужского пола.</strong>
+							</div>
+						</div>
+						<!-- END .cm-post__man -->
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
+						</div>					
+					</div>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
+						</div>
+						<!-- BEGIN .cm-post__event -->
+						<div class="cm-post__event">
+							<div class="cm-post__event-pic">
+								<a href="#"><img src="img/community_img/pic14.jpg" width="125" height="117" alt=""></a>
+							</div>
+							<div class="cm-post__event-desc">
+								<div class="cm-post__event-date">18 января, 20:00</div>
+								<div class="cm-post__event-cat">
+									<a href="#">вечеринка</a>
+								</div>
+								<div class="cm-post__event-title">
+									<a href="#">NRJ GLOBALDANCE: HALLOWEEN EDITION, Totem</a>
+								</div>
+								<div class="cm-post__event-go">
+									<strong>157</strong>
+									<a href="#"><span>Я иду</span></a>
+								</div>
+							</div>
+						</div>
+						<!-- END .cm-post__event -->
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
+						</div>					
+					</div>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->	
+					<div class="cm-post cm-post_video">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
+						</div>
+						<div class="cm-post__text">Посмотрела суппер ролик на ютубе. Всем очень рекомендую, ржала как конь 3 часа подряд.</div>
+						<!-- BEGIN .cm-post__video -->
+						<div class="cm-post__video">
+							<img src="img/community_img/player.jpg" width="390" height="213" alt="">
+						</div>
+						<!-- END .cm-post__video -->
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
+						</div>					
+					</div>
+					<!-- END .cm-post -->
+					<!-- BEGIN .cm-post -->
+					<div class="cm-post cm-post_write">
+						<div class="cm-post__top">
+							<img src="img/community_img/pic1.jpg" alt="">
+							<a href="#">Аграфена<br>Кирова-Свиридова</a>
+							<i></i>
+							<span>2 часа назад</span>
+						</div>
+						<div class="cm-post__text">Сегодня проснулась с отличным настроением, хотя всю ночь меня тошнило от выпитого алкоголя. А вот сейчас будто заново родилась... хотя во рту вкус алкоголя и рвоты, но он мне реально нравится ))))</div>
+						<div class="cm-post__detail">
+							<div class="cm-post__detail-item">
+								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+							</div>
+						</div>
+						<!-- END .cm-post__comm -->
+					</div>
+					<!-- END .cm-post -->
 				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->	
-				<div class="cm-post cm-post_video">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<div class="cm-post__text">Посмотрела суппер ролик на ютубе. Всем очень рекомендую, ржала как конь 3 часа подряд.</div>
-					<!-- BEGIN .cm-post__video -->
-					<div class="cm-post__video">
-						<img src="img/community_img/player.jpg" alt="">
-					</div>
-					<!-- END .cm-post__video -->
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>					
-				</div>
-				<!-- END .cm-post -->
-				<!-- BEGIN .cm-post -->
-				<div class="cm-post cm-post_write">
-					<div class="cm-post__top">
-						<img src="img/community_img/pic1.jpg" alt="">
-						<a href="#">Аграфена<br>Кирова-Свиридова</a>
-						<i></i>
-						<span>2 часа назад</span>
-					</div>
-					<div class="cm-post__text">Сегодня проснулась с отличным настроением, хотя всю ночь меня тошнило от выпитого алкоголя. А вот сейчас будто заново родилась... хотя во рту вкус алкоголя и рвоты, но он мне реально нравится ))))</div>
-					<div class="cm-post__detail">
-						<div class="cm-post__detail-item">
-							<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
-						</div>
-						<div class="cm-post__detail-item">
-							<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
-						</div>
-					</div>
-					<!-- END .cm-post__comm -->
-				</div>
-				<!-- END .cm-post -->
 			</div>
 			<!-- END .cm-wall -->
 		</div>

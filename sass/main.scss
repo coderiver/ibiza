@@ -113,6 +113,7 @@
 .tours {
 	margin-bottom: 40px;
 	ul {
+		padding-top: 45px;
 		overflow: hidden;
 	}	
 	li {
@@ -124,17 +125,16 @@
 	}
 	.item__pic {
 		position: relative;
-		margin-bottom: 45px;
 		strong {
-			position: absolute;
-			left: 50%;
+			position: absolute;			
 			text-align: center;
 			font-family: 'AG_Futura Bold', Arial, sans-serif;
 			font-size: 22px;
 		}
 	}
 	.item__price-yc {		
-		bottom: -40px;		
+		left: 25px;
+		top: -45px;		
 		margin-left: -49px;
 		@include sized-sprite($index_img, stick);		
 		color: #fff;
@@ -146,8 +146,9 @@
 			text-transform: uppercase;
 		}
 	}
-	.item__price-wc {		
-		bottom: -40px;		
+	.item__price-wc {	
+		left: 50%;	
+		top: -45px;		
 		margin-left: -49px;
 		@include sized-sprite($index_img, stick1);		
 		color: #000;
@@ -157,7 +158,8 @@
 		}
 	}
 	.item__price-yr {	
-		bottom: -20px;	
+		left: 50%;
+		top: -23px;	
 		margin-left: -61px;
 		@include sized-sprite($index_img, stick2);		
 		color: #fff;
@@ -312,7 +314,6 @@
 	margin-bottom: 5px;
 	img {
 		display: inline-block;
-		min-height: 180px;
 	}
 }
 .item__cat, .item__number {		

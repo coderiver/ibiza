@@ -110,31 +110,6 @@ if ($('.js-masonry').length > 0) {
   
 };
 
-//rating
-function rating() {
-	if ($('.js-rating-read').length > 0) {
-		$('.js-rating-read').raty({
-			readOnly: true,
-			space: false,
-			number: 5,
-	  	starOff: 'img/index_img/star-off.png',
-	  	starOn : 'img/index_img/star-on.png',
-	  	score: function() {
-	    	return $(this).attr('data-score');
-	 		}
-		});
-	};
-	if ($('.js-rating-choice').length > 0) {
-		$('.js-rating-choice').raty({
-			space: false,
-			number: 5,
-	  	starOff: 'img/index_img/star-off.png',
-	  	starOn : 'img/index_img/star-on.png'
-		});
-	};
-}
-rating();
-
 //html area
 if ($('.js-html-area').length>0) {
 	$('.js-html-area').htmlarea({
@@ -198,6 +173,7 @@ $('.js-add-post').click(function() {
 //gallery
 function js_gallery() {	
 	var item_parent = $('.js-gallery');	
+	var item_show = $('.js-gallery-show');	
 	var item = $('.js-gallery-items');	
 	var item_prev = $('.js-gallery-prev');	
 	var item_next = $('.js-gallery-next');	
@@ -216,7 +192,7 @@ function js_gallery() {
 	item_prev.click(function() {
 		item_parent.scrollTo('-=200px', 400);
 	});
-	item.children('a').click(function() {		
+	item_show.children().children('a').click(function() {		
 		var item_pic_cur = $(this).attr('href');
 		item_pic_show.children('img').attr('src', item_pic_cur);
 		return false;
