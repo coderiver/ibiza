@@ -17,6 +17,8 @@
 
 .hl-title { float: left; font-family: 'Futuris Bold', Arial, sans-serif; font-size: 48px; }
 
+.hl-title-h2 { margin-bottom: 30px; font-family: 'Futuris Bold', Arial, sans-serif; font-size: 30px; text-transform: uppercase; }
+
 .hl-rating { margin-bottom: 25px; text-align: center; font-size: 0; }
 .hl-rating .rating { display: inline-block; }
 
@@ -175,6 +177,8 @@
 .hl-others__view i { left: 0; background: url('../img/hotel_img/icons-sda867f6652.png') 0 -1856px no-repeat; width: 17px; height: 16px; }
 
 .hl-others__comm i { left: 5px; background: url('../img/hotel_img/icons-sda867f6652.png') 0 -1908px no-repeat; width: 17px; height: 16px; }
+
+.hl-map .hl-hotels ul { padding-bottom: 10px; }
 
 .hl-map__type { position: relative; padding-bottom: 30px; margin-bottom: 30px; text-align: center; overflow: hidden; }
 .hl-map__type:before { content: ''; position: absolute; top: 140px; left: 20px; right: 20px; height: 20px; -webkit-border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; border-radius: 50px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 90px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 90px; box-shadow: rgba(0, 0, 0, 0.1) 0 0 90px; }

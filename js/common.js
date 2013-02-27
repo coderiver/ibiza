@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+//radio
+function radio_scroll() {
+	var radio_el = $('.js-radio');
+	var radio_next = "Armin Van Buuren - ASOT 315";
+	var radio_prev = "Scillet - Hero";
+	radio_el.bind('mousewheel', function(event, delta) {
+		if (delta < 0) {
+			radio_el.children('span').html(radio_next);
+		}
+		else {
+			radio_el.children('span').html(radio_prev);
+		}
+		return false;
+	});
+}
+radio_scroll();
+
 //online hide-visible
 $('.online__title').live('click', function() {
 	if ($(this).hasClass('open')) {
@@ -185,12 +202,24 @@ function js_gallery() {
 			return(gal_width);
 		});
 		item.width(gal_width);
-	});
-	item_next.click(function() {
+	});	
+	function hover_scrollto_next() {
 		item_parent.scrollTo('+=200px', 400);
-	});
-	item_prev.click(function() {
+	}
+	function hover_scrollto_prev() {
 		item_parent.scrollTo('-=200px', 400);
+	}
+	item_next.hover(function() {
+		hover_scrollto_next();
+		item_set_next = setInterval(hover_scrollto_next, 400);
+	},function() {
+		clearInterval(item_set_next);
+	});
+	item_prev.hover(function() {
+		hover_scrollto_prev();
+		item_set_prev = setInterval(hover_scrollto_prev, 400);
+	},function() {
+		clearInterval(item_set_prev);
 	});
 	item_show.children().children('a').click(function() {		
 		var item_pic_cur = $(this).attr('href');

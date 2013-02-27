@@ -23,6 +23,12 @@
 	font-family: 'Futuris Bold', Arial, sans-serif;
 	font-size: 48px;
 }
+.hl-title-h2 {
+	margin-bottom: 30px;
+	font-family: 'Futuris Bold', Arial, sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+}
 .hl-rating {
 	margin-bottom: 25px;
 	text-align: center;
@@ -564,7 +570,11 @@
 }
 //hl-map
 .hl-map {
-
+	.hl-hotels {
+		ul {
+			padding-bottom: 10px;
+		}
+	}
 }
 .hl-map__type { 
 	position: relative;
