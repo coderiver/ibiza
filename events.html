@@ -16,12 +16,14 @@
 	<script src="js/jquery.cycle.all.js"></script>
 	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>	
+	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>		
 	<script src="js/jquery.masonry.min.js"></script>
 	<script src="js/jquery.raty.min.js"></script>
 	<script src="js/jHtmlArea-0.7.5.min.js"></script>
 	<script src="js/lightbox.js"></script>
-	<script src="js/rating.js"></script>
+	<script src="js/rating.js"></script>	
+	<script src="js/jquery.jscrollpane.min.js"></script>
 	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -36,7 +38,7 @@
 				<input type="text" placeholder="Поиск">
 				<button><i></i></button>
 			</form>			
-			<a class="radio" href="#"><i></i><span>radio |</span>blue marlin ibiza radio</a>
+			<div class="radio js-radio"><i></i>radio |<span>blue marlin ibiza radio</span></div>
 			<button class="enter-btn js-enter-open">
 				<span class="enter-btn__fb"></span>
 				<span class="enter-btn__vk"></span>
@@ -168,9 +170,46 @@
 	<div class="ev-top">
 		<div class="ev-title">События</div>
 		<div class="ev-nav">
-			<a class="ev-nav__prev no-active" href="#">Назад<i class="ev-ico-prev"></i></a>
-			<span>|</span>
-			<a class="ev-nav__next" href="#">10 дней вперед<i class="ev-ico-next"></i></a>
+			<button class="ev-nav__prev"></button>
+			<div class="ev-nav__slider">
+				<ul>
+					<li><span>08</span><strong>Пт</strong></li>
+					<li class="active"><span>09</span><strong>сб</strong></li>
+					<li class="active"><span>10</span><strong>вс</strong></li>
+					<li><span>11</span><strong>Пн</strong></li>
+					<li><span>12</span><strong>вт</strong></li>
+					<li><span>13</span><strong>ср</strong></li>
+					<li><span>14</span><strong>чт</strong></li>
+					<li><span>15</span><strong>Пт</strong></li>
+					<li class="active"><span>16</span><strong>сб</strong></li>
+					<li class="active"><span>17</span><strong>вс</strong></li>
+				</ul>
+				<ul>
+					<li><span>08</span><strong>Пт</strong></li>
+					<li class="active"><span>09</span><strong>сб</strong></li>
+					<li class="active"><span>10</span><strong>вс</strong></li>
+					<li><span>11</span><strong>Пн</strong></li>
+					<li><span>12</span><strong>вт</strong></li>
+					<li><span>13</span><strong>ср</strong></li>
+					<li><span>14</span><strong>чт</strong></li>
+					<li><span>15</span><strong>Пт</strong></li>
+					<li class="active"><span>16</span><strong>сб</strong></li>
+					<li class="active"><span>17</span><strong>вс</strong></li>
+				</ul>
+				<ul>
+					<li><span>08</span><strong>Пт</strong></li>
+					<li class="active"><span>09</span><strong>сб</strong></li>
+					<li class="active"><span>10</span><strong>вс</strong></li>
+					<li><span>11</span><strong>Пн</strong></li>
+					<li><span>12</span><strong>вт</strong></li>
+					<li><span>13</span><strong>ср</strong></li>
+					<li><span>14</span><strong>чт</strong></li>
+					<li><span>15</span><strong>Пт</strong></li>
+					<li class="active"><span>16</span><strong>сб</strong></li>
+					<li class="active"><span>17</span><strong>вс</strong></li>
+				</ul>
+			</div>	
+			<button class="ev-nav__next"></button>
 		</div>
 	</div>
 	<!-- END .ev-top -->
@@ -180,11 +219,42 @@
 			<input type="text" placeholder="Поиск по имени DJ,  названию события...">
 			<input type="submit" value="Найти">			
 		</div>
-		<ul class="ev-filter__type">
-			<li><span>Место</span></li>
+		<ul class="ev-filter__param">
 			<li>
-				<span class="js-events-filter">Cтиль музыки</span>
-				<div class="ev-filter__popup">
+				<span class="js-events-filter">Место<strong>13</strong></span>
+				<div class="ev-filter__place">
+					<button class="js-filter-close"><i></i></button>
+					<div class="ev-filter__scroll js-scrollpane">
+						<label class="js-checkbox" for="evf16"><input id="evf16" type="checkbox">Drum n Bass<i></i></label>
+						<label class="js-checkbox active" for="evf17"><input id="evf17" type="checkbox" checked>Rock<i></i></label>
+						<label class="js-checkbox" for="evf18"><input id="evf18" type="checkbox">Dubstep<i></i></label>
+						<label class="js-checkbox" for="evf19"><input id="evf19" type="checkbox">Fusion<i></i></label>
+						<label class="js-checkbox" for="evf20"><input id="evf20" type="checkbox">Electro<i></i></label>
+						<label class="js-checkbox" for="evf21"><input id="evf21" type="checkbox">Pop<i></i></label>
+						<label class="js-checkbox" for="evf22"><input id="evf22" type="checkbox">Rap<i></i></label>
+						<label class="js-checkbox" for="evf23"><input id="evf23" type="checkbox">Trance<i></i></label>
+						<label class="js-checkbox" for="evf24"><input id="evf24" type="checkbox">Trap<i></i></label>
+						<label class="js-checkbox active" for="evf25"><input id="evf25" type="checkbox" checked>House<i></i></label>
+						<label class="js-checkbox" for="evf26"><input id="evf26" type="checkbox">Punk<i></i></label>
+						<label class="js-checkbox" for="evf27"><input id="evf27" type="checkbox">Lounge<i></i></label>
+						<label class="js-checkbox active" for="evf28"><input id="evf28" type="checkbox" checked>Funk<i></i></label>
+						<label class="js-checkbox" for="evf29"><input id="evf29" type="checkbox">Jazz<i></i></label>
+						<label class="js-checkbox" for="evf31"><input id="evf31" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf32"><input id="evf32" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf33"><input id="evf33" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf34"><input id="evf34" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf35"><input id="evf35" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf36"><input id="evf36" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf37"><input id="evf37" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf38"><input id="evf38" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf39"><input id="evf39" type="checkbox">Soul<i></i></label>
+						<label class="js-checkbox" for="evf40"><input id="evf40" type="checkbox">Soul<i></i></label>
+					</div>					
+				</div>
+			</li>
+			<li>
+				<span class="js-events-filter">Cтиль музыки<strong>13</strong></span>
+				<div class="ev-filter__type">
 					<button class="js-filter-close"><i></i></button>
 					<label class="js-checkbox" for="evf1"><input id="evf1" type="checkbox">Drum n Bass<i></i></label>
 					<label class="js-checkbox active" for="evf2"><input id="evf2" type="checkbox" checked>Rock<i></i></label>
@@ -202,6 +272,9 @@
 					<label class="js-checkbox" for="evf14"><input id="evf14" type="checkbox">Jazz<i></i></label>
 					<label class="js-checkbox" for="evf15"><input id="evf15" type="checkbox">Soul<i></i></label>
 				</div>
+			</li>
+			<li>
+				<button class="ev-filter__reset">Сбросить фильтр</button>
 			</li>
 		</ul>
 	</div>

@@ -13,51 +13,59 @@
 	text-transform: uppercase;
 }
 .ev-nav {
+	position: relative;
 	float: right;
-	height: 19px;
-	margin-top: 38px;
-	line-height: 19px;
-	a, span {
-		position: relative;
+	height: 51px;
+	padding: 0 30px;
+	border: 1px solid #cbcbcb;
+	@include border-radius(7px);
+	background: #fff;
+	@include background-image(linear-gradient(#fff, #e7e7e7));
+	button {
+		position: absolute;
+		top: 15px;
+	}
+}
+.ev-nav__prev {
+	left: 11px;
+	@include sized-sprite($events_img, prev-dis);
+	&:hover {
+		@include sized-sprite($events_img, prev);
+	}
+}
+.ev-nav__next {
+	right: 11px;
+	@include sized-sprite($events_img, next-dis);
+	&:hover {
+		@include sized-sprite($events_img, next);
+	}
+}
+.ev-nav__slider {
+	position: relative;
+	width: 272px;
+	margin-top: 12px;
+	overflow: hidden;
+	li {
 		float: left;
+		padding: 0 6px;
 		font-family: 'PT Sans', Arial, sans-serif;
 		font-size: 13px;
-		text-transform: uppercase;
 		font-weight: 700;
-		color: #000;
-	}
-	a {
-		&.no-active {
-			color: #999;
-			.ev-ico-prev {
-				@include sized-sprite($events_img, prev-dis);
-			}
-			.ev-ico-next {
-				@include sized-sprite($events_img, next-dis);
+		color: #999;
+		text-transform: uppercase;
+		text-align: center;
+		&.active {
+			color: #ff0000;
+			span {
+				color: #ff0000;
 			}
 		}
 	}
 	span {
-		padding: 0 25px;
+		display: block;
+		margin-bottom: 3px;
+		color: #000;
 	}
-	i {
-		position: absolute;
-		top: 0;
-	}
-}
-.ev-nav__prev {
-	padding-left: 35px;
-}
-.ev-nav__next {
-	padding-right: 35px;
-}
-.ev-ico-prev {
-	left: 0;
-	@include sized-sprite($events_img, prev);
-}
-.ev-ico-next {
-	right: 0;
-	@include sized-sprite($events_img, next);
 }
 //ev-filter
 .ev-filter {
@@ -65,7 +73,7 @@
 	padding: 14px 15px;
 	background: #f7f7f7;
 	border: 1px solid #c1c1c1;
-	@include background-image(linear-gradient(#f7f7f7, #e7e7e7));
+	@include background-image(linear-gradient(#f7f7f7 50%, #e7e7e7));
 }
 .ev-filter__search {
 	float: left;
@@ -73,7 +81,7 @@
 		float: left;
 	}
 	input[type="text"] {
-		width: 790px;
+		width: 615px;
 		height: 37px;
 		padding: 0 15px;
 		margin-right: 4px;
@@ -81,6 +89,9 @@
 		border: 1px solid #dcdcdc;
 		@include border-radius(3px);
 		font-family: 'PT Sans', Arial, sans-serif;
+		&:focus {
+			@include box-shadow(#fce174 0 0 0 2px inset);
+		}
 	}
 	input[type="submit"] {
 		height: 39px;
@@ -90,39 +101,52 @@
 		font-size: 18px;
 	}
 }
-.ev-filter__type {
+.ev-filter__param {
+	position: relative;
 	float: right;		
 	margin-top: 5px;
-	li {
-		position: relative;
+	li {		
 		float: left;
-		padding: 7px 30px;
+		padding: 0 15px;
 		border-left: 1px solid #dcdcdc;
 		@include box-shadow(#fff -1px 0 0);
+		&:last-child {
+			padding: 0 0 0 15px;
+		}
 	}
 	span {
+		display: block;
+		height: 20px;
+		padding: 5px 0;
+		line-height: 20px;
 		font-family: 'PT Sans', Arial, sans-serif;
 		font-size: 13px;
 		color: $blue;
 		text-transform: uppercase;
 		cursor: pointer;
 	}
+	strong {
+		display: inline-block;
+		margin-left: 8px;
+		padding: 0 7px;
+		font-size: 11px;
+		color: #fff;
+		background: $blue;
+		@include border-radius(10px);
+	}
 }
-.ev-filter__popup {
+.ev-filter__place, .ev-filter__type {
 	display: none;
 	position: absolute;
-	top: 35px;
-	right: 0;
-	width: 275px;
+	top: 43px;	
+	width: 255px;
 	padding: 12px 9px 9px 9px;
 	border-top: 6px solid $blue;
 	@include border-radius(5px);
 	background: #f5f5f5;
 	@include box-shadow(rgba(0,0,0,.25) 0 1px 4px);
 	z-index: 10;
-	label {
-		float: left;
-		width: 50%;
+	label {		
 		height: 16px;
 		margin-bottom: 8px;
 		line-height: 16px;
@@ -156,7 +180,91 @@
 			display: block;
 			@include sized-sprite($events_img, close);
 		}
+		&:hover {
+			i {
+				@include sized-sprite($events_img, close-act);
+			}			
+		}
 	}
+}
+.ev-filter__place {
+	right: 285px;		
+	label {
+		display: block;
+	}
+}
+.ev-filter__type {
+	right: 0;
+	label {
+		float: left;
+		width: 50%;
+	}
+}
+.ev-filter__scroll {
+	width: 255px;
+	height: 280px;
+	margin: 5px;
+	overflow: auto;
+	//scrollpane
+	.jspContainer	{
+		overflow: hidden;
+		position: relative;
+	}	
+	.jspPane {
+		position: absolute;
+	}	
+	.jspVerticalBar	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 16px;
+		height: 100%;
+	}
+	.jspCap	{
+		display: none;
+	}	
+	.jspHorizontalBar .jspTrack,
+	.jspHorizontalBar .jspDrag {
+		float: left;
+		height: 100%;
+	}	
+	.jspVerticalBar .jspArrow:focus {
+		outline: none;
+	}	
+	.jspVerticalBar {
+		width: 10px;
+		background: none;
+	}
+	.jspTrack {
+		position: relative;
+		width: 8px;
+		@include border-radius(5px);
+		@include box-shadow(#bcbcbc 0 0 0 1px inset);
+		background: url(../img/events_img/scroll-bg.jpg);
+	}
+	.jspDrag {
+		position: relative;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		width: 8px;
+		@include border-radius(4px);
+		background-color: #fff;
+		@include background-image(linear-gradient(bottom, #149af3 0%, #149af3 28.32%, #7bc6f8 100%));
+	}
+}
+.ev-filter__reset {
+	height: 39px;
+	margin: -5px 0;
+	padding: 0 10px;
+	@include border-radius(3px);
+	background-color: #c2c2c2;
+	@include box-shadow(1px 1px 0 rgba(0,0,0,.49));
+	@include background-image(linear-gradient(bottom, #989898 0%, #cecece 100%));
+	color: #fefcfc;
+	font-family: "AG_Futura Bold", Arial, sans-serif;
+	font-size: 16px;
+	@include text-shadow(0 1px 0 rgba(0,0,0,.52));
 }
 //ev-events
 .ev-events {
