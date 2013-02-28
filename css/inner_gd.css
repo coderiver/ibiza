@@ -38,14 +38,15 @@
 
 .gd-item__desc { padding: 0 9px 10px 9px; font-family: 'PT Sans', Arial, sans-serif; color: #242020; line-height: 1.3; font-size: 16px; font-weight: 700; }
 
-.gd-item__detail { height: 30px; padding: 0 15px; line-height: 30px; background: #efefef; overflow: hidden; }
+.gd-item__detail { height: 30px; padding-left: 15px; line-height: 30px; background: #efefef; overflow: hidden; }
 
 .gd-item__detail-item { float: left; }
 .gd-item__detail-item:first-child { width: 60%; }
 
 .gd-item-comm, .gd-item-like { font-family: 'PT Sans', Arial, sans-serif; font-size: 13px; color: #0099ff; }
-.gd-item-comm span, .gd-item-like span { position: relative; padding-left: 30px; font-size: 11px; font-weight: 700; color: #9e9e9e; }
+.gd-item-comm strong, .gd-item-like strong { position: relative; padding-left: 30px; font-size: 11px; font-weight: 700; color: #9e9e9e; }
 .gd-item-comm i, .gd-item-like i { position: absolute; top: 2px; left: 11px; }
+.gd-item-comm:hover span, .gd-item-like:hover span { text-decoration: underline; }
 
 .gd-item-comm i { background: url('../img/guide_img/icons-sa57a552c2c.png') 0 -21px no-repeat; width: 13px; height: 11px; }
 
@@ -65,7 +66,11 @@
 .gd-item__comm-detail { padding-left: 34px; overflow: hidden; }
 .gd-item__comm-detail .gd-item-date { float: left; }
 .gd-item__comm-detail .gd-item-like { float: right; }
+.gd-item__comm-detail .gd-item-like:hover span { text-decoration: none; }
+.gd-item__comm-detail .gd-item-like:hover strong { color: #0099ff; }
+.gd-item__comm-detail .gd-item-like:hover i { background: url('../img/community_img/icons-se40754c5f6.png') 0 -1403px no-repeat; width: 13px; height: 11px; }
 
 .gd-item__comm-add { margin-top: 2px; padding: 8px 10px; background: #efefef; overflow: hidden; }
 .gd-item__comm-add img { float: left; }
 .gd-item__comm-add textarea { float: right; width: 227px; height: 17px; padding: 4px 7px; border: 1px solid #c1c1c1; resize: vertical; font-family: 'PT Sans', Arial, sans-serif; font-size: 13px; }
+.gd-item__comm-add textarea:focus { -webkit-box-shadow: #0099ff 0 0 0 1px inset; -moz-box-shadow: #0099ff 0 0 0 1px inset; box-shadow: #0099ff 0 0 0 1px inset; }

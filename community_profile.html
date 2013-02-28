@@ -9,7 +9,6 @@
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css">
 	<link rel="stylesheet" media="screen" href="css/lightbox.css">
-	<link rel="stylesheet" media="screen" href="css/jquery-ui-1.10.0.custom.min.css">	
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.tools.min.js"></script>
@@ -21,7 +20,7 @@
 	<script src="js/jquery.raty.min.js"></script>
 	<script src="js/jHtmlArea-0.7.5.min.js"></script>
 	<script src="js/lightbox.js"></script>
-	<script src="js/rating.js"></script>
+	<script src="js/rating-map.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<script src="js/common.js"></script>
@@ -37,7 +36,7 @@
 				<input type="text" placeholder="Поиск">
 				<button><i></i></button>
 			</form>			
-			<div class="radio js-radio"><i></i>radio |<span>blue marlin ibiza radio</span></div>
+			<div class="radio js-radio"><i></i><strong>radio</strong>|<span>blue marlin ibiza radio</span></div>
 			<button class="enter-btn js-enter-open">
 				<span class="enter-btn__fb"></span>
 				<span class="enter-btn__vk"></span>
@@ -240,19 +239,64 @@
 		<div class="col-9">
 			<!-- BEGIN .cm-publish -->
 			<div class="cm-publish">
-				<ul class="cm-tabs">
-					<li class="active">Новая запись<i class="ico-pub-write"></i></li>
-					<li>Фото<i class="ico-pub-photo"></i></li>
-					<li>Аудио<i class="ico-pub-audio"></i></li>
-					<li>Видео<i class="ico-pub-video"></i></li>
-					<li class="cm-tabs__man">Поиск попутчика<i class="ico-pub-man"></i></li>
+				<ul class="cm-tabs js-tabs">
+					<li data-item="add-write" class="active">Новая запись<i class="ico-pub-write"></i></li>
+					<li data-item="add-photo">Фото<i class="ico-pub-photo"></i></li>
+					<li data-item="add-audio">Аудио<i class="ico-pub-audio"></i></li>
+					<li data-item="add-video">Видео<i class="ico-pub-video"></i></li>
+					<li data-item="add-man">Поиск попутчика<i class="ico-pub-man"></i></li>
 				</ul>
-				<div class="cm-publish__content">
-					<textarea placeholder="Оставить запись"></textarea>
-				</div>
-				<div class="cm-pudlish__go">
-					<input type="submit" value="Опубликовать">
-				</div>
+				<form id="add-write" class="js-tabs-item" action="">
+					<div class="cm-publish__write">
+						<textarea placeholder="Оставить запись"></textarea>
+					</div>
+					<div class="cm-pudlish__go">
+						<input type="submit" value="Опубликовать">
+					</div>
+				</form>
+				<form id="add-photo" class="js-tabs-item" action="">
+					<ul class="cm-publish__photo">
+						<li>
+							<img src="img/community_img/photo.jpg" alt="">
+							<button><i></i></button>
+						</li>
+						<li></li>
+					</ul>
+					<div class="cm-pudlish__go">						
+						<button><i class="ico-add-photo"></i>Добавить фотографию</button>
+						<button><i class="ico-add-gallery"></i>Добавить фотогалерею</button>
+						<input type="submit" value="Опубликовать">
+					</div>
+				</form>
+				<form id="add-audio" class="js-tabs-item" action="">
+					<div class="cm-publish__audio">
+						<textarea placeholder="Вставьте ссылку на аудио трек"></textarea>
+					</div>
+					<div class="cm-pudlish__go">
+						<input type="submit" value="Опубликовать">
+					</div>
+				</form>
+				<form id="add-video" class="js-tabs-item" action="">
+					<div class="cm-publish__video">
+						<textarea placeholder="Вставьте ссылку на видео"></textarea>
+					</div>
+					<div class="cm-pudlish__go">
+						<input type="submit" value="Опубликовать">
+					</div>
+				</form>
+				<form id="add-man" class="js-tabs-item" action="">
+					<div class="cm-publish__man">
+						<ul>
+							<li><label for="pm1">Город отправления:</label><input id="pm1" type="text"></li>
+							<li><label for="pm2">Даты поездки: с</label><input id="pm2" class="js-dp" type="text"></li>
+							<li><label for="pm3">по</label><input id="pm3" class="js-dp" type="text"></li>
+						</ul>						
+						<textarea placeholder="Введите текст и попутчик обязательно найдется!"></textarea>
+					</div>
+					<div class="cm-pudlish__go">
+						<input type="submit" value="Опубликовать">
+					</div>
+				</form>				
 			</div>
 			<!-- END .cm-publish -->
 			<!-- BEGIN .cm-wall -->
@@ -292,10 +336,14 @@
 						<!-- END .cm-post__gallery -->
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
+							</div>
+							<div class="cm-post__detail-item">
+								<button class="cm-post__edit"></button>
+								<button class="cm-post__remove"></button>
 							</div>
 						</div>
 					</div>
@@ -311,10 +359,10 @@
 						<div class="cm-post__text">Сегодня проснулась с отличным настроением, хотя всю ночь меня тошнило от выпитого алкоголя. А вот сейчас будто заново родилась... хотя во рту вкус алкоголя и рвоты, но он мне реально нравится ))))</div>
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>
 						<!-- BEGIN .cm-post__comm -->
@@ -327,7 +375,7 @@
 									<div class="cm-post__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
 									<div class="cm-post__comm-detail">
 										<span class="cm-post-date">1 января 2013</span>
-										<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+										<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 									</div>					
 								</li>
 								<li>
@@ -337,7 +385,7 @@
 									<div class="cm-post__comm-text"><a href="#">Утка</a>Мы с тобой же вечером 	тусили и вроде ты много не пила. Предпологаю, что вечеринка продолжилась 	после мого ухода )))</div>		
 									<div class="cm-post__comm-detail">
 										<span class="cm-post-date">1 января 2013</span>
-										<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+										<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 									</div>					
 								</li>
 							</ul>
@@ -380,10 +428,10 @@
 						<!-- END .cm-post__place -->
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>					
 					</div>
@@ -417,10 +465,10 @@
 						<!-- END .cm-post__like -->
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>					
 					</div>
@@ -447,10 +495,10 @@
 						<!-- END .cm-post__man -->
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>					
 					</div>
@@ -485,10 +533,10 @@
 						<!-- END .cm-post__event -->
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>					
 					</div>
@@ -509,10 +557,10 @@
 						<!-- END .cm-post__video -->
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>					
 					</div>
@@ -528,10 +576,10 @@
 						<div class="cm-post__text">Сегодня проснулась с отличным настроением, хотя всю ночь меня тошнило от выпитого алкоголя. А вот сейчас будто заново родилась... хотя во рту вкус алкоголя и рвоты, но он мне реально нравится ))))</div>
 						<div class="cm-post__detail">
 							<div class="cm-post__detail-item">
-								<a class="cm-post-comm" href="#">Комментировать<span>1<i></i></span></a>
+								<a class="cm-post-comm" href="#"><span>Комментировать</span><strong>1<i></i></strong></a>
 							</div>
 							<div class="cm-post__detail-item">
-								<a class="cm-post-like" href="#">Нравится<span>1<i></i></span></a>
+								<a class="cm-post-like" href="#"><span>Нравится</span><strong>1<i></i></strong></a>
 							</div>
 						</div>
 						<!-- END .cm-post__comm -->

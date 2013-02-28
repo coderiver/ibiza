@@ -58,6 +58,51 @@ button {
 	background: none;
 	cursor: pointer; 
 }
+//extend
+%btn-orange {
+  @include background-image(linear-gradient(#ffcc00, #e99400));
+  @include box-shadow(rgba(0,0,0,0.38) 0 1px 0);
+  @include border-radius(3px);
+  color: #fff;  
+  text-shadow: 0 1px 1px rgba(97,62,0,0.54);  
+  cursor: pointer;
+  &:hover {
+    @include box-shadow(inset 0 2px 1px rgba(162,93,3,.25), #d19500 0 0 0 1px inset);
+    @include background-image(linear-gradient(bottom, #fdc900 -25%, #f9bf00 42.31%, #f3af00 80.65%, #ed9f00 125%));
+  }
+  &.disabled {
+
+  }
+}
+%btn-blue {
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid #0167a9;
+  background-color: #09f;
+  @include box-shadow(inset 0 1px 0 rgba(255,255,255,.4));
+  @include background-image(linear-gradient(bottom, rgba(0,0,0,.05) 0%, rgba(125,125,125,.05) 50%, rgba(255,255,255,.05) 100%));
+  @include border-radius(5px);
+  font-family: 'AG_Futura Bold', Arial, sans-serif;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #026aac;
+    background-color: #09f;
+    @include box-shadow(inset 0 1px 2px #024d84);
+    @include background-image(linear-gradient(bottom, #56bcfc 0%, #0095ff 66.16%, #0095ff 100%));
+  }
+  &.disabled {
+  	border: 1px solid #bebebe;
+		background: #d9d9d9;
+		@include box-shadow(none);
+		&:hover {
+			border: 1px solid #bebebe;
+			background: #d9d9d9;
+			@include box-shadow(none);
+		}
+  }
+}
 // common styles
 .h2 {
 	padding-bottom: 20px;
@@ -218,6 +263,9 @@ button {
 	font-weight: 700;
 	color: #000;
 	text-transform: uppercase;
+	strong {
+		margin-right: 5px;
+	}
 	span {
 		margin-left: 5px;
 		color: #666;
@@ -227,6 +275,14 @@ button {
 		top: 6px;
 		left: 8px;
 		@include sized-sprite($index_img, radio);
+	}
+	&:hover {
+		strong {
+			color: #0066cc;
+		} 
+		i {
+			@include sized-sprite($index_img, radio-act);
+		}
 	}
 }
 .enter-btn {
@@ -820,7 +876,7 @@ button {
 	}
 }
 .enter__extra-open {
-	padding: 0 45px;
+	padding: 0 45px; 
 	button {
 		height: 50px;
 		font-size: 14px;
@@ -876,4 +932,111 @@ button {
 	background: url(../img/hotel_img/inner.jpg) no-repeat 50% 0;
 	background-size: cover;
 	border-bottom: 5px solid #1a113a;
+}
+//datepicker
+.ui-datepicker {
+	@include border-radius(5px);
+	background-color: #f5f5f5;
+	@include box-shadow(0 1px 4px rgba(0,0,0,.25));
+	font-family: 'PT Sans', Arial, sans-serif;
+}
+.ui-widget-header {
+	position: relative;
+	height: 35px;
+	line-height: 35px;
+	background: #000;
+	@include border-radius(5px 5px 0 0);
+}
+.ui-datepicker-title {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+}
+.ui-datepicker-calendar {
+	background: #f5f5f5;
+	@include border-radius(0 0 5px 5px);
+	th {
+		span {
+			border-bottom: 1px solid #e7e7e7;
+			color: #6c6c6c;
+			font-size: 12px;
+		}		
+	}
+	a, span {
+		display: block;
+		width: 22px;
+		height: 19px;
+		line-height: 19px;
+		border: 4px solid #f5f5f5;
+		text-align: center;	
+	}
+	a {
+		font-size: 13px;
+		color: #6c6c6c;
+	}
+	span {
+		font-size: 13px;
+		color: #b5b5b5;
+	}
+	.ui-state-active {
+		border: 4px solid #000;
+		color: #000;
+		font-weight: 700;
+	}
+}
+.ui-datepicker-prev, .ui-datepicker-next {
+	position: absolute;
+	top: 8px;
+	cursor: pointer;
+	span {
+		display: block;
+		@extend %hide-text;
+	}
+}
+.ui-datepicker-prev {
+	left: 5px;
+	span {
+		@include sized-sprite($index_img, dp-prev);
+	}
+}
+.ui-datepicker-next {
+	right: 5px;
+	span {
+		@include sized-sprite($index_img, dp-next);
+	}
+}
+//btn-more
+.btn-more {
+	padding: 0 2px 20px 2px;
+	button {
+		width: 1246px;
+		height: 79px;
+		@include border-radius(7px);
+		@include background-clip(padding-box);
+		background-color: #fff;
+		@include box-shadow(0 1px 1px rgba(0,0,0,.38));
+		@include background-image(linear-gradient(bottom, #ececec 0%, #fdfbfb 100%));
+		color: #ababab;
+		font-family: 'PT Sans', Arial, sans-serif;
+		font-size: 25px;
+		font-weight: 700;
+		&:hover {
+			@include box-shadow(0 1px 0 rgba(0,0,0,.38), inset 0 3px 3px rgba(0,0,0,.1));
+			@include background-image(linear-gradient(bottom, #fdfbfb 0%, #ececec 100%));
+		}
+	}
+}
+//icons
+.ico-like {
+	@include sized-sprite($index_img, ico-like);
+}
+.ico-comm {
+	@include sized-sprite($index_img, ico-comm);
+}
+.ico-like-w {
+	@include sized-sprite($index_img, ico-like-w);
+}
+.ico-comm-w {
+	@include sized-sprite($index_img, ico-comm-w);
 }

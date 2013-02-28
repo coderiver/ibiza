@@ -169,7 +169,22 @@ if ($('.js-html-area').length>0) {
 };
 
 //datepicker
-$('.js-dp').datepicker();
+if ($('.js-dp').length > 0) {
+	$('.js-dp').datepicker({
+    monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+    'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthNamesShort: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+    'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+    dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+    dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    weekHeader: 'Не',
+    dateFormat: 'dd.mm.yy',
+    firstDay: 1,
+    hideIfNoPrevNext: true,
+    minDate: 0
+	});
+};	
 
 //select
 $('.js-select select').change(function() {
@@ -252,49 +267,6 @@ function js_gallery() {
 }
 js_gallery();
 
-//map
-if ($('#map_canvas').length > 0) {
-	function initialize() {     
-	    var myLatlng = new google.maps.LatLng(38.90895099999999, 1.4281150);
-	    var myOptions = {
-	        zoom: 15,
-	        center: myLatlng,
-	        mapTypeId: google.maps.MapTypeId.ROADMAP
-	    }
-	    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-	
-	    //markers
-	
-			//marker window
-			var contentString = '<div class="map-content">\
-														 <div class="map-content__pic">\
-														 	<a href="#"><img src="img/hotel_img/map.jpg" alt=""></a>\
-														 </div>\
-														 <div class="map-content__cat">\
-														 	<a href="#">классика</a>\
-														 </div>\
-														 <div class="map-content__title">\
-														 	<a href="#">Croissanteria Jesus</a>\
-														 </div>\
-													   <div class="rating js-rating-read" data-score="4"></div>\
-													 </div>';
-			var infowindow = new google.maps.InfoWindow({
-			  content: contentString
-			});
-			var image = 'img/hotel_img/icons/marker.png';
-			var marker = new google.maps.Marker({
-			  position: myLatlng,
-			  map: map,
-			  icon: image
-			});
-			google.maps.event.addListener(marker, 'click', function() {
-			  infowindow.open(map,marker);
-			  rating();
-			});
-	}
-	initialize();
-};
-
 //tabs
 $('.js-tabs-item:gt(0)').hide();
 $('.js-tabs li').click(function() {
@@ -318,8 +290,9 @@ $('.js-filter-close').click(function() {
 	$(this).parent().fadeOut();
 });
 //scrollpane
-$('.js-scrollpane').jScrollPane();
-
+if ($('.js-scrollpane').length > 0) {
+	$('.js-scrollpane').jScrollPane();
+};
 
 });
 

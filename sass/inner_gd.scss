@@ -133,7 +133,7 @@
 }
 .gd-item__detail {
 	height: 30px;
-	padding: 0 15px;
+	padding-left: 15px;
 	line-height: 30px;
 	background: #efefef;
 	overflow: hidden;
@@ -148,7 +148,7 @@
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 13px;
 	color: $blue;
-	span {
+	strong {
 		position: relative;
 		padding-left: 30px;
 		font-size: 11px;
@@ -159,6 +159,11 @@
 		position: absolute;
 		top: 2px;
 		left: 11px;
+	}
+	&:hover {		
+		span {
+			text-decoration: underline;
+		}
 	}
 }
 .gd-item-comm {
@@ -212,6 +217,17 @@
 	}
 	.gd-item-like {
 		float: right;
+		&:hover {
+			span {  
+				text-decoration: none;
+			}
+			strong {
+				color: $blue;
+			}
+			i {
+				@include sized-sprite($community_img, post-like-act);
+			}
+		}
 	}
 }
 .gd-item__comm-add {
@@ -231,5 +247,8 @@
 		resize: vertical;
 		font-family: 'PT Sans', Arial, sans-serif;
 		font-size: 13px;
+		&:focus {
+			@include box-shadow($blue 0 0 0 1px inset);
+		}
 	}
 }
